@@ -1,3 +1,6 @@
+```plantuml
+hide circle
+
 Class Joueur{
     id_joueur : {key}
     cartes_reserve: Carte type
@@ -75,21 +78,28 @@ Class Controleur{
 }
 
 Class Partie{
+    nombre_joueur : int 
 }
 
 
 Joueur"0, 1" -- "0..5"Noble: possede >
 Joueur"0, 1" -- "*"Carte: possede >
-Joueur"1, 4" -- "1"Plateau: joue sur >
+Joueur"1, 4" -- "1"Partie: joue sur >
 Joueur"0, 1" -- "0..10"Jeton: possede >
 
 Carte"0..12" -- "1"Plateau: compose >
 Carte"0..40" -- "1"Pioche_carte : compose >
 
-Pioche_carte"3" -- "1"Plateau : compose >
+Pioche_carte"3" -- "1"Controleur : compose >
 
 Noble"0..5" -- "1"Plateau : compose >
 
-Pile_Jeton"6" -- "1"Plateau : compose >
+Pile_Jeton"6" -- "1"Controleur : compose >
 
 Jeton"0..7" -- "1"Pile_Jeton : compose >
+
+Plateau"1" -- "1"Controleur : compose >
+
+Controleur"1" -- "1"Partie : compose >
+
+'''https://hackmd.io/QPxN_0KpTruHEyn9zXSQbA?edit'''
