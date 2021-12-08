@@ -1,1 +1,95 @@
+Class Joueur{
+    id_joueur : {key}
+    cartes_reserve: Carte type
+    cartes_achetees : Carte type
+    nobles : type Noble
+    
+    jeton_rouge : int
+    jeton_bleu : int
+    jeton_blanc : int
+    jeton_jaune : int
+    jeton_noir : int
+    jeton_vert : int
+    
+    int points_prestige (cartes_achetees)
+    int points_bleu (pile_bleu, cartes_achetees)
+    int points_blanc (pile_blanc, cartes_achetees)
+    int points_vert (pile_vert, cartes_achetees)
+    int points_noir (pile_noir, cartes_achetees)
+    int points_rouge (pile_rouge, cartes_achetees)
+    int piocher_jeton_rouge (jeton_rouge)
+    int piocher_jeton_bleu (jeton_bleu)
+    int piocher_jeton_vert (jeton_vert)
+    int piocher_jeton_jaune (jeton_jaune)
+    int piocher_jeton_noir (jeton_noir)
+    int piocher_jeton_bleu (jeton_bleu)
+}
 
+Class Carte {
+    id_carte : int {key}
+    cout_rouge : int
+    cout_vert : int
+    cout_bleu : int
+    cout_noir : int
+    cout_blanc : int
+    point_prestige : int  
+    bonus_rouge : int
+    bonus_vert : int
+    bonus_bleu : int
+    bonus_noir : int
+    bonus_blanc : int
+    niveau : int enum{1, 2, 3} NOT NULL     
+}
+
+Class Plateau {
+    
+}
+
+Class Jeton {
+    couleur : string enum{"rouge", "bleu", "blanc", "vert", "noir", "jaune"} {key}
+}
+
+Class Pile_Jeton {
+    nb_jeton_init : int enum {4,5,7}
+
+}
+
+Class Pioche_carte {
+    nb_carte_init : int
+    niveau : int enum{1, 2, 3} {key} NOT NULL
+    
+    
+}
+
+Class Noble {
+    id_noble : int {key}
+    cout_rouge : int
+    cout_vert : int
+    cout_bleu : int
+    cout_noir : int
+    cout_blanc : int
+    point_prestige : int NOT NULL    
+}
+
+Class Controleur{
+}
+
+Class Partie{
+}
+
+
+Joueur"0, 1" -- "0..5"Noble: possede >
+Joueur"0, 1" -- "*"Carte: possede >
+Joueur"1, 4" -- "1"Plateau: joue sur >
+Joueur"0, 1" -- "0..10"Jeton: possede >
+
+Carte"0..12" -- "1"Plateau: compose >
+Carte"0..40" -- "1"Pioche_carte : compose >
+
+Pioche_carte"3" -- "1"Plateau : compose >
+
+Noble"0..5" -- "1"Plateau : compose >
+
+Pile_Jeton"6" -- "1"Plateau : compose >
+
+Jeton"0..7" -- "1"Pile_Jeton : compose >
