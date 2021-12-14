@@ -1,0 +1,105 @@
+{
+  "nombre": 10,
+  "liste": [
+    {
+      "pts": 3,
+      "demande": {
+        "noir": 0,
+        "rouge": 4,
+        "vert": 4,
+        "blanc": 0,
+        "bleu": 0
+      }
+    },
+    {
+      "pts": 3,
+      "demande": {
+        "noir": 4,
+        "rouge": 4,
+        "vert": 0,
+        "blanc": 0,
+        "bleu": 0
+      }
+    },
+    {
+      "pts": 3,
+      "demande": {
+        "noir": 4,
+        "rouge": 0,
+        "vert": 0,
+        "blanc": 4,
+        "bleu": 0
+      }
+    },
+    {
+      "pts": 3,
+      "demande": {
+        "noir": 0,
+        "rouge": 0,
+        "vert": 0,
+        "blanc": 4,
+        "bleu": 4
+      }
+    },
+    {
+      "pts": 3,
+      "demande": {
+        "noir": 0,
+        "rouge": 0,
+        "vert": 4,
+        "blanc": 0,
+        "bleu": 4
+      }
+    },
+    {
+      "pts": 3,
+      "demande": {
+        "noir": 0,
+        "rouge": 3,
+        "vert": 3,
+        "blanc": 0,
+        "bleu": 3
+      }
+    },
+    {
+      "pts": 3,
+      "demande": {
+        "noir": 0,
+        "rouge": 0,
+        "vert": 3,
+        "blanc": 3,
+        "bleu": 3
+      }
+    },
+    {
+      "pts": 3,
+      "demande": {
+        "noir": 3,
+        "rouge": 3,
+        "vert": 3,
+        "blanc": 0,
+        "bleu": 0
+      }
+    },
+    {
+      "pts": 3,
+      "demande": {
+        "noir": 3,
+        "rouge": 0,
+        "vert": 0,
+        "blanc": 3,
+        "bleu": 3
+      }
+    },
+    {
+      "pts": 3,
+      "demande": {
+        "noir": 3,
+        "rouge": 3,
+        "vert": 0,
+        "blanc": 3,
+        "bleu": 0
+      }
+    }
+  ]
+}
