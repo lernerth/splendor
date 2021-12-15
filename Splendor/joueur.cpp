@@ -1,7 +1,7 @@
 #include "joueur.h"
 
 //CONSTRUCTEUR
-//Joueur():initialise les attributs de la classe à 0/nullptr
+//Joueur():initialise les attributs de la classe Ã  0/nullptr
 
 Joueur::Joueur(){
 
@@ -32,37 +32,37 @@ int Joueur::totalPrestige() {
     return prestige;
 }
 
-//Getbonus(): renvoie le bonus pour une couleur donnée(représentée par un entier entre 1 et 5)
+//Getbonus(): renvoie le bonus pour une couleur donnÃ©e(reprÃ©sentÃ©e par un entier entre 1 et 5)
 int Joueur::getBonus(int indice) {
     return bonus[indice];
 }
 
-//getnbJetons(int indice): renvoie le nombres de jetons d'une couleur donnée.
+//getnbJetons(int indice): renvoie le nombres de jetons d'une couleur donnÃ©e.
 int Joueur::getnbJetons(int indice){
     return jetons[indice];
 }
 
-//getReserve(int indice): renvoie le pointeur vers la carte pour la position (indice) donnée.
+//getReserve(int indice): renvoie le pointeur vers la carte pour la position (indice) donnÃ©e.
 Carte* Joueur::getReserve(int indice){
     return reserveCarte[indice];
 }
 
 //SETTERS
 
-//Set_Jetons(int add_jetons[6]) : additionne au tableau de jetons le tableau entré.
+//Set_Jetons(int add_jetons[6]) : additionne au tableau de jetons le tableau entrÃ©.
 void Joueur::setJetons (int add_jetons[6]){
     for (int i = 0; i <6 ; ++i) {
         jetons[i]= jetons[i]+ jetons[i];
     }
 }
 
-//Set_bonus(int indice) : incrémente de 1 le nombre de bonus pour une couleur donnée.
+//Set_bonus(int indice) : incrÃ©mente de 1 le nombre de bonus pour une couleur donnÃ©e.
 void Joueur::setBonus(int indice){
     bonus[indice] = bonus[indice] +1;
 }
 
 //Set_ReserveCartes
-//Ajoute la carte entrée dans la réserve s'il reste de la place.
+//Ajoute la carte entrÃ©e dans la rÃ©serve s'il reste de la place.
 void Joueur::setReserveCartes(Carte *reserve_carte) {
     for (int i = 0; i <3 ; ++i) {
         if(reserveCartes[i] == nullptr){
@@ -72,20 +72,20 @@ void Joueur::setReserveCartes(Carte *reserve_carte) {
     }
 }
 
-//Set_prestige(int points_supp): ajoute un nombre de donné au prestige du joueur.
+//Set_prestige(int points_supp): ajoute un nombre de donnÃ© au prestige du joueur.
 void Joueur::setPrestige(int points_supp){
     prestige+= points_supp;
 }
 
 
 //remove_Reserve
-//carte entrée dans la réserve s'il reste de la place.
+//carte entrÃ©e dans la rÃ©serve s'il reste de la place.
 void Joueur::removeReserve(int indice){
     reserveCartes[indice] = nullptr;
 }
 
 //set_Id (string id)
-//définit l'identifiant du joueur.
+//dÃ©finit l'identifiant du joueur.
 void Joueur::set_Id(string id){
-     id_joueur = string;
+     id_joueur = id;
 }
