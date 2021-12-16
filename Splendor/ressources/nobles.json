@@ -2,8 +2,8 @@
   "nombre": 10,
   "liste": [
     {
-      "pts": 3,
-      "demande": {
+      "point_prestige": 3,
+      "count": {
         "noir": 0,
         "rouge": 4,
         "vert": 4,
@@ -12,8 +12,8 @@
       }
     },
     {
-      "pts": 3,
-      "demande": {
+      "point_prestige": 3,
+      "count": {
         "noir": 4,
         "rouge": 4,
         "vert": 0,
@@ -22,8 +22,8 @@
       }
     },
     {
-      "pts": 3,
-      "demande": {
+      "point_prestige": 3,
+      "count": {
         "noir": 4,
         "rouge": 0,
         "vert": 0,
@@ -32,8 +32,8 @@
       }
     },
     {
-      "pts": 3,
-      "demande": {
+      "point_prestige": 3,
+      "count": {
         "noir": 0,
         "rouge": 0,
         "vert": 0,
@@ -42,8 +42,8 @@
       }
     },
     {
-      "pts": 3,
-      "demande": {
+      "point_prestige": 3,
+      "count": {
         "noir": 0,
         "rouge": 0,
         "vert": 4,
@@ -52,8 +52,8 @@
       }
     },
     {
-      "pts": 3,
-      "demande": {
+      "point_prestige": 3,
+      "count": {
         "noir": 0,
         "rouge": 3,
         "vert": 3,
@@ -62,8 +62,8 @@
       }
     },
     {
-      "pts": 3,
-      "demande": {
+      "point_prestige": 3,
+      "count": {
         "noir": 0,
         "rouge": 0,
         "vert": 3,
@@ -72,8 +72,8 @@
       }
     },
     {
-      "pts": 3,
-      "demande": {
+      "point_prestige": 3,
+      "count": {
         "noir": 3,
         "rouge": 3,
         "vert": 3,
@@ -82,8 +82,8 @@
       }
     },
     {
-      "pts": 3,
-      "demande": {
+      "point_prestige": 3,
+      "count": {
         "noir": 3,
         "rouge": 0,
         "vert": 0,
@@ -92,8 +92,8 @@
       }
     },
     {
-      "pts": 3,
-      "demande": {
+      "point_prestige": 3,
+      "count": {
         "noir": 3,
         "rouge": 3,
         "vert": 0,
