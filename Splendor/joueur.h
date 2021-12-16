@@ -29,7 +29,8 @@ private:
     int id_joueur;
     Carte* cartes_reservees[3];
 	const Carte** cartes_achetees = nullptr;
-    Noble* noble;
+    Noble* noble[5];
+    //ou const Noble** noble = nullptr;
     int jetons [6];
     int prestige;
     int bonus[5];
