@@ -22,7 +22,7 @@ Joueur::Joueur(){
     }
 
     for (int i = 0; i <3 ; ++i) {
-        reserveCards[i] = nullptr;
+        reserveCartes[i] = nullptr;
     }
 }
 
@@ -44,7 +44,7 @@ int Joueur::getnbJetons(int indice){
 
 //getReserve(int indice): renvoie le pointeur vers la carte pour la position (indice) donnée.
 Carte* Joueur::getReserve(int indice){
-    return reserveCarte[indice];
+    return reserveCartes[indice];
 }
 
 //SETTERS
