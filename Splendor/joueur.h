@@ -4,6 +4,7 @@
 #include <fstream>
 #include <string>
 #include "Carte.h"
+#include "Noble.h"
 #include <vector>
 
 class Joueur{
