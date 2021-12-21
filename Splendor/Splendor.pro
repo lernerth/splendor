@@ -11,7 +11,9 @@ CONFIG += c++11
 SOURCES += \
     Carte.cpp \
     Noble.cpp \
+    Partie.cpp \
     Pioche_carte.cpp \
+    Plateau.cpp \
     joueur.cpp \
     main.cpp \
     mainwindow.cpp

@@ -28,6 +28,7 @@ int Noble::getCout(int index){
         case '4':
             return cout[4];
     }
+    return -1;
 }
 
 int Noble::getPtPrestige(){
@@ -37,12 +38,12 @@ int Noble::getPtPrestige(){
 
 //setters
 void Noble::setIdNoble(int id_Noble){
-    this->id_noble = id_noble;
+    this->id_noble = id_Noble;
 }
 
 void Noble::setCout(int *tab_cout){
     for(int i = 0; i < 5; i++){
-        cout[i] = *tab_cout[i];
+        cout[i] = tab_cout[i];
     }
 }
 
