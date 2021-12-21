@@ -15,7 +15,18 @@ public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
 
+private slots :
+
+    void oui();
+    void non();
+    void setPlayers();
+    void autofillName2();
+    void autofillName3();
+    void autofillName4();
+
 private:
+
     Ui::MainWindow *ui;
 };
+
 #endif // MAINWINDOW_H
