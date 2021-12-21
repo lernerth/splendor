@@ -24,20 +24,8 @@ int Plateau::getIdCarteGrille(int niveau, int indice){
 void Plateau::setNoble(int *tab_noble) {
     srand(time(NULL));
     int nb_joueur = Partie::getNombreJoueur();
-    if (nb_joueur == 2){
-        for (int i = 0; i < 3; i++){
-            tab_noble[i] = rand() %10+1;
-        }
-    }
-    else if (nb_joueur == 3){
-        for (int i = 0; i < 4; i++){
-            tab_noble[i] = rand() %10+1;
-        }
-    }
-    else if (nb_joueur == 4){
-        for (int i = 0; i < 5; i++){
-            tab_noble[i] = rand() %10+1;
-        }
+    for (int i = 0; i < nb_joueur + 1; i++){
+        tab_noble[i] = rand() %10+1;
     }
 }
 
