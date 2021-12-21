@@ -4,6 +4,9 @@
 #include <iostream>
 #include <string>
 #include <vector>
+#include <Carte.h>
+#include <Noble.h>
+#include <Pioche_carte.h>
 
 using namespace std;
 class Plateau {

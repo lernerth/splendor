@@ -17,12 +17,12 @@ public:
     int getNiv();
 
     //Setters
-    void setNbCarte(int nb_carte_initiale);
-    void setNiv(enum niveau {1, 2, 3});
+    void setNbCarte(int nb_carte);
+    void setNiv(int niv);
 
 private:
     int nb_carte_initiale;
-    enum niveau {1, 2, 3};
+    int niveau;
 };
 
 #endif

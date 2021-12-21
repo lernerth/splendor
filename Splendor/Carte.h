@@ -12,23 +12,23 @@ public:
     //constructeur
     Carte();
 
-    int getRow();
+    int getNiveau();
     int getPrestige();
-    int getDiscount();
+    int getRemise();
     int getPrix(int index);
     int getIdCarte();
 
-    void setRow(int row);
+    void setNiveau(int niv);
     void setPrestige(int prestige);
-    void setDiscount(int index);
-    void setPrix (int tab_price[5]);
+    void setRemise(int index);
+    void setPrix (int tab_prix[5]);
     void setIdCarte(int id_Carte);
 
 private:
     int id_Carte;
-    int row;
+    int niveau;
     int prestige;
-    int discount[5]; //Bonus color
+    int remise[5]; //Bonus color
     int prix[5];
 };
 

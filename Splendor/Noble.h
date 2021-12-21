@@ -12,17 +12,17 @@ public:
 
     //récupérateur
     int getIdNoble();
-    int getCout(int index);
+    int getPrix(int index);
     int getPtPrestige();
 
     //setters
     void setIdNoble(int id_Noble);
-    void setCout(int count[5]);
+    void setPrix(int prix[5]);
     void setPtPrestige(int point_prestige);
 
 private:
     int id_noble;
-    int cout[5];
+    int prix[5];
     int point_prestige;
 
 };

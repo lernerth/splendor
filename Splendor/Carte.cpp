@@ -1,29 +1,30 @@
 #include "Carte.h"
 
 Carte::Carte() {
-    setRow(0);
+    setIdCarte(0);
+    setNiveau(0);
     setPrestige(0);
-    setDiscount(0);
+    setRemise(0);
     for (int i = 0; i < 5; i++){
         prix[i]=0;
     }
 }
 
-void Carte::setRow(int row){
-    this->row = row;
+void Carte::setNiveau(int niv){
+    this->niveau = niv;
 }
 
-int Carte::getRow(){
-    return this->row;
+int Carte::getNiveau(){
+    return this->niveau;
 }
 
-void Carte::setDiscount(int index){
-    this->discount[index] = 1;
+void Carte::setRemise(int index){
+    this->remise[index] = 1;
 }
 
-int Carte::getDiscount(){
+int Carte::getRemise(){
     for(int i = 0; i < 5; i++){
-        if(discount[i]==1){
+        if(remise[i]==1){
             return i;
         }
     }

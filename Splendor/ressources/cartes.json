@@ -505,6 +505,7 @@
       },
       "liste": [
         {
+          "id": 41,
           "couleur": "bleu",
           "pts": 3,
           "demande": {
@@ -516,6 +517,7 @@
           }
         },
         {
+          "id": 42,
           "couleur": "bleu",
           "pts": 2,
           "demande": {
@@ -527,6 +529,7 @@
           }
         },
         {
+          "id": 43,
           "couleur": "bleu",
           "pts": 2,
           "demande": {
@@ -538,6 +541,7 @@
           }
         },
         {
+          "id": 44,
           "couleur": "bleu",
           "pts": 2,
           "demande": {
@@ -549,6 +553,7 @@
           }
         },
         {
+          "id": 45,
           "couleur": "bleu",
           "pts": 1,
           "demande": {
@@ -560,6 +565,7 @@
           }
         },
         {
+          "id": 46,
           "couleur": "bleu",
           "pts": 1,
           "demande": {
@@ -571,6 +577,7 @@
           }
         },
         {
+          "id": 47,
           "couleur": "rouge",
           "pts": 3,
           "demande": {
@@ -582,6 +589,7 @@
           }
         },
         {
+          "id": 48,
           "couleur": "rouge",
           "pts": 2,
           "demande": {
@@ -593,6 +601,7 @@
           }
         },
         {
+          "id": 49,
           "couleur": "rouge",
           "pts": 2,
           "demande": {
@@ -604,6 +613,7 @@
           }
         },
         {
+          "id": 50,
           "couleur": "rouge",
           "pts": 2,
           "demande": {
@@ -615,6 +625,7 @@
           }
         },
         {
+          "id": 51,
           "couleur": "rouge",
           "pts": 1,
           "demande": {
@@ -626,6 +637,7 @@
           }
         },
         {
+          "id": 52,
           "couleur": "rouge",
           "pts": 1,
           "demande": {
@@ -637,6 +649,7 @@
           }
         },
         {
+          "id": 53,
           "couleur": "noir",
           "pts": 3,
           "demande": {
@@ -648,6 +661,7 @@
           }
         },
         {
+          "id": 54,
           "couleur": "noir",
           "pts": 2,
           "demande": {
@@ -659,6 +673,7 @@
           }
         },
         {
+          "id": 55,
           "couleur": "noir",
           "pts": 2,
           "demande": {
@@ -670,6 +685,7 @@
           }
         },
         {
+          "id": 56,
           "couleur": "noir",
           "pts": 2,
           "demande": {
@@ -681,6 +697,7 @@
           }
         },
         {
+          "id": 57,
           "couleur": "noir",
           "pts": 1,
           "demande": {
@@ -692,6 +709,7 @@
           }
         },
         {
+          "id": 58,
           "couleur": "noir",
           "pts": 1,
           "demande": {
@@ -703,6 +721,7 @@
           }
         },
         {
+          "id": 59,
           "couleur": "blanc",
           "pts": 3,
           "demande": {
@@ -714,6 +733,7 @@
           }
         },
         {
+          "id": 60,
           "couleur": "blanc",
           "pts": 2,
           "demande": {
@@ -725,6 +745,7 @@
           }
         },
         {
+          "id": 61,
           "couleur": "blanc",
           "pts": 2,
           "demande": {
@@ -736,6 +757,7 @@
           }
         },
         {
+          "id": 62,
           "couleur": "blanc",
           "pts": 2,
           "demande": {
@@ -747,6 +769,7 @@
           }
         },
         {
+          "id": 63,
           "couleur": "blanc",
           "pts": 1,
           "demande": {
@@ -758,6 +781,7 @@
           }
         },
         {
+          "id": 64,
           "couleur": "blanc",
           "pts": 1,
           "demande": {
@@ -769,6 +793,7 @@
           }
         },
         {
+          "id": 65,
           "couleur": "vert",
           "pts": 3,
           "demande": {
@@ -780,6 +805,7 @@
           }
         },
         {
+          "id": 66,
           "couleur": "vert",
           "pts": 2,
           "demande": {
@@ -791,6 +817,7 @@
           }
         },
         {
+          "id": 67,
           "couleur": "vert",
           "pts": 2,
           "demande": {
@@ -802,6 +829,7 @@
           }
         },
         {
+          "id": 68,
           "couleur": "vert",
           "pts": 2,
           "demande": {
@@ -813,6 +841,7 @@
           }
         },
         {
+          "id": 69,
           "couleur": "vert",
           "pts": 1,
           "demande": {
@@ -824,6 +853,7 @@
           }
         },
         {
+          "id": 70,
           "couleur": "vert",
           "pts": 1,
           "demande": {
@@ -847,6 +877,7 @@
       },
       "liste": [
         {
+          "id": 71,
           "couleur": "rouge",
           "pts": 5,
           "demande": {
@@ -858,6 +889,7 @@
           }
         },
         {
+          "id": 72,
           "couleur": "rouge",
           "pts": 4,
           "demande": {
@@ -869,6 +901,7 @@
           }
         },
         {
+          "id": 73,
           "couleur": "rouge",
           "pts": 4,
           "demande": {
@@ -880,6 +913,7 @@
           }
         },
         {
+          "id": 74,
           "couleur": "rouge",
           "pts": 3,
           "demande": {
@@ -891,6 +925,7 @@
           }
         },
         {
+          "id": 75,
           "couleur": "noir",
           "pts": 5,
           "demande": {
@@ -902,6 +937,7 @@
           }
         },
         {
+          "id": 76,
           "couleur": "noir",
           "pts": 4,
           "demande": {
@@ -913,6 +949,7 @@
           }
         },
         {
+          "id": 77,
           "couleur": "noir",
           "pts": 4,
           "demande": {
@@ -924,6 +961,7 @@
           }
         },
         {
+          "id": 78,
           "couleur": "noir",
           "pts": 3,
           "demande": {
@@ -935,6 +973,7 @@
           }
         },
         {
+          "id": 79,
           "couleur": "vert",
           "pts": 5,
           "demande": {
@@ -946,6 +985,7 @@
           }
         },
         {
+          "id": 80
           "couleur": "vert",
           "pts": 4,
           "demande": {
@@ -957,6 +997,7 @@
           }
         },
         {
+          "id": 81,
           "couleur": "vert",
           "pts": 4,
           "demande": {
@@ -968,6 +1009,7 @@
           }
         },
         {
+          "id": 82,
           "couleur": "vert",
           "pts": 3,
           "demande": {
@@ -979,6 +1021,7 @@
           }
         },
         {
+          "id": 83,
           "couleur": "bleu",
           "pts": 5,
           "demande": {
@@ -990,6 +1033,7 @@
           }
         },
         {
+          "id": 84,
           "couleur": "bleu",
           "pts": 4,
           "demande": {
@@ -1001,6 +1045,7 @@
           }
         },
         {
+          "id": 85,
           "couleur": "bleu",
           "pts": 4,
           "demande": {
@@ -1012,6 +1057,7 @@
           }
         },
         {
+          "id": 86,
           "couleur": "bleu",
           "pts": 3,
           "demande": {
@@ -1023,6 +1069,7 @@
           }
         },
         {
+          "id": 87,
           "couleur": "blanc",
           "pts": 5,
           "demande": {
@@ -1034,6 +1081,7 @@
           }
         },
         {
+          "id": 88,
           "couleur": "blanc",
           "pts": 4,
           "demande": {
@@ -1045,6 +1093,7 @@
           }
         },
         {
+          "id": 89,
           "couleur": "blanc",
           "pts": 4,
           "demande": {
@@ -1056,6 +1105,7 @@
           }
         },
         {
+          "id": 90,
           "couleur": "blanc",
           "pts": 3,
           "demande": {

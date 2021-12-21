@@ -14,21 +14,22 @@ public:
 
     //getters
     int totalPrestige();
-    int getJetons (int index);
-    int getBonus (int index);
-    Carte* getReserve(int index);
+    int getJetons (int indice);
+    int getBonus (int indice);
+    int getReserve(int indice);
 
     //setters
-    void setJetons (int nb, string couleur);
-    void setPierres(int pierres[6]);
-    void setReserveCartes(Carte* reserve_cartes[3]);
+    void setJetons (int add_jetons[6]);
+    void setBonus(int indice);
+    void setReserveCartes(int reserve_carte);
     void setPrestige(int nb_points);
     void removeReserve(int index);
+    void setId(int id);
 
 private:
     int id_joueur;
-    Carte* cartes_reservees[3];
-	const Carte** cartes_achetees = nullptr;
+    int cartes_reservees[3];
+    const Carte** cartes_achetees;
     Noble* noble[5];
     //ou const Noble** noble = nullptr;
     int jetons [6];
