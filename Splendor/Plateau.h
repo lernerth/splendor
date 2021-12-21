@@ -23,6 +23,7 @@ public:
 
     void setNoble(int tab_noble[5]);
     void setGrille(int tab_grille[3][4]);
+    void remplacerCarte(int niveau, int indice);
 
 private:
     int grille[3][4];
