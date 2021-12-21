@@ -14,14 +14,14 @@ public:
 
     //récupérateur
     int getNbCarte();
-    int getNiv();
+    int getNiveau();
 
     //Setters
-    void setNbCarte(int nb_carte);
-    void setNiv(int niv);
+    void setNbCarte(int nbcarte);
+    void setNiveau(int niv);
 
 private:
-    int nb_carte_initiale;
+    int nb_carte;
     int niveau;
 };
 
