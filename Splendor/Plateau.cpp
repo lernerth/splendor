@@ -49,3 +49,7 @@ void Plateau::setGrille(int (*tab_grille)[4]){
         tab_grille[2][i] = rand() %20+71;
     }
 }
+
+void Plateau::remplacerCarte(int niveau, int indice){
+    grille[niveau][indice] = 0 // remplacer par l'id de la carte sur le dessus de la pioche du niveau correspondant
+}
