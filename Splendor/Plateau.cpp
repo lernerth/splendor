@@ -39,5 +39,5 @@ void Plateau::setGrille(int (*tab_grille)[4]){
 }
 
 void Plateau::remplacerCarte(int niveau, int indice){
-    grille[niveau][indice] = 0 // remplacer par l'id de la carte sur le dessus de la pioche du niveau correspondant
+    grille[niveau][indice] = 0; // remplacer par l'id de la carte sur le dessus de la pioche du niveau correspondant
 }

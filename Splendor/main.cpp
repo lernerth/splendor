@@ -11,3 +11,4 @@ int main(int argc, char *argv[])
 }
 
 //indice 0:blanc 1:bleu 2:noir 3:rouge 4:vert 5:jaune
+//test
