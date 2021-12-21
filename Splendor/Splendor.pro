@@ -10,13 +10,20 @@ CONFIG += c++11
 
 SOURCES += \
     Carte.cpp \
+    Noble.cpp \
+    Pioche_carte.cpp \
+    joueur.cpp \
     main.cpp \
     mainwindow.cpp
 
 HEADERS += \
     Carte.h \
+    Noble.h \
     Partie.h \
+    Pioche_carte.h \
     Plateau.h \
+    controleur.h \
+    joueur.h \
     mainwindow.h
 
 FORMS += \

@@ -2,6 +2,7 @@
   "nombre": 90,
   "niveaux": {
     "1": {
+      "id": 1,
       "nombre": 40,
       "sprites": {
         "noir": 1,
@@ -12,6 +13,7 @@
       },
       "liste": [
         {
+          "id": 2,
           "couleur": "vert",
           "pts": 1,
           "demande": {
@@ -23,6 +25,7 @@
           }
         },
         {
+          "id": 3,
           "couleur": "vert",
           "pts": 0,
           "demande": {
@@ -34,6 +37,7 @@
           }
         },
         {
+          "id": 4,
           "couleur": "vert",
           "pts": 0,
           "demande": {
@@ -45,6 +49,7 @@
           }
         },
         {
+          "id": 5,
           "couleur": "vert",
           "pts": 0,
           "demande": {
@@ -56,6 +61,7 @@
           }
         },
         {
+          "id": 5,
           "couleur": "vert",
           "pts": 0,
           "demande": {
@@ -67,6 +73,7 @@
           }
         },
         {
+          "id": 6,
           "couleur": "vert",
           "pts": 0,
           "demande": {
@@ -78,6 +85,7 @@
           }
         },
         {
+          "id": 7,
           "couleur": "vert",
           "pts": 0,
           "demande": {
@@ -89,6 +97,7 @@
           }
         },
         {
+          "id": 8,
           "couleur": "vert",
           "pts": 0,
           "demande": {
@@ -100,6 +109,7 @@
           }
         },
         {
+          "id": 9,
           "couleur": "rouge",
           "pts": 1,
           "demande": {
@@ -111,6 +121,7 @@
           }
         },
         {
+          "id": 10,
           "couleur": "rouge",
           "pts": 0,
           "demande": {
@@ -122,6 +133,7 @@
           }
         },
         {
+          "id": 11,
           "couleur": "rouge",
           "pts": 0,
           "demande": {
@@ -133,6 +145,7 @@
           }
         },
         {
+          "id": 12,
           "couleur": "rouge",
           "pts": 0,
           "demande": {
@@ -144,6 +157,7 @@
           }
         },
         {
+          "id": 13,
           "couleur": "rouge",
           "pts": 0,
           "demande": {
@@ -155,6 +169,7 @@
           }
         },
         {
+          "id": 14,
           "couleur": "rouge",
           "pts": 0,
           "demande": {
@@ -166,6 +181,7 @@
           }
         },
         {
+          "id": 15,
           "couleur": "rouge",
           "pts": 0,
           "demande": {
@@ -177,6 +193,7 @@
           }
         },
         {
+          "id": 16,
           "couleur": "rouge",
           "pts": 0,
           "demande": {
@@ -188,6 +205,7 @@
           }
         },
         {
+          "id": 17,
           "couleur": "noir",
           "pts": 1,
           "demande": {
@@ -199,6 +217,7 @@
           }
         },
         {
+          "id": 18,
           "couleur": "noir",
           "pts": 0,
           "demande": {
@@ -210,6 +229,7 @@
           }
         },
         {
+          "id": 19,
           "couleur": "noir",
           "pts": 0,
           "demande": {
@@ -221,6 +241,7 @@
           }
         },
         {
+          "id": 20,
           "couleur": "noir",
           "pts": 0,
           "demande": {
@@ -232,6 +253,7 @@
           }
         },
         {
+          "id": 21,
           "couleur": "noir",
           "pts": 0,
           "demande": {
@@ -243,6 +265,7 @@
           }
         },
         {
+          "id": 22,
           "couleur": "noir",
           "pts": 0,
           "demande": {
@@ -254,6 +277,7 @@
           }
         },
         {
+          "id": 23,
           "couleur": "noir",
           "pts": 0,
           "demande": {
@@ -265,6 +289,7 @@
           }
         },
         {
+          "id": 24,
           "couleur": "noir",
           "pts": 0,
           "demande": {
@@ -276,6 +301,7 @@
           }
         },
         {
+          "id": 25,
           "couleur": "bleu",
           "pts": 1,
           "demande": {
@@ -287,6 +313,7 @@
           }
         },
         {
+          "id": 26,
           "couleur": "bleu",
           "pts": 0,
           "demande": {
@@ -298,6 +325,7 @@
           }
         },
         {
+          "id": 27,
           "couleur": "bleu",
           "pts": 0,
           "demande": {
@@ -309,6 +337,7 @@
           }
         },
         {
+          "id": 28,
           "couleur": "bleu",
           "pts": 0,
           "demande": {
@@ -320,6 +349,7 @@
           }
         },
         {
+          "id": 29,
           "couleur": "bleu",
           "pts": 0,
           "demande": {
@@ -331,6 +361,7 @@
           }
         },
         {
+          "id": 30,
           "couleur": "bleu",
           "pts": 0,
           "demande": {
@@ -342,6 +373,7 @@
           }
         },
         {
+          "id": 31,
           "couleur": "bleu",
           "pts": 0,
           "demande": {
@@ -353,6 +385,7 @@
           }
         },
         {
+          "id": 32,
           "couleur": "bleu",
           "pts": 0,
           "demande": {
@@ -364,6 +397,7 @@
           }
         },
         {
+          "id": 33,
           "couleur": "blanc",
           "pts": 1,
           "demande": {
@@ -375,6 +409,7 @@
           }
         },
         {
+          "id": 34,
           "couleur": "blanc",
           "pts": 0,
           "demande": {
@@ -386,6 +421,7 @@
           }
         },
         {
+          "id": 35,
           "couleur": "blanc",
           "pts": 0,
           "demande": {
@@ -397,6 +433,7 @@
           }
         },
         {
+          "id": 36,
           "couleur": "blanc",
           "pts": 0,
           "demande": {
@@ -408,6 +445,7 @@
           }
         },
         {
+          "id": 37,
           "couleur": "blanc",
           "pts": 0,
           "demande": {
@@ -419,6 +457,7 @@
           }
         },
         {
+          "id": 38,
           "couleur": "blanc",
           "pts": 0,
           "demande": {
@@ -430,6 +469,7 @@
           }
         },
         {
+          "id": 39,
           "couleur": "blanc",
           "pts": 0,
           "demande": {
@@ -441,6 +481,7 @@
           }
         },
         {
+          "id": 40,
           "couleur": "blanc",
           "pts": 0,
           "demande": {
