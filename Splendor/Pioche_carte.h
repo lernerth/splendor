@@ -11,7 +11,7 @@ class Pioche_carte {
 public:
     //constructeur-destructeur
     Pioche_carte(int niv);
-    ~Pioche_carte()	{delete[] cartes;}//edit
+    ~Pioche_carte() {delete[] cartes;}//edit
 
     //Getters
     size_t getNbCartes() const {return nb_cartes;}//edit
