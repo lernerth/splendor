@@ -32,8 +32,8 @@ public:
 
 private:
     int grille[3][4];
+    //Carte* grille[3][4];
     int noble[5];
-    
+    //Noble* grille[5] 
 };
-
 #endif // PLATEAU_H
