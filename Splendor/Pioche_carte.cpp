@@ -11,7 +11,7 @@ Pioche_carte::Pioche_carte(int niv) {
         break;
     }
     this->cartes=new Carte* [nb_cartes];
-    //remplir la pioche avec les cartes du jeu correspondant au niveau entré
+    //remplir la pioche avec les cartes du jeu (mélangées) correspondant au niveau entré
     //pb : comment garantir qu'il n'y ait qu'une instance de pioche par niveau ?
     //trois classes-singleton ?
     
