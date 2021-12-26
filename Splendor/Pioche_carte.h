@@ -13,15 +13,11 @@ public:
     Pioche_carte(int niv);
     ~Pioche_carte()	{delete[] cartes;}//edit
 
-    //Setters
-    void setNbCarte();
-
-    //récupérateurs
-    int getNbCarte()const {return nb;}//edit
+    //Getters
+    size_t getNbCartes() const {return nb_cartes;}//edit
     int getNiveau() const {return niveau;}//edit
 
     //méthodes
-    size_t getNbCartes() {return nb_cartes;}//edit
     bool estVide() const {return nb_cartes == 0;}//edit
     const Carte& piocher();//edit
 
