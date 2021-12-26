@@ -10,11 +10,10 @@
 class Pioche_carte {
 public:
     //constructeur-destructeur
-    Pioche_carte();
+    Pioche_carte(int niv);
     ~Pioche_carte()	{delete[] cartes;}//edit
 
     //Setters
-    void setNiveau(int niv);
     void setNbCarte();
 
     //récupérateurs
