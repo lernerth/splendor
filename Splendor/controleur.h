@@ -1,5 +1,6 @@
 #ifndef CONTROLEUR_H_INCLUDED
 #define CONTROLEUR_H_INCLUDED
+#include "Exception.h"
 
  class Controleur {
 	public:

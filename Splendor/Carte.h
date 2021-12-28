@@ -4,32 +4,32 @@
 #include <iostream>
 #include <string>
 #include <vector>
+#include <QMap>
+#include <QPixmap>
+#include "global.h"
+#include "Exception.h"
 
 using namespace std;
 
 class Carte {
 public:
     //constructeur
-    Carte();
-
     int getNiveau();
     int getPrestige();
-    int getRemise();
-    int getPrix(int index);
+    Couleur getRemise();
+    QMap<Couleur, int> getPrix();
     int getIdCarte();
+    QPixmap image;
 
-    void setNiveau(int niv);
-    void setPrestige(int prestige);
-    void setRemise(int index);
-    void setPrix (int tab_prix[5]);
-    void setIdCarte(int id_Carte);
 
 private:
+    friend class Pioche_carte;
     int id_Carte;
     int niveau;
     int prestige;
-    int remise[5]; //Bonus color
-    int prix[5];
+    Couleur remise; //Bonus color
+    QMap<Couleur, int> prix;
+    Carte(int id, int n, int p, Couleur r, QMap<Couleur, int> pr, QPixmap i) : id_Carte(id), niveau(n), prestige(p), remise(r), prix(pr), image(i) {};
 };
 
 #endif // CARTE_H

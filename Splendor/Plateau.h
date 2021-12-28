@@ -10,6 +10,7 @@
 #include <time.h>
 #include <stdlib.h>
 #include <Partie.h>
+#include "Exception.h"
 
 
 using namespace std;
