@@ -1,6 +1,6 @@
 #include "Plateau.h"
 
-
+//PASSER AUX POINTEURS
 Plateau::Plateau(){
     for (int i = 0; i < 5; i++){
         noble[i] = 0;
@@ -17,10 +17,12 @@ int Plateau::getNoble(int index_noble){
     return this->noble[index_noble];
 }
 
+//getCarte
 int Plateau::getIdCarteGrille(int niveau, int indice){
     return this->grille[niveau][indice];
 }
 
+//A supprimer
 void Plateau::setNoble(int *tab_noble) {
     srand(time(NULL));
     int nb_joueur = Partie::getNombreJoueur();
@@ -29,6 +31,7 @@ void Plateau::setNoble(int *tab_noble) {
     }
 }
 
+//A supprimer
 void Plateau::setGrille(int (*tab_grille)[4]){
     srand(time(NULL));
     for (int i = 0; i < 4; i++){
@@ -38,6 +41,7 @@ void Plateau::setGrille(int (*tab_grille)[4]){
     }
 }
 
+//A supprimer
 void Plateau::remplacerCarte(int niveau, int indice){
     grille[niveau][indice] = 0; // remplacer par l'id de la carte sur le dessus de la pioche du niveau correspondant
 }
