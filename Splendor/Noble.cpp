@@ -1,5 +1,8 @@
 #include "Noble.h"
 
+
+
+/*
 //constructeur
 Noble::Noble() {
     id_noble = 0;
@@ -50,3 +53,4 @@ void Noble::setPrix(int *tab_prix){
 void Noble::setPtPrestige(int point_prestige){
     this->point_prestige = point_prestige;
 }
+*/

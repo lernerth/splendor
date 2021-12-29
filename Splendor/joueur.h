@@ -6,35 +6,28 @@
 #include "Carte.h"
 #include "Noble.h"
 #include <vector>
+#include "Exception.h"
 
 class Joueur{
-public:
-    //constructeur
-    Joueur();
-
-    //getters
-    int totalPrestige();
-    int getJetons (int indice);
-    int getBonus (int indice);
-    int getReserve(int indice);
-
-    //setters
-    void setJetons (int add_jetons[6]);
-    void setBonus(int indice);
-    void setReserveCartes(int reserve_carte);
-    void setPrestige(int nb_points);
-    void removeReserve(int index);
-    void setId(int id);
+public: 
+    int getPrestige() {return this->prestige;}
+    const QString getNom() const {return this->nom;}
+    QMap<Couleur, int> getJetons() const {return this->jetons;}
+    QMap<Couleur, int> getBonus () const {return this->bonus;}
+    Carte** getCartesAchetees() const { return this->cartes_achetees; }
+    Carte** getCartesReservees() const { return this->cartes_reservees; }
+    Noble** getNobles() const { return this->noble; }
 
 private:
-    int id_joueur;
-    int cartes_reservees[3];
-    const Carte** cartes_achetees;
-    Noble* noble[5];
-    //ou const Noble** noble = nullptr;
-    int jetons [6];
+    //friend class Partie; //ou controlleur a def
+    const QString nom;
+    Carte** cartes_reservees = nullptr;
+    Carte** cartes_achetees = nullptr;
+    Noble** noble = nullptr;
+    QMap<Couleur, int> jetons;
     int prestige;
-    int bonus[5];
+    QMap<Couleur, int> bonus;
+    Joueur(QString n) : nom(n), prestige(0){}
 };
 
 #endif // JOUEUR_H_INCLUDED

@@ -4,6 +4,7 @@
 #include <iostream>
 #include <string>
 #include <vector>
+#include "Exception.h"
 
 using namespace std;
 class Partie {

@@ -3,6 +3,7 @@
 //CONSTRUCTEUR
 //Joueur():initialise les attributs de la classe à 0/nullptr
 
+/*
 Joueur::Joueur(){
 
     for (int i = 0; i <3; ++i){
@@ -94,3 +95,5 @@ void Joueur::removeReserve(int indice){
 void Joueur::setId(int id){
      id_joueur = id;
 }
+
+*/
