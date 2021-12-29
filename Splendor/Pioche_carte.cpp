@@ -6,10 +6,14 @@
 
 //constructeur
 Pioche_carte::Pioche_carte() {
-    toutes = new const Carte*[90];
-    lvl1 = new const Carte*[40];
-    lvl2 = new const Carte*[30];
-    lvl3 = new const Carte*[20];
+    nb_cartes = 90;
+    nb_carteslvl1 = 40;
+    nb_carteslvl2 = 30;
+    nb_carteslvl3 = 20;
+    toutes = new const Carte*[nb_cartes];
+    lvl1 = new const Carte*[nb_carteslvl1];
+    lvl2 = new const Carte*[nb_carteslvl2];
+    lvl3 = new const Carte*[nb_carteslvl3];
 
 
     //ouverture et lecture du fichier .json
@@ -81,12 +85,52 @@ Pioche_carte::Pioche_carte() {
 
 }
 
-const Carte& Pioche_carte::piocher() {//issu de set.cpp
-    if (this->nb_cartes == 0) throw SetException("Pioche vide");
-    size_t x = rand() % nb;
-    const Carte* c = this->cartes[x];
-    for (size_t i = x + 1; i < nb; i++) this->cartes[i - 1] = this->cartes[i];
-    nb--;
+size_t Pioche_carte::getNbCartes(int niveau) {
+    switch (niveau) {
+        case 1:
+            return nb_carteslvl1;
+            break;
+        case 2:
+            return nb_carteslvl2;
+            break;
+        case 3:
+            return nb_carteslvl3;
+            break;
+        default:
+            return nb_cartes;
+            break;
+    }
+}
+
+const Carte& Pioche_carte::piocher(int niveau) {
+    size_t x;
+    const Carte* c = nullptr;
+    switch (niveau) {
+        case 1:
+            if (this->nb_carteslvl1 == 0) throw Exception("Pioche vide");
+            x = rand() % nb_carteslvl1;
+            c = this->lvl1[x];
+            for (size_t i = x + 1; i < nb_carteslvl1; i++) this->lvl1[i - 1] = this->lvl1[i];
+            nb_carteslvl1--;
+            break;
+        case 2:
+            if (this->nb_carteslvl2 == 0) throw Exception("Pioche vide");
+            x = rand() % nb_carteslvl2;
+            c = this->lvl2[x];
+            for (size_t i = x + 1; i < nb_carteslvl2; i++) this->lvl2[i - 1] = this->lvl2[i];
+            nb_carteslvl2--;
+            break;
+        case 3:
+            if (this->nb_carteslvl3 == 0) throw Exception("Pioche vide");
+            x = rand() % nb_carteslvl3;
+            c = this->lvl3[x];
+            for (size_t i = x + 1; i < nb_carteslvl3; i++) this->lvl3[i - 1] = this->lvl3[i];
+            nb_carteslvl3--;
+            break;
+        default:
+            throw Exception("La pioche n'existe pas");
+            break;
+    }
     return *c;
     }
 
