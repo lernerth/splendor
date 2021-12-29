@@ -1,13 +1,16 @@
 #include "Partie.h"
 
-Partie::Partie(){
-    this->Nombre_Joueur = 0;
-}
 
-int Partie::getNombreJoueur(){
-    return this->Nombre_Joueur;
-}
+Partie::Partie(size_t n, QString j[3]){
+    Nbjoueur = n;
+    for (size_t i=1; i<=n; i++){
+        ListeJoueur[i] = new Joueur(j[i-1]);
+    }
+};
 
-void Partie::setNombreJoueur(int nb_joueur){
-    this->Nombre_Joueur = nb_joueur;
-}
+const Joueur& Partie::getJoueur(size_t numJ) {
+    const Joueur* j = nullptr;
+    if(numJ>Nbjoueur) throw Exception("Ce joueur n'existe pas");
+    j = this->ListeJoueur[numJ];
+    return *j;
+};

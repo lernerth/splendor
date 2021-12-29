@@ -5,7 +5,7 @@
  class Controleur {
 	public:
     //controleur-destructeur
-		Controleur(Pioche_carte c1, Pioche_carte c2, Pioche_carte c3, Nobles* n[10]): p1(c1),p2(c2),p3(c3),plateau(new Plateau){
+        Controleur(Pioche_carte c1, Pioche_carte c2, Pioche_carte c3, Nobles* n[10]): p1(c1),p2(c2),p3(c3),plateau(new Plateau){
         //initialisation de la pile de jetons
         for (int i = 0; i <5; ++i) {
         jetons[i]= 7;

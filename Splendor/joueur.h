@@ -10,16 +10,16 @@
 
 class Joueur{
 public: 
-    int getPrestige() {return this->prestige;}
-    const QString getNom() const {return this->nom;}
-    QMap<Couleur, int> getJetons() const {return this->jetons;}
-    QMap<Couleur, int> getBonus () const {return this->bonus;}
-    Carte** getCartesAchetees() const { return this->cartes_achetees; }
-    Carte** getCartesReservees() const { return this->cartes_reservees; }
-    Noble** getNobles() const { return this->noble; }
+    int getPrestige() {return prestige;}
+    const QString getNom() const {return nom;}
+    QMap<Couleur, int> getJetons() const {return jetons;}
+    QMap<Couleur, int> getBonus () const {return bonus;}
+    Carte** getCartesAchetees() const { return cartes_achetees; }
+    Carte** getCartesReservees() const { return cartes_reservees; }
+    Noble** getNobles() const { return noble; }
 
 private:
-    //friend class Partie; //ou controlleur a def
+    friend class Partie; //ou controlleur a def
     const QString nom;
     Carte** cartes_reservees = nullptr;
     Carte** cartes_achetees = nullptr;
