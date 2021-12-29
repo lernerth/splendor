@@ -1,46 +1,22 @@
 #include "Carte.h"
 
 int Carte::getNiveau(){
-    return this->niveau;
+    return niveau;
 }
 
 Couleur Carte::getRemise(){
-    return this->remise;
+    return remise;
 }
 
 int Carte::getPrestige(){
-    return this->prestige;
+    return prestige;
 }
 
 
 int Carte::getIdCarte(){
-    return this->id_Carte;
+    return id_Carte;
 }
 
 QMap<Couleur, int> Carte::getPrix(){
-    return this->prix;
+    return prix;
 }
-
-/*
-void Carte::setNiveau(int niv){
-    this->niveau = niv;
-}
-
-void Carte::setPrix(int *tab_prix){
-    for (int i = 0; i < 5; ++i){
-        prix[i]=tab_prix[i];
-    }
-}
-
-void Carte::setRemise(Couleur couleur){
-    this->remise = couleur;
-}
-
-void Carte::setPrestige(int prestige){
-    this->prestige = prestige;
-}
-
-void Carte::setIdCarte(int id_Carte){
-    this->id_Carte = id_Carte;
-}
-*/

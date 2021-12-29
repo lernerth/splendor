@@ -22,14 +22,6 @@ Pioche_Noble::Pioche_Noble(){
     QByteArray json_bytes = json_string.toLocal8Bit();
     auto json_doc = QJsonDocument::fromJson(json_bytes);
 
-    QMap<QString, Couleur> traduction_couleur = {
-        {"vert", Couleur::vert},
-        {"bleu", Couleur::bleu},
-        {"rouge", Couleur::rouge},
-        {"blanc", Couleur::blanc},
-        {"noir", Couleur::noir}
-    };
-
     for(int j=0; j < json_doc["nombre"].toInt(); j++){
         QJsonValue noble = json_doc["liste"][j];
         QMap<Couleur,int> requirements = {
@@ -45,8 +37,7 @@ Pioche_Noble::Pioche_Noble(){
         tous[j] = new Noble(
                     noble["pts"].toInt(),
                     requirements,
-                    sprite,
-                    PositionNoble::nonAffiche
+                    sprite
         );
     }
 

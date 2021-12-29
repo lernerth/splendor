@@ -81,3 +81,13 @@ Pioche_carte::Pioche_carte() {
 
 }
 
+const Carte& Pioche_carte::piocher() {//issu de set.cpp
+    if (this->nb_cartes == 0) throw SetException("Pioche vide");
+    size_t x = rand() % nb;
+    const Carte* c = this->cartes[x];
+    for (size_t i = x + 1; i < nb; i++) this->cartes[i - 1] = this->cartes[i];
+    nb--;
+    return *c;
+    }
+
+

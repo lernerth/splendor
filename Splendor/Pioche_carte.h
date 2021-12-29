@@ -10,6 +10,7 @@
 class Pioche_carte {
 public:
     int getNbCartes() const {return 90;}
+    const Carte& Pioche_carte::piocher() {};
     const Carte** getToutes() const { return toutes; };
     const Carte** getLvl1() const { return lvl1; };
     const Carte** getLvl2() const { return lvl2; };
