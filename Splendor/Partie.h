@@ -22,14 +22,14 @@ public:
     Partie(size_t n, QString j[3]);
     size_t getNbJoueurs() {return Nbjoueur;};
     const Joueur& getJoueur(size_t numJ);
-    void PiocherJetons();
-    Carte& AcheterCarte();
+    void PiocherJetons(Couleur c1, Couleur c2, Couleur c3);
+    Carte& AcheterCarte(Carte* carte);
     Carte& ReserverCarte();
 
 
 private:
     size_t Nbjoueur;
-    Joueur ListeJoueur;
+    Joueur* ListeJoueur[3];
 
 };
 
