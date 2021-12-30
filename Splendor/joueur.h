@@ -17,9 +17,18 @@ public:
     Carte** getCartesAchetees() const { return cartes_achetees; }
     Carte** getCartesReservees() const { return cartes_reservees; }
     Noble** getNobles() const { return noble; }
+    int getNbJetonsTot();
+
+    void ajouter_jeton(Couleur c) {jetons[c]++;}
+    void retirer_jeton(Couleur c) {jetons[c]--;}
+
+    void ajouter_carte_reserve(Carte* carte, Carte** cartes_reservees);
+    void retirer_carte_reserve(Carte* carte, Carte** cartes_reservees);
+    void acheter_carte(Carte* carte, Carte** cartes_achetees);
+    void recupérer_noble(Carte* carte, Noble** noble);
 
 private:
-    friend class Partie; //ou controlleur a def
+    friend class Partie; //ou controleur a def
     const QString nom;
     Carte** cartes_reservees = nullptr;
     Carte** cartes_achetees = nullptr;
