@@ -17,7 +17,7 @@ public:
     int getNiveau();
     int getPrestige();
     Couleur getRemise();
-    QMap<Couleur, int> getPrix();
+    int getPrix(Couleur c);
     int getIdCarte();
 
 private:

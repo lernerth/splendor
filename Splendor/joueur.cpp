@@ -1,12 +1,22 @@
 #include "joueur.h"
 
+int Joueur::getJetons(Couleur c) {
+    int nbJ = jetons[c];
+    return nbJ;
+}
+
+int Joueur::getBonus(Couleur couleur){
+    int nbBonus = bonus[couleur];
+    return nbBonus;
+}
+
 int Joueur::getNbJetonsTot(){
-    int t = jetons.value("blanc", 0)+jetons.value("bleu", 0)+jetons["noir"]+jetons["rouge"]+jetons["vert"]+jetons["jaune"];
+    int t = jetons[Couleur::blanc]+jetons[Couleur::bleu]+jetons[Couleur::jaune]+jetons[Couleur::noir]+jetons[Couleur::rouge]+jetons[Couleur::vert];
     return t;
 }
 
 //Ajoute la carte entrée dans la réserve s'il reste de la place.
-void Joueur::ajouter_carte_reserve(Carte* carte, Carte** cartes_reservees) {
+void Joueur::ajouter_carte_reserve(Carte* carte) {
     for(int i = 0; i <3 ; ++i) {
         if(cartes_reservees[i] == 0){
             cartes_reservees[i] = carte;
@@ -21,13 +31,13 @@ void Joueur::ajouter_carte_reserve(Carte* carte, Carte** cartes_reservees) {
 
 
 //Retire une carte de la reserve. ATTENTION : il faut l'acheter après
-void Joueur::retirer_carte_reserve(Carte* carte, Carte** cartes_reservees){
+void Joueur::retirer_carte_reserve(Carte* carte){
     //a faire
 }
 
 
 //Achète une carte
-void Joueur::acheter_carte(Carte* carte, Carte** cartes_achetees) {
+void Joueur::acheter_carte(Carte* carte) {
     int i = 0;
     while(cartes_achetees[i] != 0) {
         i++;
@@ -40,7 +50,7 @@ void Joueur::acheter_carte(Carte* carte, Carte** cartes_achetees) {
 
 
 //Donne un noble au joueur
-void Joueur::recupérer_noble(Carte* carte, Noble** noble) {
+void Joueur::recupérer_noble(Carte* carte) {
     int i = 0;
     while(noble[i] != 0) {
         i++;

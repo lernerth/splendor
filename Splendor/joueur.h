@@ -12,8 +12,8 @@ class Joueur{
 public: 
     int getPrestige() {return prestige;}
     const QString getNom() const {return nom;}
-    QMap<Couleur, int> getJetons() const {return jetons;}
-    QMap<Couleur, int> getBonus () const {return bonus;}
+    int getJetons(Couleur c);
+    int getBonus (Couleur couleur);
     Carte** getCartesAchetees() const { return cartes_achetees; }
     Carte** getCartesReservees() const { return cartes_reservees; }
     Noble** getNobles() const { return noble; }
@@ -22,10 +22,10 @@ public:
     void ajouter_jeton(Couleur c) {jetons[c]++;}
     void retirer_jeton(Couleur c) {jetons[c]--;}
 
-    void ajouter_carte_reserve(Carte* carte, Carte** cartes_reservees);
-    void retirer_carte_reserve(Carte* carte, Carte** cartes_reservees);
-    void acheter_carte(Carte* carte, Carte** cartes_achetees);
-    void recupérer_noble(Carte* carte, Noble** noble);
+    void ajouter_carte_reserve(Carte* carte);
+    void retirer_carte_reserve(Carte* carte);
+    void acheter_carte(Carte* carte);
+    void recupérer_noble(Carte* carte);
 
 private:
     friend class Partie; //ou controleur a def

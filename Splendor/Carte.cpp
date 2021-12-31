@@ -17,6 +17,7 @@ int Carte::getIdCarte(){
     return id_Carte;
 }
 
-QMap<Couleur, int> Carte::getPrix(){
-    return prix;
+int Carte::getPrix(Couleur c){
+    int p = prix[c];
+    return p;
 }

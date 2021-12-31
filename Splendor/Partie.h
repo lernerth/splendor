@@ -22,9 +22,9 @@ public:
     Partie(size_t n, QString j[3]);
     size_t getNbJoueurs() {return Nbjoueur;};
     const Joueur& getJoueur(size_t numJ);
-    void PiocherJetons(Couleur c1, Couleur c2, Couleur c3);
-    Carte& AcheterCarte(Carte* carte);
-    Carte& ReserverCarte();
+    void PiocherJetons(Couleur c1, Couleur c2, Couleur c3, Joueur* joueur, Controleur* controleur);
+    Carte& AcheterCarte(Carte* carte, Joueur* joueur, Controleur* controleur);
+    Carte& ReserverCarte(Carte* carte, Joueur* joueur, Controleur* controleur);
 
 
 private:

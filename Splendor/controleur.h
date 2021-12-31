@@ -43,9 +43,9 @@
 		Pioche_carte p1;
 		Pioche_carte p2;
 		Pioche_carte p3;
-        QMap<QString, int> pj;
+        QMap<Couleur, int> pj;
 		Plateau plateau;
-		Nobles* pn[10];
+        Noble* pn[10];
 	};
 
 #endif
