@@ -25,7 +25,13 @@ public:
     void PiocherJetons(Couleur c1, Couleur c2, Couleur c3, Joueur* joueur, Controleur* controleur);
     Carte& AcheterCarte(Carte* carte, Joueur* joueur, Controleur* controleur);
     Carte& ReserverCarte(Carte* carte, Joueur* joueur, Controleur* controleur);
-
+    void FinDePartie(); //argument à def
+    /*TO DO
+     * vérifie si un joueur est éligible à la visite d'un noble
+     * puis si un joueur à += de 15 de prestige
+     *  -> si oui dernier tour de jeu
+     *  -> si non la partie continue
+    */
 
 private:
     size_t Nbjoueur;
