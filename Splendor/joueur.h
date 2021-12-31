@@ -25,10 +25,10 @@ public:
     void ajouter_carte_reserve(Carte* carte);
     void retirer_carte_reserve(Carte* carte);
     void acheter_carte(Carte* carte);
-    void recupérer_noble(Carte* carte);
+    void recupérer_noble(Noble* noble);
 
 private:
-    friend class Partie; //ou controleur a def
+    friend class Partie;
     const QString nom;
     Carte** cartes_reservees = nullptr;
     Carte** cartes_achetees = nullptr;

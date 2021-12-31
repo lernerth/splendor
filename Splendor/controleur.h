@@ -32,7 +32,7 @@
     //remplacer une carte développement du tableau
     Carte& retirer_carte(Carte* carte);
     //retirer une carte noble
-    Noble& retirer_Noble(int pos);
+    Noble& retirer_Noble(Noble* noble);
     //retirer des jetons de la pioche centrale
     void retirer_Jetons(Couleur c);
     //rendre des jetons à la pioche centrale
