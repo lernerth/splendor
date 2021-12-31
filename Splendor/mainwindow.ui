@@ -86,7 +86,7 @@
      <string>Nombre de joueurs : </string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton">
+   <widget class="QPushButton" name="boutonLancer">
     <property name="geometry">
      <rect>
       <x>210</x>
@@ -112,7 +112,7 @@
     <property name="geometry">
      <rect>
       <x>70</x>
-      <y>330</y>
+      <y>320</y>
       <width>141</width>
       <height>41</height>
      </rect>
@@ -125,7 +125,7 @@
     <property name="geometry">
      <rect>
       <x>330</x>
-      <y>340</y>
+      <y>330</y>
       <width>99</width>
       <height>22</height>
      </rect>
@@ -138,7 +138,7 @@
     <property name="geometry">
      <rect>
       <x>400</x>
-      <y>340</y>
+      <y>330</y>
       <width>99</width>
       <height>22</height>
      </rect>
@@ -151,7 +151,7 @@
     <property name="geometry">
      <rect>
       <x>60</x>
-      <y>400</y>
+      <y>390</y>
       <width>171</width>
       <height>21</height>
      </rect>
@@ -212,36 +212,6 @@
      <string>Joueur 4</string>
     </property>
    </widget>
-   <widget class="QTextEdit" name="nomJoueur1">
-    <property name="geometry">
-     <rect>
-      <x>300</x>
-      <y>150</y>
-      <width>141</width>
-      <height>31</height>
-     </rect>
-    </property>
-   </widget>
-   <widget class="QTextEdit" name="nomJoueur3">
-    <property name="geometry">
-     <rect>
-      <x>300</x>
-      <y>230</y>
-      <width>141</width>
-      <height>31</height>
-     </rect>
-    </property>
-   </widget>
-   <widget class="QTextEdit" name="nomJoueur4">
-    <property name="geometry">
-     <rect>
-      <x>300</x>
-      <y>270</y>
-      <width>141</width>
-      <height>31</height>
-     </rect>
-    </property>
-   </widget>
    <widget class="QCheckBox" name="J2bot">
     <property name="geometry">
      <rect>
@@ -288,7 +258,7 @@
     <property name="geometry">
      <rect>
       <x>290</x>
-      <y>400</y>
+      <y>390</y>
       <width>191</width>
       <height>24</height>
      </rect>
@@ -314,7 +284,17 @@
      </property>
     </item>
    </widget>
-   <widget class="QTextEdit" name="nomJoueur2">
+   <widget class="QLineEdit" name="nomJoueur1">
+    <property name="geometry">
+     <rect>
+      <x>300</x>
+      <y>150</y>
+      <width>141</width>
+      <height>31</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="nomJoueur2">
     <property name="geometry">
      <rect>
       <x>300</x>
@@ -322,6 +302,39 @@
       <width>141</width>
       <height>31</height>
      </rect>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="nomJoueur3">
+    <property name="geometry">
+     <rect>
+      <x>300</x>
+      <y>230</y>
+      <width>141</width>
+      <height>31</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="nomJoueur4">
+    <property name="geometry">
+     <rect>
+      <x>300</x>
+      <y>270</y>
+      <width>141</width>
+      <height>31</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLabel" name="avertissement">
+    <property name="geometry">
+     <rect>
+      <x>150</x>
+      <y>450</y>
+      <width>261</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
     </property>
    </widget>
   </widget>

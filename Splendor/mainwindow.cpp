@@ -138,6 +138,7 @@ void MainWindow::autofillName4(){
 
 
 void MainWindow::checkName(){
+    ui->avertissement->text() = "</font color = 'red'> Tous les joueurs doivent avoir un nom !</font>";
     if (ui->nomJoueur1->text()  == "" && ui->nomJoueur1->isVisible() == true){
         ui->boutonLancer->setEnabled(false);
     }
