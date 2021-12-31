@@ -30,13 +30,14 @@ public:
 private:
     friend class Partie;
     const QString nom;
+    int id;
     Carte** cartes_reservees = nullptr;
     Carte** cartes_achetees = nullptr;
     Noble** noble = nullptr;
     QMap<Couleur, int> jetons;
     int prestige;
     QMap<Couleur, int> bonus;
-    Joueur(QString n) : nom(n), prestige(0){}
+    Joueur(int i, QString n) : id(i), nom(n), prestige(0){}
 };
 
 #endif // JOUEUR_H_INCLUDED

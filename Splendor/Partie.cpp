@@ -4,7 +4,7 @@
 Partie::Partie(size_t n, QString j[3]){
     Nbjoueur = n;
     for (size_t i=0; i<n; i++){
-        ListeJoueur[i] = new Joueur(j[i]);
+        ListeJoueur[i] = new Joueur(i, j[i]);
     }
 };
 
@@ -47,7 +47,7 @@ void Partie::PiocherJetons(Couleur c1, Couleur c2, Couleur c3, Joueur* joueur, C
         throw Exception ("Vous ne pouvez pas avoir plus de 10 jetons, merci de vous en débarasser");
         for(int i=joueur->getNbJetonsTot()-10 ; i > 0; i--){
             Couleur c;
-            //TO DO récupérer la couleur du jeton à defausser et la mettre dans la variable c
+            //TO DO récupérer la couleur du jeton à defausser et la mettre dans la variable c A VOIR EN FONCTION DE L'INTERFACE !!
             joueur->retirer_jeton(c);
             controleur->rendre_Jetons(c);
         }
@@ -101,10 +101,12 @@ Carte& Partie::AcheterCarte(Carte* carte, Joueur* joueur, Controleur* controleur
     else{
         throw Exception("Vous ne pouvez pas acheter cette carte...");
     }
+    return *carte;
 }
 
 
 Carte& ReserverCarte(Carte* carte, Joueur* joueur, Controleur* controleur){
      joueur->ajouter_carte_reserve(carte);//ajoute la carte dans la main du joueur, vérifie déjà s'il y en a 3 ou pas
      controleur->retirer_carte(carte);//enlève la carte ET la remplace
+     return *carte;
 }

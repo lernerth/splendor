@@ -8,21 +8,21 @@
  class Controleur {
 	public:
     //controleur-destructeur
-        Controleur(Pioche_carte c1, Pioche_carte c2, Pioche_carte c3, Nobles* n[10]): p1(c1),p2(c2),p3(c3),plateau(new Plateau){
+        Controleur(Carte** c1, Carte** c2, Carte** c3, Noble* n[10]): p1(c1),p2(c2),p3(c3), plateau(new Plateau) {
         //initialisation de la pile de jetons
-        int jetons[6];
-        for (int i = 0; i <5; ++i) {
-            jetons[i]= 7;
-        }
-        jetons[5]=5;
+            int jetons[6];
+            for (int i = 0; i <5; ++i) {
+                jetons[i]= 7;
+            }
+            jetons[5]=5;
 		}
 
-        ~Controleur() { delete pn; }
+        // ~Controleur() { delete pn; } Pourquoi delete que la pioche noble ??
     //getters
 		const Plateau& getPlateau() const { return plateau; }
-        const Pioche_jetons& getJetons() const { return pj; }
+       // const Pioche_jetons& getJetons() const { return pj; } //Pioche de jetons n'existe pas !
         const Pioche_carte& getPioche(int niveau) const;
-        const Nobles* getNobles() const {return pn}
+        const Noble* getNobles(int i) const {return pn[i];}
     //Singleton
 		Controleur(const Controleur& c) = delete;
 		Controleur& operator=(const Controleur& c) = delete;
@@ -40,12 +40,12 @@
 
 	private:
         friend class Partie;
-		Pioche_carte p1;
-		Pioche_carte p2;
-		Pioche_carte p3;
+        Carte** p1;
+        Carte** p2;
+        Carte** p3;
         QMap<Couleur, int> pj;
 		Plateau plateau;
-        Noble* pn[10];
+        const Noble* pn[10];
 	};
 
 #endif
