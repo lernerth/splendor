@@ -2,8 +2,12 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+<<<<<<< HEAD
 #include <QWindow>
 #include <QTextEdit>
+=======
+#include "Exception.h"
+>>>>>>> 2804a584d5030270d3d713b4a42df63781415eef
 
 QT_BEGIN_NAMESPACE
 namespace Ui {

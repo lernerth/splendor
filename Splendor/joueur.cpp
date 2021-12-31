@@ -1,73 +1,26 @@
 #include "joueur.h"
 
-//CONSTRUCTEUR
-//Joueur():initialise les attributs de la classe à 0/nullptr
-
-Joueur::Joueur(){
-
-    for (int i = 0; i <3; ++i){
-        cartes_reservees[i]=0;
-    }
-
-    cartes_achetees = nullptr;
-    prestige = 0;
-
-    for (int i = 0; i <6 ; ++i) {
-        jetons[i]= 0;
-    }
-
-    for (int i = 0; i <5 ; ++i) {
-        bonus[i]= 0;
-    }
-
-    for (int i = 0; i <5 ; ++i) {
-        noble[i] = nullptr;
-    }
-
-    id_joueur = 0;
+int Joueur::getJetons(Couleur c) {
+    int nbJ = jetons[c];
+    return nbJ;
 }
 
-//GETTERS
-//totalPrestige(): renvoie le prestige du joueur.
-int Joueur::totalPrestige() {
-    return prestige;
+
+int Joueur::getBonus(Couleur couleur){
+    int nbBonus = bonus[couleur];
+    return nbBonus;
 }
 
-//Getbonus(): renvoie le bonus pour une couleur donnée(représentée par un entier entre 1 et 5)
-int Joueur::getBonus(int indice) {
-    return bonus[indice];
+int Joueur::getNbJetonsTot(){
+    int t = jetons[Couleur::blanc]+jetons[Couleur::bleu]+jetons[Couleur::jaune]+jetons[Couleur::noir]+jetons[Couleur::rouge]+jetons[Couleur::vert];
+    return t;
 }
 
-//getnbJetons(int indice): renvoie le nombres de jetons d'une couleur donnée.
-int Joueur::getJetons(int indice){
-    return jetons[indice];
-}
-
-//getReserve(int indice): renvoie le pointeur vers la carte pour la position (indice) donnée.
-int Joueur::getReserve(int indice){
-    return cartes_reservees[indice];
-}
-
-//SETTERS
-
-//Set_Jetons(int add_jetons[6]) : additionne au tableau de jetons le tableau entré.
-void Joueur::setJetons (int add_jetons[6]){
-    for (int i = 0; i <6 ; ++i) {
-        jetons[i]= jetons[i]+ add_jetons[i];
-    }
-}
-
-//Set_bonus(int indice) : incrémente de 1 le nombre de bonus pour une couleur donnée.
-void Joueur::setBonus(int indice){
-    bonus[indice]++;
-}
-
-//Set_ReserveCartes
 //Ajoute la carte entrée dans la réserve s'il reste de la place.
-void Joueur::setReserveCartes(int reserve_carte) {
-    for (int i = 0; i <3 ; ++i) {
-        if(cartes_reservees[i] == 0){
-            cartes_reservees[i] = reserve_carte;
+void Joueur::ajouter_carte_reserve(Carte* carte) {
+    for(int i = 0; i <3 ; ++i) {
+        if(cartes_reservees[i] == nullptr){
+            cartes_reservees[i] = carte;
             break;
         }
         else if(i==2){
@@ -77,20 +30,44 @@ void Joueur::setReserveCartes(int reserve_carte) {
     }
 }
 
-//Set_prestige(int points_supp): ajoute un nombre de donné au prestige du joueur.
-void Joueur::setPrestige(int nb_points){
-    prestige+= nb_points;
+
+//Retire une carte de la reserve. ATTENTION : l'achat se fait automatiquement
+void Joueur::retirer_carte_reserve(Carte* carte){
+    for (int i = 0; i<3; i++){
+        if (carte->getIdCarte() == cartes_reservees[i]->getIdCarte()){
+            for (int j = i; j<3; j++){
+                cartes_reservees[j] = cartes_reservees[j+1];
+                cartes_reservees[j+1] = nullptr;
+            }
+        }
+    }
+    acheter_carte(carte); //achat automatique !
+}
+
+//Achète une carte
+void Joueur::acheter_carte(Carte* carte) {
+    int i = 0;
+    while(cartes_achetees[i] != nullptr) {
+        i++;
+        }
+    cartes_achetees[i] = carte;
+    prestige += carte->getPrestige();
+    bonus[carte->getRemise()] ++;
+
 }
 
 
-//remove_Reserve
-//acheter une carte de la réserve
-void Joueur::removeReserve(int indice){
-    cartes_reservees[indice] = 0;
+
+//Donne un noble au joueur
+void Joueur::recupérer_noble(Noble* n) {
+    int i = 0;
+    while(noble[i] != nullptr) {
+        i++;
+        }
+    noble[i] = n;
+    prestige += n->getPrestige();
 }
 
-//set_Id (string id)
-//définit l'identifiant du joueur.
-void Joueur::setId(int id){
-     id_joueur = id;
-}
+
+
+

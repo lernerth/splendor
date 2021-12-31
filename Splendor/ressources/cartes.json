@@ -2,7 +2,6 @@
   "nombre": 90,
   "niveaux": {
     "1": {
-      "id": 1,
       "nombre": 40,
       "sprites": {
         "noir": 1,
@@ -13,7 +12,7 @@
       },
       "liste": [
         {
-          "id": 2,
+          "id": 1,
           "couleur": "vert",
           "pts": 1,
           "demande": {
@@ -25,7 +24,7 @@
           }
         },
         {
-          "id": 3,
+          "id": 2,
           "couleur": "vert",
           "pts": 0,
           "demande": {
@@ -37,7 +36,7 @@
           }
         },
         {
-          "id": 4,
+          "id": 3,
           "couleur": "vert",
           "pts": 0,
           "demande": {
@@ -49,7 +48,7 @@
           }
         },
         {
-          "id": 5,
+          "id": 4,
           "couleur": "vert",
           "pts": 0,
           "demande": {
@@ -985,7 +984,7 @@
           }
         },
         {
-          "id": 80
+          "id": 80,
           "couleur": "vert",
           "pts": 4,
           "demande": {
