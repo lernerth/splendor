@@ -15,6 +15,7 @@ SOURCES += \
     Pioche_carte.cpp \
     Plateau.cpp \
     controleur.cpp \
+    gamewindow.cpp \
     joueur.cpp \
     main.cpp \
     mainwindow.cpp \
@@ -28,12 +29,14 @@ HEADERS += \
     Pioche_carte.h \
     Plateau.h \
     controleur.h \
+    gamewindow.h \
     global.h \
     joueur.h \
     mainwindow.h \
     pioche_noble.h
 
 FORMS += \
+    gamewindow.ui \
     mainwindow.ui
 
 # Default rules for deployment.
