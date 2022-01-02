@@ -17,6 +17,13 @@ public:
 
 private:
     Ui::GameWindow *ui;
+
+private slots :
+    void afficherJetons();
+    void afficherJetonsJoueurs();
+
+public slots:
+
 };
 
 #endif // GAMEWINDOW_H
