@@ -1,70 +1,74 @@
 #include "controleur.h"
 
-//controleur-destructeur
+/*
+Controleur::Controleur(){
+    Carte** p1 = nullptr;
+    Carte** p2 = nullptr;
+    Carte** p3 = nullptr;
+    //static QMap<Couleur, int> pj{{"blanc", 7}, {"bleu", 7}, {"noir", 7}, {"rouge", 7}, {"vert", 7}, {"jaune", 5},};
+    //Plateau& plateau = Plateau.Plateau();
+    const Noble* pn[10];
+    for(int i = 0; i <10; i++){
+        pn[i] = nullptr;
+    }
+}*/
 
-Controleur(Pioche_carte c1, Pioche_carte c2, Pioche_carte c3, Nobles* n[10]): p1(c1),p2(c2),p3(c3),plateau(new Plateau){
-    //initialisation de la pile de jetons
-        for (int i = 0; i <5; ++i) {
-        jetons[i]= 7;
-        }
-        jetons[5]=5;
-        }
-
-~Controleur() { delete pn; }
+//~Controleur() { delete pn; }
 
     //getters
         const Pioche_carte& Controleur::getPioche(int niveau) const {
             switch (niveau){
-                case 1 : return p1;
-                break;
-                case 2 : return p2;
-                break;
-                case 3 : return p3;
-                break;
+                case 1 :
+                    return p1;
+                    break;
+                case 2 :
+                    return p2;
+                    break;
+                case 3 :
+                    return p3;
+                    break;
                 }
         }
 
-    //Methodes
-        void Controleur::initialiser_Plateau(int nb_joueurs){
-
-        //initialisation de la grille avec cartes de d?veloppement
-            for (int j = 0; j < 4; j++){
-            plateau.getIdCarteGrille(1,j) = p1.piocher();
-          }
-
-            for (int j = 0; j < 4; j++){
-            plateau.getIdCarteGrille(2,j) = p2.piocher();
-          }
-
-            for (int j = 0; j < 4; j++){
-            plateau.getIdCarteGrille(3,j) = p3.piocher();
-          }
-
-          //initialisation de la grille avec cartes nobles
-          ?plateau.setNoble(pn); //plateau.h ? adapter
-     }
-          //remplacer une carte d?veloppement du tableau
-           Carte& Controleur::retirer_carte (int niveau, int indice){
-               Carte& c = *plateau.getIdCarteGrille(niveau,indice);//on r?cup?re une ref vers la carte ? retirer
-               switch (niveau){
-               case 1 : plateau.getIdCarteGrille(niveau,indice)=p1.piocher(); //on la remplace vers la carte de la pioche
-               case 2 : plateau.getIdCarteGrille(niveau, indice)= p2.piocher();//?a marche avec un get ?
-               case 3 : plateau.getIdCarteGrille(niveau, indice)= p3.piocher();
-               }
-               return c;//on r?cup?re la carte qu'on vient de retirer
+//Methodes
+void Controleur::initialiser_Plateau(int nb_joueurs){
+    Plateau plateau = Plateau();
+    //Carte à acheter
+    for (int j = 0; j < 4; j++){
+        for(int i = 1; i < 4; i++){
+            plateau.modifCarteGrille(i, j, p1.piocher(i));
         }
-          //retirer une carte noble
-          Noble& Controleur::retirer_Noble(int pos){
-              n=plateau.getNoble(pos);
-              plateau.getNoble(pos)=nullptr;
-              return n;
-          }
-          //retirer des jetons de la pioche centrale
-          void Controleur::retirer_Jetons(Couleur c){
-            pj[c]--;
-          }
+    }
+    //Cartes nobles
+    for(int i = 0; i < nb_joueurs+1 ; i++){
+        plateau.setNoble(pn);
+    }
+}
 
-          //rendre des jetons ? la pioche centrale
-          void Controleur::rendre_Jetons(Couleur c){
-            pj[c]++;
-          }
+//remplacer une carte
+void Controleur::retirer_carte (Carte* carte){
+    Carte& c = Plateau.getIdCarteGrille(niveau,indice);//on r?cup?re une ref vers la carte ? retirer
+    switch (niveau){
+        case 1 : Plateau.getIdCarteGrille(niveau,indice)=p1.piocher(); //on la remplace vers la carte de la pioche
+        case 2 : Plateau.getIdCarteGrille(niveau, indice)= p2.piocher();//?a marche avec un get ?
+        case 3 : Plateau.getIdCarteGrille(niveau, indice)= p3.piocher();
+    }
+}
+
+//retirer une carte noble
+void Controleur::retirer_Noble(Noble* noble){
+    int i = noble->getId;
+    Noble& n = plateau.getNoble(pos);
+
+    plateau.getNoble(pos) = nullptr;
+}
+
+//retirer des jetons de la pioche centrale
+void Controleur::retirer_Jetons(Couleur c){
+    pj[c]--;
+}
+
+//Remettre les jetons dans la pioche centrale
+void Controleur::rendre_Jetons(Couleur c){
+    pj[c]++;
+}
