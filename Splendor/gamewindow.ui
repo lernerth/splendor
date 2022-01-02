@@ -469,7 +469,7 @@
      <string/>
     </property>
     <property name="pixmap">
-     <pixmap resource="../../build-lo21test-Qt_6_2_1_for_macOS-Debug/qmake_qmake_immediate.qrc">:/ressources/deck/2.png</pixmap>
+     <pixmap>ressources/deck/2.png</pixmap>
     </property>
     <property name="scaledContents">
      <bool>true</bool>
@@ -494,7 +494,7 @@
      <string/>
     </property>
     <property name="pixmap">
-     <pixmap resource="../../build-lo21test-Qt_6_2_1_for_macOS-Debug/qmake_qmake_immediate.qrc">:/ressources/jetons/or.png</pixmap>
+     <pixmap>ressources/jetons/or.png</pixmap>
     </property>
     <property name="scaledContents">
      <bool>true</bool>
@@ -543,7 +543,7 @@
      <string/>
     </property>
     <property name="pixmap">
-     <pixmap resource="../../build-lo21test-Qt_6_2_1_for_macOS-Debug/qmake_qmake_immediate.qrc">:/ressources/jetons/bleu.png</pixmap>
+     <pixmap>ressources/jetons/bleu.png</pixmap>
     </property>
     <property name="scaledContents">
      <bool>true</bool>
@@ -565,7 +565,7 @@
      <string/>
     </property>
     <property name="pixmap">
-     <pixmap resource="../../build-lo21test-Qt_6_2_1_for_macOS-Debug/qmake_qmake_immediate.qrc">:/ressources/deck/3.png</pixmap>
+     <pixmap>ressources/deck/3.png</pixmap>
     </property>
     <property name="scaledContents">
      <bool>true</bool>
@@ -600,7 +600,7 @@
      <string/>
     </property>
     <property name="pixmap">
-     <pixmap resource="../../build-lo21test-Qt_6_2_1_for_macOS-Debug/qmake_qmake_immediate.qrc">:/ressources/jetons/noir.png</pixmap>
+     <pixmap>ressources/jetons/noir.png</pixmap>
     </property>
     <property name="scaledContents">
      <bool>true</bool>
@@ -622,7 +622,7 @@
      <string/>
     </property>
     <property name="pixmap">
-     <pixmap resource="../../build-lo21test-Qt_6_2_1_for_macOS-Debug/qmake_qmake_immediate.qrc">:/ressources/deck/1.png</pixmap>
+     <pixmap>ressources/deck/1.png</pixmap>
     </property>
     <property name="scaledContents">
      <bool>true</bool>
@@ -647,7 +647,7 @@
      <string/>
     </property>
     <property name="pixmap">
-     <pixmap resource="../../build-lo21test-Qt_6_2_1_for_macOS-Debug/qmake_qmake_immediate.qrc">:/ressources/jetons/rouge.png</pixmap>
+     <pixmap>ressources/jetons/rouge.png</pixmap>
     </property>
     <property name="scaledContents">
      <bool>true</bool>
@@ -695,7 +695,7 @@
      <string/>
     </property>
     <property name="pixmap">
-     <pixmap resource="../../build-lo21test-Qt_6_2_1_for_macOS-Debug/qmake_qmake_immediate.qrc">:/ressources/jetons/blanc.png</pixmap>
+     <pixmap>ressources/jetons/blanc.png</pixmap>
     </property>
     <property name="scaledContents">
      <bool>true</bool>
@@ -723,7 +723,7 @@
      <string/>
     </property>
     <property name="pixmap">
-     <pixmap resource="../../build-lo21test-Qt_6_2_1_for_macOS-Debug/qmake_qmake_immediate.qrc">:/ressources/jetons/vert.png</pixmap>
+     <pixmap>ressources/jetons/vert.png</pixmap>
     </property>
     <property name="scaledContents">
      <bool>true</bool>
@@ -867,7 +867,7 @@
      <string/>
     </property>
     <property name="pixmap">
-     <pixmap resource="../../build-lo21test-Qt_6_2_1_for_macOS-Debug/qmake_qmake_immediate.qrc">:/ressources/jetons/bleu.png</pixmap>
+     <pixmap>ressources/jetons/bleu.png</pixmap>
     </property>
     <property name="scaledContents">
      <bool>true</bool>
@@ -927,7 +927,7 @@
      <string/>
     </property>
     <property name="pixmap">
-     <pixmap resource="../../build-lo21test-Qt_6_2_1_for_macOS-Debug/qmake_qmake_immediate.qrc">:/ressources/jetons/bleu.png</pixmap>
+     <pixmap>ressources/jetons/bleu.png</pixmap>
     </property>
     <property name="scaledContents">
      <bool>true</bool>
@@ -984,7 +984,7 @@
      <string/>
     </property>
     <property name="pixmap">
-     <pixmap resource="../../build-lo21test-Qt_6_2_1_for_macOS-Debug/qmake_qmake_immediate.qrc">:/ressources/jetons/vert.png</pixmap>
+     <pixmap>ressources/jetons/vert.png</pixmap>
     </property>
     <property name="scaledContents">
      <bool>true</bool>
@@ -1076,7 +1076,7 @@
      <string/>
     </property>
     <property name="pixmap">
-     <pixmap resource="../../build-lo21test-Qt_6_2_1_for_macOS-Debug/qmake_qmake_immediate.qrc">:/ressources/jetons/rouge.png</pixmap>
+     <pixmap>ressources/jetons/rouge.png</pixmap>
     </property>
     <property name="scaledContents">
      <bool>true</bool>
@@ -1136,7 +1136,7 @@
      <string/>
     </property>
     <property name="pixmap">
-     <pixmap resource="../../build-lo21test-Qt_6_2_1_for_macOS-Debug/qmake_qmake_immediate.qrc">:/ressources/jetons/noir.png</pixmap>
+     <pixmap>ressources/jetons/noir.png</pixmap>
     </property>
     <property name="scaledContents">
      <bool>true</bool>
@@ -1164,7 +1164,7 @@
      <string/>
     </property>
     <property name="pixmap">
-     <pixmap resource="../../build-lo21test-Qt_6_2_1_for_macOS-Debug/qmake_qmake_immediate.qrc">:/ressources/jetons/or.png</pixmap>
+     <pixmap>ressources/jetons/or.png</pixmap>
     </property>
     <property name="scaledContents">
      <bool>true</bool>
@@ -1192,7 +1192,7 @@
      <string/>
     </property>
     <property name="pixmap">
-     <pixmap resource="../../build-lo21test-Qt_6_2_1_for_macOS-Debug/qmake_qmake_immediate.qrc">:/ressources/jetons/or.png</pixmap>
+     <pixmap>ressources/jetons/or.png</pixmap>
     </property>
     <property name="scaledContents">
      <bool>true</bool>
@@ -1220,7 +1220,7 @@
      <string/>
     </property>
     <property name="pixmap">
-     <pixmap resource="../../build-lo21test-Qt_6_2_1_for_macOS-Debug/qmake_qmake_immediate.qrc">:/ressources/jetons/blanc.png</pixmap>
+     <pixmap>ressources/jetons/blanc.png</pixmap>
     </property>
     <property name="scaledContents">
      <bool>true</bool>
@@ -1248,7 +1248,7 @@
      <string/>
     </property>
     <property name="pixmap">
-     <pixmap resource="../../build-lo21test-Qt_6_2_1_for_macOS-Debug/qmake_qmake_immediate.qrc">:/ressources/jetons/vert.png</pixmap>
+     <pixmap>ressources/jetons/vert.png</pixmap>
     </property>
     <property name="scaledContents">
      <bool>true</bool>
@@ -1340,7 +1340,7 @@
      <string/>
     </property>
     <property name="pixmap">
-     <pixmap resource="../../build-lo21test-Qt_6_2_1_for_macOS-Debug/qmake_qmake_immediate.qrc">:/ressources/jetons/bleu.png</pixmap>
+     <pixmap>ressources/jetons/bleu.png</pixmap>
     </property>
     <property name="scaledContents">
      <bool>true</bool>
@@ -1448,7 +1448,7 @@
      <string/>
     </property>
     <property name="pixmap">
-     <pixmap resource="../../build-lo21test-Qt_6_2_1_for_macOS-Debug/qmake_qmake_immediate.qrc">:/ressources/jetons/rouge.png</pixmap>
+     <pixmap>ressources/jetons/rouge.png</pixmap>
     </property>
     <property name="scaledContents">
      <bool>true</bool>
@@ -1492,7 +1492,7 @@
      <string/>
     </property>
     <property name="pixmap">
-     <pixmap resource="../../build-lo21test-Qt_6_2_1_for_macOS-Debug/qmake_qmake_immediate.qrc">:/ressources/jetons/or.png</pixmap>
+     <pixmap>ressources/jetons/or.png</pixmap>
     </property>
     <property name="scaledContents">
      <bool>true</bool>
@@ -1520,7 +1520,7 @@
      <string/>
     </property>
     <property name="pixmap">
-     <pixmap resource="../../build-lo21test-Qt_6_2_1_for_macOS-Debug/qmake_qmake_immediate.qrc">:/ressources/jetons/vert.png</pixmap>
+     <pixmap>ressources/jetons/vert.png</pixmap>
     </property>
     <property name="scaledContents">
      <bool>true</bool>
@@ -1548,7 +1548,7 @@
      <string/>
     </property>
     <property name="pixmap">
-     <pixmap resource="../../build-lo21test-Qt_6_2_1_for_macOS-Debug/qmake_qmake_immediate.qrc">:/ressources/jetons/rouge.png</pixmap>
+     <pixmap>ressources/jetons/rouge.png</pixmap>
     </property>
     <property name="scaledContents">
      <bool>true</bool>
@@ -1589,7 +1589,7 @@
      <string/>
     </property>
     <property name="pixmap">
-     <pixmap resource="../../build-lo21test-Qt_6_2_1_for_macOS-Debug/qmake_qmake_immediate.qrc">:/ressources/jetons/blanc.png</pixmap>
+     <pixmap>ressources/jetons/blanc.png</pixmap>
     </property>
     <property name="scaledContents">
      <bool>true</bool>
@@ -1617,7 +1617,7 @@
      <string/>
     </property>
     <property name="pixmap">
-     <pixmap resource="../../build-lo21test-Qt_6_2_1_for_macOS-Debug/qmake_qmake_immediate.qrc">:/ressources/jetons/bleu.png</pixmap>
+     <pixmap>ressources/jetons/bleu.png</pixmap>
     </property>
     <property name="scaledContents">
      <bool>true</bool>
@@ -1645,7 +1645,7 @@
      <string/>
     </property>
     <property name="pixmap">
-     <pixmap resource="../../build-lo21test-Qt_6_2_1_for_macOS-Debug/qmake_qmake_immediate.qrc">:/ressources/jetons/rouge.png</pixmap>
+     <pixmap>ressources/jetons/rouge.png</pixmap>
     </property>
     <property name="scaledContents">
      <bool>true</bool>
@@ -1673,7 +1673,7 @@
      <string/>
     </property>
     <property name="pixmap">
-     <pixmap resource="../../build-lo21test-Qt_6_2_1_for_macOS-Debug/qmake_qmake_immediate.qrc">:/ressources/jetons/noir.png</pixmap>
+     <pixmap>ressources/jetons/noir.png</pixmap>
     </property>
     <property name="scaledContents">
      <bool>true</bool>
@@ -1701,7 +1701,7 @@
      <string/>
     </property>
     <property name="pixmap">
-     <pixmap resource="../../build-lo21test-Qt_6_2_1_for_macOS-Debug/qmake_qmake_immediate.qrc">:/ressources/jetons/blanc.png</pixmap>
+     <pixmap>ressources/jetons/blanc.png</pixmap>
     </property>
     <property name="scaledContents">
      <bool>true</bool>
@@ -1729,7 +1729,7 @@
      <string/>
     </property>
     <property name="pixmap">
-     <pixmap resource="../../build-lo21test-Qt_6_2_1_for_macOS-Debug/qmake_qmake_immediate.qrc">:/ressources/jetons/noir.png</pixmap>
+     <pixmap>ressources/jetons/noir.png</pixmap>
     </property>
     <property name="scaledContents">
      <bool>true</bool>
@@ -1786,7 +1786,7 @@
      <string/>
     </property>
     <property name="pixmap">
-     <pixmap resource="../../build-lo21test-Qt_6_2_1_for_macOS-Debug/qmake_qmake_immediate.qrc">:/ressources/jetons/noir.png</pixmap>
+     <pixmap>ressources/jetons/noir.png</pixmap>
     </property>
     <property name="scaledContents">
      <bool>true</bool>
@@ -1843,7 +1843,7 @@
      <string/>
     </property>
     <property name="pixmap">
-     <pixmap resource="../../build-lo21test-Qt_6_2_1_for_macOS-Debug/qmake_qmake_immediate.qrc">:/ressources/jetons/vert.png</pixmap>
+     <pixmap>ressources/jetons/vert.png</pixmap>
     </property>
     <property name="scaledContents">
      <bool>true</bool>
@@ -1871,7 +1871,7 @@
      <string/>
     </property>
     <property name="pixmap">
-     <pixmap resource="../../build-lo21test-Qt_6_2_1_for_macOS-Debug/qmake_qmake_immediate.qrc">:/ressources/jetons/blanc.png</pixmap>
+     <pixmap>ressources/jetons/blanc.png</pixmap>
     </property>
     <property name="scaledContents">
      <bool>true</bool>
@@ -1899,7 +1899,7 @@
      <string/>
     </property>
     <property name="pixmap">
-     <pixmap resource="../../build-lo21test-Qt_6_2_1_for_macOS-Debug/qmake_qmake_immediate.qrc">:/ressources/jetons/or.png</pixmap>
+     <pixmap>ressources/jetons/or.png</pixmap>
     </property>
     <property name="scaledContents">
      <bool>true</bool>
@@ -1937,8 +1937,6 @@
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
  </widget>
- <resources>
-  <include location="../../build-lo21test-Qt_6_2_1_for_macOS-Debug/qmake_qmake_immediate.qrc"/>
- </resources>
+ <resources/>
  <connections/>
 </ui>
