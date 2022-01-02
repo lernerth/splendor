@@ -4,7 +4,6 @@
 #include <QMainWindow>
 #include <QWindow>
 #include <QTextEdit>
-#include "Exception.h"
 
 
 QT_BEGIN_NAMESPACE
@@ -20,6 +19,7 @@ class MainWindow : public QMainWindow
 public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
+    int getNbJoueurs() const ;
 
 private slots :
 
@@ -32,9 +32,13 @@ private slots :
     void fermer();
     void checkName();
 
+
 private:
 
     Ui::MainWindow *ui;
+
+signals:
+
 };
 
 

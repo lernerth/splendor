@@ -1,7 +1,6 @@
 #include "gamewindow.h"
 #include "ui_gamewindow.h"
 #include "mainwindow.h"
-#include <QPalette>
 #include <string>
 #include <QString>
 
@@ -14,7 +13,16 @@ GameWindow::GameWindow(QWidget *parent) :
     //Affichage des jetons du plateau
     afficherJetons();
 
-    //Affichage du nom des joueurs
+    //Affichage à l'initialisation de la fenêtre
+    ui->cadreCartes->setVisible(false);
+    ui->cadreCartes2->setVisible(false);
+    ui->cadreCartes3->setVisible(false);
+    ui->cadreCartes4->setVisible(false);
+
+    //Affichage du cadre de focus lors de l'achat ou la reservation de cartes
+    connect(ui->acheter, SIGNAL(pressed()), this, SLOT(highlight()));
+    connect(ui->reserver, SIGNAL(pressed()), this, SLOT(highlight()));
+    connect(ui->prendreJetons, SIGNAL(pressed()), this, SLOT(highlight()));
 }
 
 GameWindow::~GameWindow()
@@ -33,4 +41,93 @@ void GameWindow::afficherJetons(){
 
 void GameWindow::afficherJetonsJoueurs(){
 
+}
+
+void GameWindow::highlight(){
+    if (ui->acheter->isChecked()==true){
+        ui->cadreCartes->setVisible(true);
+        ui->cadreCartes2->setVisible(true);
+        ui->cadreCartes3->setVisible(true);
+        ui->cadreCartes4->setVisible(true);
+    }
+    if (ui->reserver->isChecked()==false){
+        ui->cadreCartes->setVisible(true);
+        ui->cadreCartes2->setVisible(true);
+        ui->cadreCartes3->setVisible(true);
+        ui->cadreCartes4->setVisible(true);
+    }
+    else {
+        ui->cadreCartes->setVisible(false);
+        ui->cadreCartes2->setVisible(false);
+        ui->cadreCartes3->setVisible(false);
+        ui->cadreCartes4->setVisible(false);
+    }
+}
+
+void GameWindow::setNom1(QString nom1){
+    ui->NomJoueur1->setText(nom1);
+}
+
+void GameWindow::setNom2(QString nom1){
+    ui->NomJoueur2->setText(nom1);
+}
+
+void GameWindow::setNom3(QString nom1){
+    ui->NomJoueur3->setText(nom1);
+}
+
+void GameWindow::setNom4(QString nom1){
+    ui->NomJoueur4->setText(nom1);
+}
+
+void GameWindow::setNbJoueurs(int nb){
+    if (nb < 3){
+        //Noms
+        ui->NomJoueur3->setVisible(false);
+        ui->NomJoueur4->setVisible(false);
+        //Nombre de jetons
+        ui->jetonsBlancJ3->setVisible(false);
+        ui->jetonsNoirJ3->setVisible(false);
+        ui->jetonsBleuJ3->setVisible(false);
+        ui->jetonsRougeJ3->setVisible(false);
+        ui->jetonsVertJ3->setVisible(false);
+        ui->jetonsOrJ3->setVisible(false);
+        ui->jetonsBlancJ4->setVisible(false);
+        ui->jetonsNoirJ4->setVisible(false);
+        ui->jetonsBleuJ4->setVisible(false);
+        ui->jetonsRougeJ4->setVisible(false);
+        ui->jetonsVertJ4->setVisible(false);
+        ui->jetonsOrJ4->setVisible(false);
+        //Jetons
+        ui->line_4->setVisible(false);
+        ui->Blanc3->setVisible(false);
+        ui->Noir3->setVisible(false);
+        ui->Bleu3->setVisible(false);
+        ui->Rouge3->setVisible(false);
+        ui->Vert3->setVisible(false);
+        ui->Or3->setVisible(false);
+        ui->Blanc4->setVisible(false);
+        ui->Noir4->setVisible(false);
+        ui->Bleu4->setVisible(false);
+        ui->Rouge4->setVisible(false);
+        ui->Vert4->setVisible(false);
+        ui->Or4->setVisible(false);
+    }
+    if (nb < 4){
+        //Nombre de jetons
+        ui->NomJoueur4->setVisible(false);
+        ui->jetonsBlancJ4->setVisible(false);
+        ui->jetonsNoirJ4->setVisible(false);
+        ui->jetonsBleuJ4->setVisible(false);
+        ui->jetonsRougeJ4->setVisible(false);
+        ui->jetonsVertJ4->setVisible(false);
+        ui->jetonsOrJ4->setVisible(false);
+        //Jetons
+        ui->Blanc4->setVisible(false);
+        ui->Noir4->setVisible(false);
+        ui->Bleu4->setVisible(false);
+        ui->Rouge4->setVisible(false);
+        ui->Vert4->setVisible(false);
+        ui->Or4->setVisible(false);
+    }
 }

@@ -1,6 +1,7 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 #include "gamewindow.h"
+#include <QString>
 #include <string>
 
 MainWindow::MainWindow(QWidget *parent)
@@ -160,7 +161,12 @@ void MainWindow::checkName(){
 void MainWindow::fermer()
 {
    MainWindow::close();
-   GameWindow* GameWindow = new class GameWindow();
+   GameWindow* GameWindow = new class GameWindow(nullptr);
+   GameWindow->setNom1(ui->nomJoueur1->text());
+   GameWindow->setNom2(ui->nomJoueur2->text());
+   GameWindow->setNom3(ui->nomJoueur3->text());
+   GameWindow->setNom4(ui->nomJoueur4->text());
+   GameWindow->setNbJoueurs(ui->nbJoueurs->value());
    GameWindow->show();
 }
 
@@ -169,4 +175,11 @@ MainWindow::~MainWindow()
 {
     delete ui;
 }
+
+int MainWindow::getNbJoueurs() const {
+    int nbJoueurs = ui->nbJoueurs->value();
+    return nbJoueurs;
+}
+
+
 
