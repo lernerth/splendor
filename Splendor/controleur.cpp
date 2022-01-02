@@ -1,10 +1,6 @@
 #include "controleur.h"
 
 
-
-
-//~Controleur() { delete pn; }
-
 //getters
 Carte** Controleur::getPioche(int niveau) {
     switch (niveau){
@@ -24,35 +20,29 @@ Carte** Controleur::getPioche(int niveau) {
 
 //Methodes
 void Controleur::initialiser_Plateau(int nb_joueurs){
-    Plateau plateau = Plateau();
+    Plateau p = *plateau;
     //Carte à acheter
     for (int j = 0; j < 4; j++){
         for(int i = 1; i < 4; i++){
-            plateau.modifCarteGrille(i, j, pioches->piocher(i));
+            p.modifCarteGrille(i, j, pioches->piocher(i+1));
         }
     }
     //Cartes nobles
     for(int i = 0; i < nb_joueurs+1 ; i++){
-        plateau.modifierNoble(i, noble->piocherNoble());
+        p.modifierNoble(i, noble->piocherNoble());
     }
 }
 
 //remplacer une carte
-void Controleur::retirer_carte (Carte* carte){
-    Carte& c = plateau.getIdCarteGrille(niveau,indice);//on r?cup?re une ref vers la carte ? retirer
-    switch (niveau){
-        case 1 : plateau.getIdCarteGrille(niveau,indice)=p1.piocher(); //on la remplace vers la carte de la pioche
-        case 2 : plateau.getIdCarteGrille(niveau, indice)= p2.piocher();//?a marche avec un get ?
-        case 3 : plateau.getIdCarteGrille(niveau, indice)= p3.piocher();
-    }
+void Controleur::remplacer_carte (int niveau, int indice){
+    Plateau p = *plateau;
+    p.modifCarteGrille(niveau-1, indice, pioches->piocher(niveau));
 }
 
 //retirer une carte noble
-void Controleur::retirer_Noble(Noble* noble){
-    int i = noble->getId;
-    Noble& n = plateau.getNoble(pos);
-
-    plateau.getNoble(pos) = nullptr;
+void Controleur::retirer_Noble(int indice){
+    Plateau p = *plateau;
+    p.modifierNoble(indice, nullptr);
 }
 
 //retirer des jetons de la pioche centrale

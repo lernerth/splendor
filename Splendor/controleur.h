@@ -21,9 +21,7 @@
         ~Controleur(); //Pourquoi delete que la pioche noble ??
 
         //getters
-        //Plateau& getPlateau()  { return plateau; }
         Carte** getPioche(int niveau) ;
-        //Noble* getNobles(int i) {return pn[i];}
 
         //Singleton
         Controleur(const Controleur& c) = delete;
@@ -31,8 +29,8 @@
 
         //Methodes
         void initialiser_Plateau(int nb_joueurs);//initialiser la grille et la rangée
-        void retirer_carte(Carte* carte);     //remplacer une carte développement du tableau
-        void retirer_Noble(Noble* noble);     //retirer une carte noble
+        void remplacer_carte(int niveau, int indice);     //remplacer une carte développement du tableau
+        void retirer_Noble(int indice);     //retirer une carte noble
         void retirer_Jetons(Couleur c);         //retirer des jetons de la pioche centrale
         void rendre_Jetons(Couleur c);          //rendre des jetons à la pioche centrale
 
