@@ -5,6 +5,8 @@
 #include <QWindow>
 #include <QTextEdit>
 
+#include "Partie.h"
+
 
 QT_BEGIN_NAMESPACE
 namespace Ui {
@@ -19,7 +21,7 @@ class MainWindow : public QMainWindow
 public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
-    int getNbJoueurs() const ;
+    size_t getNbJoueurs() const ;
 
 private slots :
 

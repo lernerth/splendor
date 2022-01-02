@@ -10,6 +10,7 @@
 
 class Joueur{
 public: 
+    Joueur(int i, QString n);
     int getPrestige() {return prestige;}
     const QString getNom() const {return nom;}
     int getJetons(Couleur c);
@@ -37,7 +38,7 @@ private:
     QMap<Couleur, int> jetons;
     int prestige;
     QMap<Couleur, int> bonus;
-    Joueur(int i, QString n);
+
 };
 
 #endif // JOUEUR_H_INCLUDED

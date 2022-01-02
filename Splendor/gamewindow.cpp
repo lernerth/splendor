@@ -23,6 +23,9 @@ GameWindow::GameWindow(QWidget *parent) :
     connect(ui->acheter, SIGNAL(pressed()), this, SLOT(highlight()));
     connect(ui->reserver, SIGNAL(pressed()), this, SLOT(highlight()));
     connect(ui->prendreJetons, SIGNAL(pressed()), this, SLOT(highlight()));
+    connect(ui->prendreJetons, SIGNAL(pressed()), this, SLOT(numChoix()));
+    connect(ui->reserver, SIGNAL(pressed()), this, SLOT(numChoix()));
+    connect(ui->acheter, SIGNAL(pressed()), this, SLOT(numChoix()));
 }
 
 GameWindow::~GameWindow()
@@ -80,7 +83,7 @@ void GameWindow::setNom4(QString nom1){
     ui->NomJoueur4->setText(nom1);
 }
 
-void GameWindow::setNbJoueurs(int nb){
+void GameWindow::setNbJoueurs(size_t nb){
     if (nb < 3){
         //Noms
         ui->NomJoueur3->setVisible(false);
@@ -130,4 +133,12 @@ void GameWindow::setNbJoueurs(int nb){
         ui->Vert4->setVisible(false);
         ui->Or4->setVisible(false);
     }
+}
+
+int GameWindow::numChoix(){
+    if (ui->prendreJetons->isChecked() == true) this->choix = 1;
+    else if (ui->acheter->isChecked() == true) this->choix = 2;
+    else if(ui->reserver->isChecked() == true) this->choix = 3;
+    //Partie::setChoix(choix);
+    return this->choix;
 }

@@ -2,6 +2,7 @@
 #define GAMEWINDOW_H
 
 #include <QMainWindow>
+#include "global.h"
 
 namespace Ui {
 class GameWindow;
@@ -19,7 +20,9 @@ public:
     void setNom2(QString nom2);
     void setNom3(QString nom3);
     void setNom4(QString nom4);
-    void setNbJoueurs(int nb);
+    void setNbJoueurs(size_t nb);
+    int numChoix();
+    static int choix;
 
 private:
     Ui::GameWindow *ui;

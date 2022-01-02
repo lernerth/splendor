@@ -161,6 +161,32 @@ void MainWindow::checkName(){
 void MainWindow::fermer()
 {
    MainWindow::close();
+
+   if (ui->nbJoueurs->value()==2){
+       QString joueur[ui->nbJoueurs->value()];
+       joueur[0] = ui->nomJoueur1->text();
+       joueur[1] = ui->nomJoueur2->text();
+       Partie(ui->nbJoueurs->value(), joueur);
+
+   }
+   if (ui->nbJoueurs->value()==3){
+       QString joueur[ui->nbJoueurs->value()];
+       joueur[0] = ui->nomJoueur1->text();
+       joueur[1] = ui->nomJoueur2->text();
+       joueur[2] = ui->nomJoueur3->text();
+       Partie(ui->nbJoueurs->value(), joueur);
+
+   }
+   if (ui->nbJoueurs->value()==3){
+       QString joueur[ui->nbJoueurs->value()];
+       joueur[0] = ui->nomJoueur1->text();
+       joueur[1] = ui->nomJoueur2->text();
+       joueur[2] = ui->nomJoueur3->text();
+       joueur[3] = ui->nomJoueur4->text();
+       Partie(ui->nbJoueurs->value(), joueur);
+
+   }
+
    GameWindow* GameWindow = new class GameWindow(nullptr);
    GameWindow->setNom1(ui->nomJoueur1->text());
    GameWindow->setNom2(ui->nomJoueur2->text());
@@ -176,10 +202,11 @@ MainWindow::~MainWindow()
     delete ui;
 }
 
-int MainWindow::getNbJoueurs() const {
-    int nbJoueurs = ui->nbJoueurs->value();
+size_t MainWindow::getNbJoueurs() const {
+    size_t nbJoueurs = ui->nbJoueurs->value();
     return nbJoueurs;
 }
+
 
 
 
