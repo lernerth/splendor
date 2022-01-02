@@ -456,231 +456,127 @@
    <string>MainWindow</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QLabel" name="Carte2">
+   <widget class="Line" name="line">
     <property name="geometry">
      <rect>
-      <x>90</x>
-      <y>360</y>
-      <width>101</width>
-      <height>151</height>
+      <x>840</x>
+      <y>-20</y>
+      <width>20</width>
+      <height>811</height>
      </rect>
     </property>
-    <property name="text">
-     <string/>
-    </property>
-    <property name="pixmap">
-     <pixmap>ressources/deck/2.png</pixmap>
-    </property>
-    <property name="scaledContents">
-     <bool>true</bool>
+    <property name="orientation">
+     <enum>Qt::Vertical</enum>
     </property>
    </widget>
-   <widget class="QLabel" name="JetonJaunePlateau">
+   <widget class="Line" name="line_2">
     <property name="geometry">
      <rect>
-      <x>560</x>
-      <y>30</y>
-      <width>81</width>
-      <height>81</height>
+      <x>850</x>
+      <y>180</y>
+      <width>451</width>
+      <height>16</height>
      </rect>
     </property>
-    <property name="sizePolicy">
-     <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-      <horstretch>0</horstretch>
-      <verstretch>0</verstretch>
-     </sizepolicy>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
+    </property>
+   </widget>
+   <widget class="Line" name="line_3">
+    <property name="geometry">
+     <rect>
+      <x>850</x>
+      <y>380</y>
+      <width>461</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
+    </property>
+   </widget>
+   <widget class="Line" name="line_4">
+    <property name="geometry">
+     <rect>
+      <x>850</x>
+      <y>570</y>
+      <width>471</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
+    </property>
+   </widget>
+   <widget class="QLabel" name="NomJoueur1">
+    <property name="geometry">
+     <rect>
+      <x>950</x>
+      <y>10</y>
+      <width>211</width>
+      <height>20</height>
+     </rect>
     </property>
     <property name="text">
-     <string/>
-    </property>
-    <property name="pixmap">
-     <pixmap>ressources/jetons/or.png</pixmap>
-    </property>
-    <property name="scaledContents">
-     <bool>true</bool>
+     <string>NomJoueur1</string>
     </property>
     <property name="alignment">
      <set>Qt::AlignCenter</set>
     </property>
    </widget>
-   <widget class="QLCDNumber" name="NbJetonsRouge">
+   <widget class="QLabel" name="NomJoueur2">
     <property name="geometry">
      <rect>
-      <x>360</x>
-      <y>120</y>
-      <width>81</width>
-      <height>41</height>
+      <x>950</x>
+      <y>200</y>
+      <width>211</width>
+      <height>20</height>
      </rect>
-    </property>
-   </widget>
-   <widget class="QWidget" name="gridLayoutWidget">
-    <property name="geometry">
-     <rect>
-      <x>209</x>
-      <y>189</y>
-      <width>521</width>
-      <height>491</height>
-     </rect>
-    </property>
-    <layout class="QGridLayout" name="cartesPlateau_7"/>
-   </widget>
-   <widget class="QLabel" name="JetonRougePlateau">
-    <property name="geometry">
-     <rect>
-      <x>260</x>
-      <y>30</y>
-      <width>81</width>
-      <height>81</height>
-     </rect>
-    </property>
-    <property name="sizePolicy">
-     <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-      <horstretch>0</horstretch>
-      <verstretch>0</verstretch>
-     </sizepolicy>
     </property>
     <property name="text">
-     <string/>
-    </property>
-    <property name="pixmap">
-     <pixmap>ressources/jetons/bleu.png</pixmap>
-    </property>
-    <property name="scaledContents">
-     <bool>true</bool>
+     <string>NomJoueur2</string>
     </property>
     <property name="alignment">
      <set>Qt::AlignCenter</set>
     </property>
    </widget>
-   <widget class="QLabel" name="Carte3">
+   <widget class="QLabel" name="NomJoueur3">
     <property name="geometry">
      <rect>
-      <x>90</x>
-      <y>190</y>
-      <width>101</width>
-      <height>151</height>
+      <x>950</x>
+      <y>400</y>
+      <width>211</width>
+      <height>20</height>
      </rect>
     </property>
     <property name="text">
-     <string/>
-    </property>
-    <property name="pixmap">
-     <pixmap>ressources/deck/3.png</pixmap>
-    </property>
-    <property name="scaledContents">
-     <bool>true</bool>
-    </property>
-   </widget>
-   <widget class="QLCDNumber" name="NbJetonsOr">
-    <property name="geometry">
-     <rect>
-      <x>560</x>
-      <y>120</y>
-      <width>81</width>
-      <height>41</height>
-     </rect>
-    </property>
-   </widget>
-   <widget class="QLabel" name="JetonNoirPlateau">
-    <property name="geometry">
-     <rect>
-      <x>160</x>
-      <y>30</y>
-      <width>81</width>
-      <height>81</height>
-     </rect>
-    </property>
-    <property name="sizePolicy">
-     <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-      <horstretch>0</horstretch>
-      <verstretch>0</verstretch>
-     </sizepolicy>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-    <property name="pixmap">
-     <pixmap>ressources/jetons/noir.png</pixmap>
-    </property>
-    <property name="scaledContents">
-     <bool>true</bool>
+     <string>NomJoueur3</string>
     </property>
     <property name="alignment">
      <set>Qt::AlignCenter</set>
     </property>
    </widget>
-   <widget class="QLabel" name="Carte1">
+   <widget class="QLabel" name="NomJoueur4">
     <property name="geometry">
      <rect>
-      <x>90</x>
-      <y>530</y>
-      <width>101</width>
-      <height>151</height>
+      <x>950</x>
+      <y>590</y>
+      <width>211</width>
+      <height>20</height>
      </rect>
     </property>
     <property name="text">
-     <string/>
-    </property>
-    <property name="pixmap">
-     <pixmap>ressources/deck/1.png</pixmap>
-    </property>
-    <property name="scaledContents">
-     <bool>true</bool>
-    </property>
-   </widget>
-   <widget class="QLabel" name="JetonBleuPlateau">
-    <property name="geometry">
-     <rect>
-      <x>360</x>
-      <y>30</y>
-      <width>81</width>
-      <height>81</height>
-     </rect>
-    </property>
-    <property name="sizePolicy">
-     <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-      <horstretch>0</horstretch>
-      <verstretch>0</verstretch>
-     </sizepolicy>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-    <property name="pixmap">
-     <pixmap>ressources/jetons/rouge.png</pixmap>
-    </property>
-    <property name="scaledContents">
-     <bool>true</bool>
+     <string>NomJoueur4</string>
     </property>
     <property name="alignment">
      <set>Qt::AlignCenter</set>
-    </property>
-   </widget>
-   <widget class="QLCDNumber" name="NbJetonsBlanc">
-    <property name="geometry">
-     <rect>
-      <x>60</x>
-      <y>120</y>
-      <width>81</width>
-      <height>41</height>
-     </rect>
-    </property>
-   </widget>
-   <widget class="QLCDNumber" name="NbJetonsBleu">
-    <property name="geometry">
-     <rect>
-      <x>260</x>
-      <y>120</y>
-      <width>81</width>
-      <height>41</height>
-     </rect>
     </property>
    </widget>
    <widget class="QLabel" name="JetonBlancPlateau">
     <property name="geometry">
      <rect>
-      <x>60</x>
-      <y>30</y>
+      <x>30</x>
+      <y>20</y>
       <width>81</width>
       <height>81</height>
      </rect>
@@ -704,11 +600,95 @@
      <set>Qt::AlignCenter</set>
     </property>
    </widget>
+   <widget class="QLabel" name="JetonNoirPlateau">
+    <property name="geometry">
+     <rect>
+      <x>130</x>
+      <y>20</y>
+      <width>81</width>
+      <height>81</height>
+     </rect>
+    </property>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap>ressources/jetons/noir.png</pixmap>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="JetonBleuPlateau">
+    <property name="geometry">
+     <rect>
+      <x>330</x>
+      <y>20</y>
+      <width>81</width>
+      <height>81</height>
+     </rect>
+    </property>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap>ressources/jetons/rouge.png</pixmap>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="JetonRougePlateau">
+    <property name="geometry">
+     <rect>
+      <x>230</x>
+      <y>20</y>
+      <width>81</width>
+      <height>81</height>
+     </rect>
+    </property>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap>ressources/jetons/bleu.png</pixmap>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
    <widget class="QLabel" name="JetonVertPlateau">
     <property name="geometry">
      <rect>
-      <x>460</x>
-      <y>30</y>
+      <x>430</x>
+      <y>20</y>
       <width>81</width>
       <height>81</height>
      </rect>
@@ -732,11 +712,126 @@
      <set>Qt::AlignCenter</set>
     </property>
    </widget>
+   <widget class="QLabel" name="JetonJaunePlateau">
+    <property name="geometry">
+     <rect>
+      <x>530</x>
+      <y>20</y>
+      <width>81</width>
+      <height>81</height>
+     </rect>
+    </property>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap>ressources/jetons/or.png</pixmap>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="Carte3">
+    <property name="geometry">
+     <rect>
+      <x>70</x>
+      <y>200</y>
+      <width>101</width>
+      <height>151</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap>ressources/deck/3.png</pixmap>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QLabel" name="Carte2">
+    <property name="geometry">
+     <rect>
+      <x>70</x>
+      <y>380</y>
+      <width>101</width>
+      <height>151</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap>ressources/deck/2.png</pixmap>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QLabel" name="Carte1">
+    <property name="geometry">
+     <rect>
+      <x>70</x>
+      <y>560</y>
+      <width>101</width>
+      <height>151</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap>ressources/deck/1.png</pixmap>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QLCDNumber" name="NbJetonsBlanc">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>110</y>
+      <width>81</width>
+      <height>41</height>
+     </rect>
+    </property>
+   </widget>
    <widget class="QLCDNumber" name="NbJetonsNoir">
     <property name="geometry">
      <rect>
-      <x>160</x>
-      <y>120</y>
+      <x>130</x>
+      <y>110</y>
+      <width>81</width>
+      <height>41</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLCDNumber" name="NbJetonsBleu">
+    <property name="geometry">
+     <rect>
+      <x>230</x>
+      <y>110</y>
+      <width>81</width>
+      <height>41</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLCDNumber" name="NbJetonsRouge">
+    <property name="geometry">
+     <rect>
+      <x>330</x>
+      <y>110</y>
       <width>81</width>
       <height>41</height>
      </rect>
@@ -745,17 +840,171 @@
    <widget class="QLCDNumber" name="NbJetonsVert">
     <property name="geometry">
      <rect>
-      <x>460</x>
-      <y>120</y>
+      <x>430</x>
+      <y>110</y>
       <width>81</width>
       <height>41</height>
      </rect>
+    </property>
+   </widget>
+   <widget class="QLCDNumber" name="NbJetonsOr">
+    <property name="geometry">
+     <rect>
+      <x>530</x>
+      <y>110</y>
+      <width>81</width>
+      <height>41</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLCDNumber" name="jetonsBlancJ1">
+    <property name="geometry">
+     <rect>
+      <x>870</x>
+      <y>50</y>
+      <width>41</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="digitCount">
+     <number>1</number>
+    </property>
+    <property name="segmentStyle">
+     <enum>QLCDNumber::Flat</enum>
+    </property>
+   </widget>
+   <widget class="QLCDNumber" name="jetonsNoirJ1">
+    <property name="geometry">
+     <rect>
+      <x>1010</x>
+      <y>50</y>
+      <width>41</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="digitCount">
+     <number>1</number>
+    </property>
+    <property name="segmentStyle">
+     <enum>QLCDNumber::Flat</enum>
+    </property>
+   </widget>
+   <widget class="QLCDNumber" name="jetonsBleuJ1">
+    <property name="geometry">
+     <rect>
+      <x>1150</x>
+      <y>50</y>
+      <width>41</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="digitCount">
+     <number>1</number>
+    </property>
+    <property name="segmentStyle">
+     <enum>QLCDNumber::Flat</enum>
+    </property>
+   </widget>
+   <widget class="QLCDNumber" name="jetonsRougeJ1">
+    <property name="geometry">
+     <rect>
+      <x>870</x>
+      <y>100</y>
+      <width>41</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="digitCount">
+     <number>1</number>
+    </property>
+    <property name="segmentStyle">
+     <enum>QLCDNumber::Flat</enum>
+    </property>
+   </widget>
+   <widget class="QLCDNumber" name="jetonsVertJ1">
+    <property name="geometry">
+     <rect>
+      <x>1010</x>
+      <y>100</y>
+      <width>41</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="digitCount">
+     <number>1</number>
+    </property>
+    <property name="segmentStyle">
+     <enum>QLCDNumber::Flat</enum>
+    </property>
+   </widget>
+   <widget class="QLCDNumber" name="jetonsOrJ1">
+    <property name="geometry">
+     <rect>
+      <x>1150</x>
+      <y>100</y>
+      <width>41</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="digitCount">
+     <number>1</number>
+    </property>
+    <property name="segmentStyle">
+     <enum>QLCDNumber::Flat</enum>
+    </property>
+   </widget>
+   <widget class="QLCDNumber" name="jetonsNoirJ2">
+    <property name="geometry">
+     <rect>
+      <x>1010</x>
+      <y>240</y>
+      <width>41</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="digitCount">
+     <number>1</number>
+    </property>
+    <property name="segmentStyle">
+     <enum>QLCDNumber::Flat</enum>
     </property>
    </widget>
    <widget class="QLCDNumber" name="jetonsBlancJ2">
     <property name="geometry">
      <rect>
       <x>870</x>
+      <y>240</y>
+      <width>41</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="digitCount">
+     <number>1</number>
+    </property>
+    <property name="segmentStyle">
+     <enum>QLCDNumber::Flat</enum>
+    </property>
+   </widget>
+   <widget class="QLCDNumber" name="jetonsOrJ2">
+    <property name="geometry">
+     <rect>
+      <x>1150</x>
+      <y>290</y>
+      <width>41</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="digitCount">
+     <number>1</number>
+    </property>
+    <property name="segmentStyle">
+     <enum>QLCDNumber::Flat</enum>
+    </property>
+   </widget>
+   <widget class="QLCDNumber" name="jetonsBleuJ2">
+    <property name="geometry">
+     <rect>
+      <x>1150</x>
       <y>240</y>
       <width>41</width>
       <height>41</height>
@@ -800,219 +1049,194 @@
      <enum>QLCDNumber::Flat</enum>
     </property>
    </widget>
-   <widget class="QLCDNumber" name="jetonsVertJ3">
+   <widget class="QWidget" name="gridLayoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>180</x>
+      <y>190</y>
+      <width>391</width>
+      <height>531</height>
+     </rect>
+    </property>
+    <layout class="QGridLayout" name="cartesPlateau">
+     <property name="sizeConstraint">
+      <enum>QLayout::SetDefaultConstraint</enum>
+     </property>
+     <item row="0" column="2">
+      <widget class="QLabel" name="Carte12">
+       <property name="text">
+        <string/>
+       </property>
+       <property name="pixmap">
+        <pixmap>ressources/deck/3.png</pixmap>
+       </property>
+       <property name="scaledContents">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="4">
+      <widget class="QLabel" name="Carte13">
+       <property name="text">
+        <string/>
+       </property>
+       <property name="pixmap">
+        <pixmap>ressources/deck/3.png</pixmap>
+       </property>
+       <property name="scaledContents">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="4">
+      <widget class="QLabel" name="Carte23">
+       <property name="text">
+        <string/>
+       </property>
+       <property name="pixmap">
+        <pixmap>ressources/deck/2.png</pixmap>
+       </property>
+       <property name="scaledContents">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </item>
+     <item row="4" column="2">
+      <widget class="QLabel" name="Carte32">
+       <property name="text">
+        <string/>
+       </property>
+       <property name="pixmap">
+        <pixmap>ressources/deck/1.png</pixmap>
+       </property>
+       <property name="scaledContents">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </item>
+     <item row="4" column="4">
+      <widget class="QLabel" name="Carte33">
+       <property name="text">
+        <string/>
+       </property>
+       <property name="pixmap">
+        <pixmap>ressources/deck/1.png</pixmap>
+       </property>
+       <property name="scaledContents">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </item>
+     <item row="4" column="0">
+      <widget class="QLabel" name="Carte31">
+       <property name="text">
+        <string/>
+       </property>
+       <property name="pixmap">
+        <pixmap>ressources/deck/1.png</pixmap>
+       </property>
+       <property name="scaledContents">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="2">
+      <widget class="QLabel" name="Carte22">
+       <property name="text">
+        <string/>
+       </property>
+       <property name="pixmap">
+        <pixmap>ressources/deck/2.png</pixmap>
+       </property>
+       <property name="scaledContents">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="0">
+      <widget class="QLabel" name="Carte21">
+       <property name="text">
+        <string/>
+       </property>
+       <property name="pixmap">
+        <pixmap>ressources/deck/2.png</pixmap>
+       </property>
+       <property name="scaledContents">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="3">
+      <spacer name="horizontalSpacer_2">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item row="1" column="0">
+      <spacer name="verticalSpacer">
+       <property name="orientation">
+        <enum>Qt::Vertical</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>20</width>
+         <height>40</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item row="0" column="0">
+      <widget class="QLabel" name="Carte11">
+       <property name="text">
+        <string/>
+       </property>
+       <property name="pixmap">
+        <pixmap>ressources/deck/3.png</pixmap>
+       </property>
+       <property name="scaledContents">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="1">
+      <spacer name="horizontalSpacer">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item row="3" column="0">
+      <spacer name="verticalSpacer_2">
+       <property name="orientation">
+        <enum>Qt::Vertical</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>20</width>
+         <height>40</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QLCDNumber" name="jetonsNoirJ3">
     <property name="geometry">
      <rect>
       <x>1010</x>
-      <y>490</y>
-      <width>41</width>
-      <height>41</height>
-     </rect>
-    </property>
-    <property name="digitCount">
-     <number>1</number>
-    </property>
-    <property name="segmentStyle">
-     <enum>QLCDNumber::Flat</enum>
-    </property>
-   </widget>
-   <widget class="QLabel" name="NomJoueur3">
-    <property name="geometry">
-     <rect>
-      <x>950</x>
-      <y>400</y>
-      <width>211</width>
-      <height>20</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>NomJoueur3</string>
-    </property>
-    <property name="alignment">
-     <set>Qt::AlignCenter</set>
-    </property>
-   </widget>
-   <widget class="QLCDNumber" name="jetonsOrJ2">
-    <property name="geometry">
-     <rect>
-      <x>1150</x>
-      <y>290</y>
-      <width>41</width>
-      <height>41</height>
-     </rect>
-    </property>
-    <property name="digitCount">
-     <number>1</number>
-    </property>
-    <property name="segmentStyle">
-     <enum>QLCDNumber::Flat</enum>
-    </property>
-   </widget>
-   <widget class="QLabel" name="JetonRougePlateau_5">
-    <property name="geometry">
-     <rect>
-      <x>1200</x>
-      <y>630</y>
-      <width>41</width>
-      <height>41</height>
-     </rect>
-    </property>
-    <property name="sizePolicy">
-     <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-      <horstretch>0</horstretch>
-      <verstretch>0</verstretch>
-     </sizepolicy>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-    <property name="pixmap">
-     <pixmap>ressources/jetons/bleu.png</pixmap>
-    </property>
-    <property name="scaledContents">
-     <bool>true</bool>
-    </property>
-    <property name="alignment">
-     <set>Qt::AlignCenter</set>
-    </property>
-   </widget>
-   <widget class="QLCDNumber" name="jetonsNoirJ4">
-    <property name="geometry">
-     <rect>
-      <x>1010</x>
-      <y>630</y>
-      <width>41</width>
-      <height>41</height>
-     </rect>
-    </property>
-    <property name="digitCount">
-     <number>1</number>
-    </property>
-    <property name="segmentStyle">
-     <enum>QLCDNumber::Flat</enum>
-    </property>
-   </widget>
-   <widget class="QLCDNumber" name="jetonsBleuJ1">
-    <property name="geometry">
-     <rect>
-      <x>1150</x>
-      <y>50</y>
-      <width>41</width>
-      <height>41</height>
-     </rect>
-    </property>
-    <property name="digitCount">
-     <number>1</number>
-    </property>
-    <property name="segmentStyle">
-     <enum>QLCDNumber::Flat</enum>
-    </property>
-   </widget>
-   <widget class="QLabel" name="JetonRougePlateau_3">
-    <property name="geometry">
-     <rect>
-      <x>1200</x>
-      <y>240</y>
-      <width>41</width>
-      <height>41</height>
-     </rect>
-    </property>
-    <property name="sizePolicy">
-     <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-      <horstretch>0</horstretch>
-      <verstretch>0</verstretch>
-     </sizepolicy>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-    <property name="pixmap">
-     <pixmap>ressources/jetons/bleu.png</pixmap>
-    </property>
-    <property name="scaledContents">
-     <bool>true</bool>
-    </property>
-    <property name="alignment">
-     <set>Qt::AlignCenter</set>
-    </property>
-   </widget>
-   <widget class="QLCDNumber" name="jetonsOrJ1">
-    <property name="geometry">
-     <rect>
-      <x>1150</x>
-      <y>100</y>
-      <width>41</width>
-      <height>41</height>
-     </rect>
-    </property>
-    <property name="digitCount">
-     <number>1</number>
-    </property>
-    <property name="segmentStyle">
-     <enum>QLCDNumber::Flat</enum>
-    </property>
-   </widget>
-   <widget class="Line" name="line_2">
-    <property name="geometry">
-     <rect>
-      <x>850</x>
-      <y>180</y>
-      <width>451</width>
-      <height>16</height>
-     </rect>
-    </property>
-    <property name="orientation">
-     <enum>Qt::Horizontal</enum>
-    </property>
-   </widget>
-   <widget class="QLabel" name="JetonVertPlateau_4">
-    <property name="geometry">
-     <rect>
-      <x>1060</x>
-      <y>490</y>
-      <width>41</width>
-      <height>41</height>
-     </rect>
-    </property>
-    <property name="sizePolicy">
-     <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-      <horstretch>0</horstretch>
-      <verstretch>0</verstretch>
-     </sizepolicy>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-    <property name="pixmap">
-     <pixmap>ressources/jetons/vert.png</pixmap>
-    </property>
-    <property name="scaledContents">
-     <bool>true</bool>
-    </property>
-    <property name="alignment">
-     <set>Qt::AlignCenter</set>
-    </property>
-   </widget>
-   <widget class="QLCDNumber" name="jetonsRougeJ4">
-    <property name="geometry">
-     <rect>
-      <x>870</x>
-      <y>680</y>
-      <width>41</width>
-      <height>41</height>
-     </rect>
-    </property>
-    <property name="digitCount">
-     <number>1</number>
-    </property>
-    <property name="segmentStyle">
-     <enum>QLCDNumber::Flat</enum>
-    </property>
-   </widget>
-   <widget class="QLCDNumber" name="jetonsBleuJ3">
-    <property name="geometry">
-     <rect>
-      <x>1150</x>
       <y>440</y>
       <width>41</width>
       <height>41</height>
@@ -1057,39 +1281,107 @@
      <enum>QLCDNumber::Flat</enum>
     </property>
    </widget>
-   <widget class="QLabel" name="JetonBleuPlateau_3">
+   <widget class="QLCDNumber" name="jetonsOrJ3">
     <property name="geometry">
      <rect>
-      <x>920</x>
-      <y>290</y>
+      <x>1150</x>
+      <y>490</y>
       <width>41</width>
       <height>41</height>
      </rect>
     </property>
-    <property name="sizePolicy">
-     <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-      <horstretch>0</horstretch>
-      <verstretch>0</verstretch>
-     </sizepolicy>
+    <property name="digitCount">
+     <number>1</number>
     </property>
-    <property name="text">
-     <string/>
-    </property>
-    <property name="pixmap">
-     <pixmap>ressources/jetons/rouge.png</pixmap>
-    </property>
-    <property name="scaledContents">
-     <bool>true</bool>
-    </property>
-    <property name="alignment">
-     <set>Qt::AlignCenter</set>
+    <property name="segmentStyle">
+     <enum>QLCDNumber::Flat</enum>
     </property>
    </widget>
-   <widget class="QLCDNumber" name="jetonsOrJ4">
+   <widget class="QLCDNumber" name="jetonsVertJ3">
+    <property name="geometry">
+     <rect>
+      <x>1010</x>
+      <y>490</y>
+      <width>41</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="digitCount">
+     <number>1</number>
+    </property>
+    <property name="segmentStyle">
+     <enum>QLCDNumber::Flat</enum>
+    </property>
+   </widget>
+   <widget class="QLCDNumber" name="jetonsBleuJ3">
     <property name="geometry">
      <rect>
       <x>1150</x>
+      <y>440</y>
+      <width>41</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="digitCount">
+     <number>1</number>
+    </property>
+    <property name="segmentStyle">
+     <enum>QLCDNumber::Flat</enum>
+    </property>
+   </widget>
+   <widget class="QLCDNumber" name="jetonsRougeJ4">
+    <property name="geometry">
+     <rect>
+      <x>870</x>
       <y>680</y>
+      <width>41</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="digitCount">
+     <number>1</number>
+    </property>
+    <property name="segmentStyle">
+     <enum>QLCDNumber::Flat</enum>
+    </property>
+   </widget>
+   <widget class="QLCDNumber" name="jetonsVertJ4">
+    <property name="geometry">
+     <rect>
+      <x>1010</x>
+      <y>680</y>
+      <width>41</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="digitCount">
+     <number>1</number>
+    </property>
+    <property name="segmentStyle">
+     <enum>QLCDNumber::Flat</enum>
+    </property>
+   </widget>
+   <widget class="QLCDNumber" name="jetonsBleuJ4">
+    <property name="geometry">
+     <rect>
+      <x>1150</x>
+      <y>630</y>
+      <width>41</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="digitCount">
+     <number>1</number>
+    </property>
+    <property name="segmentStyle">
+     <enum>QLCDNumber::Flat</enum>
+    </property>
+   </widget>
+   <widget class="QLCDNumber" name="jetonsNoirJ4">
+    <property name="geometry">
+     <rect>
+      <x>1010</x>
+      <y>630</y>
       <width>41</width>
       <height>41</height>
      </rect>
@@ -1117,91 +1409,23 @@
      <enum>QLCDNumber::Flat</enum>
     </property>
    </widget>
-   <widget class="QLabel" name="JetonNoirPlateau_4">
+   <widget class="QLCDNumber" name="jetonsOrJ4">
     <property name="geometry">
      <rect>
-      <x>1060</x>
-      <y>440</y>
-      <width>41</width>
-      <height>41</height>
-     </rect>
-    </property>
-    <property name="sizePolicy">
-     <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-      <horstretch>0</horstretch>
-      <verstretch>0</verstretch>
-     </sizepolicy>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-    <property name="pixmap">
-     <pixmap>ressources/jetons/noir.png</pixmap>
-    </property>
-    <property name="scaledContents">
-     <bool>true</bool>
-    </property>
-    <property name="alignment">
-     <set>Qt::AlignCenter</set>
-    </property>
-   </widget>
-   <widget class="QLabel" name="JetonJaunePlateau_4">
-    <property name="geometry">
-     <rect>
-      <x>1200</x>
-      <y>490</y>
-      <width>41</width>
-      <height>41</height>
-     </rect>
-    </property>
-    <property name="sizePolicy">
-     <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-      <horstretch>0</horstretch>
-      <verstretch>0</verstretch>
-     </sizepolicy>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-    <property name="pixmap">
-     <pixmap>ressources/jetons/or.png</pixmap>
-    </property>
-    <property name="scaledContents">
-     <bool>true</bool>
-    </property>
-    <property name="alignment">
-     <set>Qt::AlignCenter</set>
-    </property>
-   </widget>
-   <widget class="QLabel" name="JetonJaunePlateau_5">
-    <property name="geometry">
-     <rect>
-      <x>1200</x>
+      <x>1150</x>
       <y>680</y>
       <width>41</width>
       <height>41</height>
      </rect>
     </property>
-    <property name="sizePolicy">
-     <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-      <horstretch>0</horstretch>
-      <verstretch>0</verstretch>
-     </sizepolicy>
+    <property name="digitCount">
+     <number>1</number>
     </property>
-    <property name="text">
-     <string/>
-    </property>
-    <property name="pixmap">
-     <pixmap>ressources/jetons/or.png</pixmap>
-    </property>
-    <property name="scaledContents">
-     <bool>true</bool>
-    </property>
-    <property name="alignment">
-     <set>Qt::AlignCenter</set>
+    <property name="segmentStyle">
+     <enum>QLCDNumber::Flat</enum>
     </property>
    </widget>
-   <widget class="QLabel" name="JetonBlancPlateau_2">
+   <widget class="QLabel" name="Blanc1">
     <property name="geometry">
      <rect>
       <x>920</x>
@@ -1229,11 +1453,11 @@
      <set>Qt::AlignCenter</set>
     </property>
    </widget>
-   <widget class="QLabel" name="JetonVertPlateau_5">
+   <widget class="QLabel" name="Noir1">
     <property name="geometry">
      <rect>
       <x>1060</x>
-      <y>680</y>
+      <y>50</y>
       <width>41</width>
       <height>41</height>
      </rect>
@@ -1248,7 +1472,7 @@
      <string/>
     </property>
     <property name="pixmap">
-     <pixmap>ressources/jetons/vert.png</pixmap>
+     <pixmap>ressources/jetons/noir.png</pixmap>
     </property>
     <property name="scaledContents">
      <bool>true</bool>
@@ -1257,71 +1481,7 @@
      <set>Qt::AlignCenter</set>
     </property>
    </widget>
-   <widget class="QLabel" name="NomJoueur4">
-    <property name="geometry">
-     <rect>
-      <x>950</x>
-      <y>590</y>
-      <width>211</width>
-      <height>20</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>NomJoueur4</string>
-    </property>
-    <property name="alignment">
-     <set>Qt::AlignCenter</set>
-    </property>
-   </widget>
-   <widget class="QLCDNumber" name="jetonsVertJ4">
-    <property name="geometry">
-     <rect>
-      <x>1010</x>
-      <y>680</y>
-      <width>41</width>
-      <height>41</height>
-     </rect>
-    </property>
-    <property name="digitCount">
-     <number>1</number>
-    </property>
-    <property name="segmentStyle">
-     <enum>QLCDNumber::Flat</enum>
-    </property>
-   </widget>
-   <widget class="QLCDNumber" name="jetonsBlancJ1">
-    <property name="geometry">
-     <rect>
-      <x>870</x>
-      <y>50</y>
-      <width>41</width>
-      <height>41</height>
-     </rect>
-    </property>
-    <property name="digitCount">
-     <number>1</number>
-    </property>
-    <property name="segmentStyle">
-     <enum>QLCDNumber::Flat</enum>
-    </property>
-   </widget>
-   <widget class="QLCDNumber" name="jetonsOrJ3">
-    <property name="geometry">
-     <rect>
-      <x>1150</x>
-      <y>490</y>
-      <width>41</width>
-      <height>41</height>
-     </rect>
-    </property>
-    <property name="digitCount">
-     <number>1</number>
-    </property>
-    <property name="segmentStyle">
-     <enum>QLCDNumber::Flat</enum>
-    </property>
-   </widget>
-   <widget class="QLabel" name="JetonRougePlateau_2">
+   <widget class="QLabel" name="Bleu1">
     <property name="geometry">
      <rect>
       <x>1200</x>
@@ -1349,91 +1509,11 @@
      <set>Qt::AlignCenter</set>
     </property>
    </widget>
-   <widget class="QLabel" name="NomJoueur1">
-    <property name="geometry">
-     <rect>
-      <x>950</x>
-      <y>10</y>
-      <width>211</width>
-      <height>20</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>NomJoueur1</string>
-    </property>
-    <property name="alignment">
-     <set>Qt::AlignCenter</set>
-    </property>
-   </widget>
-   <widget class="QLCDNumber" name="jetonsBleuJ2">
-    <property name="geometry">
-     <rect>
-      <x>1150</x>
-      <y>240</y>
-      <width>41</width>
-      <height>41</height>
-     </rect>
-    </property>
-    <property name="digitCount">
-     <number>1</number>
-    </property>
-    <property name="segmentStyle">
-     <enum>QLCDNumber::Flat</enum>
-    </property>
-   </widget>
-   <widget class="QLCDNumber" name="jetonsRougeJ1">
-    <property name="geometry">
-     <rect>
-      <x>870</x>
-      <y>100</y>
-      <width>41</width>
-      <height>41</height>
-     </rect>
-    </property>
-    <property name="digitCount">
-     <number>1</number>
-    </property>
-    <property name="segmentStyle">
-     <enum>QLCDNumber::Flat</enum>
-    </property>
-   </widget>
-   <widget class="QLCDNumber" name="jetonsNoirJ2">
-    <property name="geometry">
-     <rect>
-      <x>1010</x>
-      <y>240</y>
-      <width>41</width>
-      <height>41</height>
-     </rect>
-    </property>
-    <property name="digitCount">
-     <number>1</number>
-    </property>
-    <property name="segmentStyle">
-     <enum>QLCDNumber::Flat</enum>
-    </property>
-   </widget>
-   <widget class="QLCDNumber" name="jetonsNoirJ3">
-    <property name="geometry">
-     <rect>
-      <x>1010</x>
-      <y>440</y>
-      <width>41</width>
-      <height>41</height>
-     </rect>
-    </property>
-    <property name="digitCount">
-     <number>1</number>
-    </property>
-    <property name="segmentStyle">
-     <enum>QLCDNumber::Flat</enum>
-    </property>
-   </widget>
-   <widget class="QLabel" name="JetonBleuPlateau_4">
+   <widget class="QLabel" name="Rouge1">
     <property name="geometry">
      <rect>
       <x>920</x>
-      <y>490</y>
+      <y>100</y>
       <width>41</width>
       <height>41</height>
      </rect>
@@ -1457,51 +1537,7 @@
      <set>Qt::AlignCenter</set>
     </property>
    </widget>
-   <widget class="QLCDNumber" name="jetonsBleuJ4">
-    <property name="geometry">
-     <rect>
-      <x>1150</x>
-      <y>630</y>
-      <width>41</width>
-      <height>41</height>
-     </rect>
-    </property>
-    <property name="digitCount">
-     <number>1</number>
-    </property>
-    <property name="segmentStyle">
-     <enum>QLCDNumber::Flat</enum>
-    </property>
-   </widget>
-   <widget class="QLabel" name="JetonJaunePlateau_3">
-    <property name="geometry">
-     <rect>
-      <x>1200</x>
-      <y>290</y>
-      <width>41</width>
-      <height>41</height>
-     </rect>
-    </property>
-    <property name="sizePolicy">
-     <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-      <horstretch>0</horstretch>
-      <verstretch>0</verstretch>
-     </sizepolicy>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-    <property name="pixmap">
-     <pixmap>ressources/jetons/or.png</pixmap>
-    </property>
-    <property name="scaledContents">
-     <bool>true</bool>
-    </property>
-    <property name="alignment">
-     <set>Qt::AlignCenter</set>
-    </property>
-   </widget>
-   <widget class="QLabel" name="JetonVertPlateau_2">
+   <widget class="QLabel" name="Vert1">
     <property name="geometry">
      <rect>
       <x>1060</x>
@@ -1529,7 +1565,147 @@
      <set>Qt::AlignCenter</set>
     </property>
    </widget>
-   <widget class="QLabel" name="JetonBleuPlateau_5">
+   <widget class="QLabel" name="Or1">
+    <property name="geometry">
+     <rect>
+      <x>1200</x>
+      <y>100</y>
+      <width>41</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap>ressources/jetons/or.png</pixmap>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="Blanc2">
+    <property name="geometry">
+     <rect>
+      <x>920</x>
+      <y>240</y>
+      <width>41</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap>ressources/jetons/blanc.png</pixmap>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="Rouge2">
+    <property name="geometry">
+     <rect>
+      <x>920</x>
+      <y>290</y>
+      <width>41</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap>ressources/jetons/rouge.png</pixmap>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="Blanc3">
+    <property name="geometry">
+     <rect>
+      <x>920</x>
+      <y>440</y>
+      <width>41</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap>ressources/jetons/blanc.png</pixmap>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="Rouge3">
+    <property name="geometry">
+     <rect>
+      <x>920</x>
+      <y>490</y>
+      <width>41</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap>ressources/jetons/rouge.png</pixmap>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="Rouge4">
     <property name="geometry">
      <rect>
       <x>920</x>
@@ -1557,371 +1733,627 @@
      <set>Qt::AlignCenter</set>
     </property>
    </widget>
-   <widget class="Line" name="line">
+   <widget class="QLabel" name="Blanc4">
     <property name="geometry">
      <rect>
-      <x>840</x>
-      <y>-20</y>
-      <width>20</width>
-      <height>811</height>
+      <x>920</x>
+      <y>630</y>
+      <width>41</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap>ressources/jetons/blanc.png</pixmap>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="Noir2">
+    <property name="geometry">
+     <rect>
+      <x>1060</x>
+      <y>240</y>
+      <width>41</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap>ressources/jetons/noir.png</pixmap>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="Vert2">
+    <property name="geometry">
+     <rect>
+      <x>1060</x>
+      <y>290</y>
+      <width>41</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap>ressources/jetons/vert.png</pixmap>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="Noir3">
+    <property name="geometry">
+     <rect>
+      <x>1060</x>
+      <y>440</y>
+      <width>41</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap>ressources/jetons/noir.png</pixmap>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="Vert3">
+    <property name="geometry">
+     <rect>
+      <x>1060</x>
+      <y>490</y>
+      <width>41</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap>ressources/jetons/vert.png</pixmap>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="Noir4">
+    <property name="geometry">
+     <rect>
+      <x>1060</x>
+      <y>630</y>
+      <width>41</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap>ressources/jetons/noir.png</pixmap>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="Vert4">
+    <property name="geometry">
+     <rect>
+      <x>1060</x>
+      <y>680</y>
+      <width>41</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap>ressources/jetons/vert.png</pixmap>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="Bleu2">
+    <property name="geometry">
+     <rect>
+      <x>1200</x>
+      <y>240</y>
+      <width>41</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap>ressources/jetons/bleu.png</pixmap>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="Or2">
+    <property name="geometry">
+     <rect>
+      <x>1200</x>
+      <y>290</y>
+      <width>41</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap>ressources/jetons/or.png</pixmap>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="Bleu3">
+    <property name="geometry">
+     <rect>
+      <x>1200</x>
+      <y>440</y>
+      <width>41</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap>ressources/jetons/bleu.png</pixmap>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="Or3">
+    <property name="geometry">
+     <rect>
+      <x>1200</x>
+      <y>490</y>
+      <width>41</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap>ressources/jetons/or.png</pixmap>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="Bleu4">
+    <property name="geometry">
+     <rect>
+      <x>1200</x>
+      <y>630</y>
+      <width>41</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap>ressources/jetons/bleu.png</pixmap>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="Or4">
+    <property name="geometry">
+     <rect>
+      <x>1200</x>
+      <y>680</y>
+      <width>41</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap>ressources/jetons/or.png</pixmap>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>660</x>
+      <y>230</y>
+      <width>111</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Action à réaliser :</string>
+    </property>
+   </widget>
+   <widget class="QRadioButton" name="acheter">
+    <property name="geometry">
+     <rect>
+      <x>640</x>
+      <y>260</y>
+      <width>161</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Acheter une carte </string>
+    </property>
+   </widget>
+   <widget class="QRadioButton" name="reserver">
+    <property name="geometry">
+     <rect>
+      <x>640</x>
+      <y>290</y>
+      <width>161</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Réserver une carte </string>
+    </property>
+   </widget>
+   <widget class="QRadioButton" name="prendreJetons">
+    <property name="geometry">
+     <rect>
+      <x>640</x>
+      <y>320</y>
+      <width>161</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Prendre des jetons</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="finDeTour">
+    <property name="geometry">
+     <rect>
+      <x>650</x>
+      <y>370</y>
+      <width>131</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Fin de tour </string>
+    </property>
+   </widget>
+   <widget class="Line" name="line_5">
+    <property name="geometry">
+     <rect>
+      <x>608</x>
+      <y>400</y>
+      <width>211</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
+    </property>
+   </widget>
+   <widget class="Line" name="line_6">
+    <property name="geometry">
+     <rect>
+      <x>608</x>
+      <y>210</y>
+      <width>211</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
+    </property>
+   </widget>
+   <widget class="Line" name="line_7">
+    <property name="geometry">
+     <rect>
+      <x>600</x>
+      <y>220</y>
+      <width>16</width>
+      <height>191</height>
      </rect>
     </property>
     <property name="orientation">
      <enum>Qt::Vertical</enum>
     </property>
    </widget>
-   <widget class="QLabel" name="JetonBlancPlateau_5">
+   <widget class="Line" name="line_8">
     <property name="geometry">
      <rect>
-      <x>920</x>
-      <y>630</y>
-      <width>41</width>
-      <height>41</height>
-     </rect>
-    </property>
-    <property name="sizePolicy">
-     <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-      <horstretch>0</horstretch>
-      <verstretch>0</verstretch>
-     </sizepolicy>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-    <property name="pixmap">
-     <pixmap>ressources/jetons/blanc.png</pixmap>
-    </property>
-    <property name="scaledContents">
-     <bool>true</bool>
-    </property>
-    <property name="alignment">
-     <set>Qt::AlignCenter</set>
-    </property>
-   </widget>
-   <widget class="QLabel" name="JetonRougePlateau_4">
-    <property name="geometry">
-     <rect>
-      <x>1200</x>
-      <y>440</y>
-      <width>41</width>
-      <height>41</height>
-     </rect>
-    </property>
-    <property name="sizePolicy">
-     <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-      <horstretch>0</horstretch>
-      <verstretch>0</verstretch>
-     </sizepolicy>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-    <property name="pixmap">
-     <pixmap>ressources/jetons/bleu.png</pixmap>
-    </property>
-    <property name="scaledContents">
-     <bool>true</bool>
-    </property>
-    <property name="alignment">
-     <set>Qt::AlignCenter</set>
-    </property>
-   </widget>
-   <widget class="QLabel" name="JetonBleuPlateau_2">
-    <property name="geometry">
-     <rect>
-      <x>920</x>
-      <y>100</y>
-      <width>41</width>
-      <height>41</height>
-     </rect>
-    </property>
-    <property name="sizePolicy">
-     <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-      <horstretch>0</horstretch>
-      <verstretch>0</verstretch>
-     </sizepolicy>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-    <property name="pixmap">
-     <pixmap>ressources/jetons/rouge.png</pixmap>
-    </property>
-    <property name="scaledContents">
-     <bool>true</bool>
-    </property>
-    <property name="alignment">
-     <set>Qt::AlignCenter</set>
-    </property>
-   </widget>
-   <widget class="QLabel" name="JetonNoirPlateau_3">
-    <property name="geometry">
-     <rect>
-      <x>1060</x>
-      <y>240</y>
-      <width>41</width>
-      <height>41</height>
-     </rect>
-    </property>
-    <property name="sizePolicy">
-     <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-      <horstretch>0</horstretch>
-      <verstretch>0</verstretch>
-     </sizepolicy>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-    <property name="pixmap">
-     <pixmap>ressources/jetons/noir.png</pixmap>
-    </property>
-    <property name="scaledContents">
-     <bool>true</bool>
-    </property>
-    <property name="alignment">
-     <set>Qt::AlignCenter</set>
-    </property>
-   </widget>
-   <widget class="QLabel" name="JetonBlancPlateau_4">
-    <property name="geometry">
-     <rect>
-      <x>920</x>
-      <y>440</y>
-      <width>41</width>
-      <height>41</height>
-     </rect>
-    </property>
-    <property name="sizePolicy">
-     <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-      <horstretch>0</horstretch>
-      <verstretch>0</verstretch>
-     </sizepolicy>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-    <property name="pixmap">
-     <pixmap>ressources/jetons/blanc.png</pixmap>
-    </property>
-    <property name="scaledContents">
-     <bool>true</bool>
-    </property>
-    <property name="alignment">
-     <set>Qt::AlignCenter</set>
-    </property>
-   </widget>
-   <widget class="QLabel" name="JetonNoirPlateau_2">
-    <property name="geometry">
-     <rect>
-      <x>1060</x>
-      <y>50</y>
-      <width>41</width>
-      <height>41</height>
-     </rect>
-    </property>
-    <property name="sizePolicy">
-     <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-      <horstretch>0</horstretch>
-      <verstretch>0</verstretch>
-     </sizepolicy>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-    <property name="pixmap">
-     <pixmap>ressources/jetons/noir.png</pixmap>
-    </property>
-    <property name="scaledContents">
-     <bool>true</bool>
-    </property>
-    <property name="alignment">
-     <set>Qt::AlignCenter</set>
-    </property>
-   </widget>
-   <widget class="Line" name="line_4">
-    <property name="geometry">
-     <rect>
-      <x>850</x>
-      <y>570</y>
-      <width>471</width>
-      <height>16</height>
+      <x>810</x>
+      <y>220</y>
+      <width>16</width>
+      <height>192</height>
      </rect>
     </property>
     <property name="orientation">
-     <enum>Qt::Horizontal</enum>
+     <enum>Qt::Vertical</enum>
     </property>
    </widget>
-   <widget class="QLCDNumber" name="jetonsNoirJ1">
+   <widget class="Line" name="line_9">
     <property name="geometry">
      <rect>
-      <x>1010</x>
-      <y>50</y>
-      <width>41</width>
-      <height>41</height>
-     </rect>
-    </property>
-    <property name="digitCount">
-     <number>1</number>
-    </property>
-    <property name="segmentStyle">
-     <enum>QLCDNumber::Flat</enum>
-    </property>
-   </widget>
-   <widget class="QLabel" name="JetonNoirPlateau_5">
-    <property name="geometry">
-     <rect>
-      <x>1060</x>
-      <y>630</y>
-      <width>41</width>
-      <height>41</height>
-     </rect>
-    </property>
-    <property name="sizePolicy">
-     <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-      <horstretch>0</horstretch>
-      <verstretch>0</verstretch>
-     </sizepolicy>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-    <property name="pixmap">
-     <pixmap>ressources/jetons/noir.png</pixmap>
-    </property>
-    <property name="scaledContents">
-     <bool>true</bool>
-    </property>
-    <property name="alignment">
-     <set>Qt::AlignCenter</set>
-    </property>
-   </widget>
-   <widget class="Line" name="line_3">
-    <property name="geometry">
-     <rect>
-      <x>850</x>
-      <y>380</y>
-      <width>461</width>
-      <height>16</height>
+      <x>642</x>
+      <y>20</y>
+      <width>16</width>
+      <height>71</height>
      </rect>
     </property>
     <property name="orientation">
-     <enum>Qt::Horizontal</enum>
+     <enum>Qt::Vertical</enum>
     </property>
    </widget>
-   <widget class="QLabel" name="NomJoueur2">
+   <widget class="Line" name="line_10">
     <property name="geometry">
      <rect>
-      <x>950</x>
-      <y>200</y>
-      <width>211</width>
+      <x>802</x>
+      <y>20</y>
+      <width>16</width>
+      <height>71</height>
+     </rect>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Vertical</enum>
+    </property>
+   </widget>
+   <widget class="Line" name="line_11">
+    <property name="geometry">
+     <rect>
+      <x>650</x>
+      <y>80</y>
+      <width>161</width>
       <height>20</height>
      </rect>
     </property>
-    <property name="text">
-     <string>NomJoueur2</string>
-    </property>
-    <property name="alignment">
-     <set>Qt::AlignCenter</set>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
     </property>
    </widget>
-   <widget class="QLabel" name="JetonVertPlateau_3">
+   <widget class="Line" name="line_12">
     <property name="geometry">
      <rect>
-      <x>1060</x>
-      <y>290</y>
-      <width>41</width>
-      <height>41</height>
+      <x>650</x>
+      <y>10</y>
+      <width>161</width>
+      <height>20</height>
      </rect>
     </property>
-    <property name="sizePolicy">
-     <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-      <horstretch>0</horstretch>
-      <verstretch>0</verstretch>
-     </sizepolicy>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-    <property name="pixmap">
-     <pixmap>ressources/jetons/vert.png</pixmap>
-    </property>
-    <property name="scaledContents">
-     <bool>true</bool>
-    </property>
-    <property name="alignment">
-     <set>Qt::AlignCenter</set>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
     </property>
    </widget>
-   <widget class="QLabel" name="JetonBlancPlateau_3">
+   <widget class="QLabel" name="label_2">
     <property name="geometry">
      <rect>
-      <x>920</x>
-      <y>240</y>
-      <width>41</width>
-      <height>41</height>
+      <x>660</x>
+      <y>30</y>
+      <width>101</width>
+      <height>16</height>
      </rect>
-    </property>
-    <property name="sizePolicy">
-     <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-      <horstretch>0</horstretch>
-      <verstretch>0</verstretch>
-     </sizepolicy>
     </property>
     <property name="text">
-     <string/>
-    </property>
-    <property name="pixmap">
-     <pixmap>ressources/jetons/blanc.png</pixmap>
-    </property>
-    <property name="scaledContents">
-     <bool>true</bool>
-    </property>
-    <property name="alignment">
-     <set>Qt::AlignCenter</set>
+     <string>Au tour de :</string>
     </property>
    </widget>
-   <widget class="QLabel" name="JetonJaunePlateau_2">
+   <widget class="QLabel" name="label_3">
     <property name="geometry">
      <rect>
-      <x>1200</x>
-      <y>100</y>
-      <width>41</width>
-      <height>41</height>
+      <x>680</x>
+      <y>60</y>
+      <width>111</width>
+      <height>16</height>
      </rect>
-    </property>
-    <property name="sizePolicy">
-     <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-      <horstretch>0</horstretch>
-      <verstretch>0</verstretch>
-     </sizepolicy>
     </property>
     <property name="text">
-     <string/>
-    </property>
-    <property name="pixmap">
-     <pixmap>ressources/jetons/or.png</pixmap>
-    </property>
-    <property name="scaledContents">
-     <bool>true</bool>
-    </property>
-    <property name="alignment">
-     <set>Qt::AlignCenter</set>
+     <string>Joueur en cours</string>
     </property>
    </widget>
-   <widget class="QLCDNumber" name="jetonsVertJ1">
+   <widget class="Line" name="cadreCartes4">
     <property name="geometry">
      <rect>
-      <x>1010</x>
-      <y>100</y>
-      <width>41</width>
-      <height>41</height>
+      <x>60</x>
+      <y>730</y>
+      <width>531</width>
+      <height>20</height>
      </rect>
     </property>
-    <property name="digitCount">
-     <number>1</number>
+    <property name="lineWidth">
+     <number>3</number>
     </property>
-    <property name="segmentStyle">
-     <enum>QLCDNumber::Flat</enum>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
+    </property>
+   </widget>
+   <widget class="Line" name="cadreCartes2">
+    <property name="geometry">
+     <rect>
+      <x>60</x>
+      <y>160</y>
+      <width>531</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="lineWidth">
+     <number>3</number>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
+    </property>
+   </widget>
+   <widget class="Line" name="cadreCartes3">
+    <property name="geometry">
+     <rect>
+      <x>50</x>
+      <y>170</y>
+      <width>20</width>
+      <height>571</height>
+     </rect>
+    </property>
+    <property name="lineWidth">
+     <number>3</number>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Vertical</enum>
+    </property>
+   </widget>
+   <widget class="Line" name="cadreCartes">
+    <property name="geometry">
+     <rect>
+      <x>580</x>
+      <y>170</y>
+      <width>20</width>
+      <height>571</height>
+     </rect>
+    </property>
+    <property name="lineWidth">
+     <number>3</number>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Vertical</enum>
     </property>
    </widget>
   </widget>
@@ -1936,6 +2368,11 @@
    </property>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionAllez_a_d_gage">
+   <property name="text">
+    <string>Allez,  ça dégage</string>
+   </property>
+  </action>
  </widget>
  <resources/>
  <connections/>
