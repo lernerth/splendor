@@ -1,34 +1,26 @@
 #include "controleur.h"
 
-/*
-Controleur::Controleur(){
-    Carte** p1 = nullptr;
-    Carte** p2 = nullptr;
-    Carte** p3 = nullptr;
-    //static QMap<Couleur, int> pj{{"blanc", 7}, {"bleu", 7}, {"noir", 7}, {"rouge", 7}, {"vert", 7}, {"jaune", 5},};
-    //Plateau& plateau = Plateau.Plateau();
-    const Noble* pn[10];
-    for(int i = 0; i <10; i++){
-        pn[i] = nullptr;
-    }
-}*/
+
+
 
 //~Controleur() { delete pn; }
 
-    //getters
-        const Pioche_carte& Controleur::getPioche(int niveau) const {
-            switch (niveau){
-                case 1 :
-                    return p1;
-                    break;
-                case 2 :
-                    return p2;
-                    break;
-                case 3 :
-                    return p3;
-                    break;
-                }
+//getters
+Carte** Controleur::getPioche(int niveau) {
+    switch (niveau){
+        case 1 :
+            return pioches->getLvl1();
+            break;
+        case 2 :
+            return pioches->getLvl2();
+            break;
+        case 3 :
+            return pioches->getLvl3();
+            break;
+        default:
+            return nullptr;
         }
+}
 
 //Methodes
 void Controleur::initialiser_Plateau(int nb_joueurs){
@@ -36,22 +28,22 @@ void Controleur::initialiser_Plateau(int nb_joueurs){
     //Carte à acheter
     for (int j = 0; j < 4; j++){
         for(int i = 1; i < 4; i++){
-            plateau.modifCarteGrille(i, j, p1.piocher(i));
+            plateau.modifCarteGrille(i, j, pioches->piocher(i));
         }
     }
     //Cartes nobles
     for(int i = 0; i < nb_joueurs+1 ; i++){
-        plateau.setNoble(pn);
+        plateau.modifierNoble(i, noble->piocherNoble());
     }
 }
 
 //remplacer une carte
 void Controleur::retirer_carte (Carte* carte){
-    Carte& c = Plateau.getIdCarteGrille(niveau,indice);//on r?cup?re une ref vers la carte ? retirer
+    Carte& c = plateau.getIdCarteGrille(niveau,indice);//on r?cup?re une ref vers la carte ? retirer
     switch (niveau){
-        case 1 : Plateau.getIdCarteGrille(niveau,indice)=p1.piocher(); //on la remplace vers la carte de la pioche
-        case 2 : Plateau.getIdCarteGrille(niveau, indice)= p2.piocher();//?a marche avec un get ?
-        case 3 : Plateau.getIdCarteGrille(niveau, indice)= p3.piocher();
+        case 1 : plateau.getIdCarteGrille(niveau,indice)=p1.piocher(); //on la remplace vers la carte de la pioche
+        case 2 : plateau.getIdCarteGrille(niveau, indice)= p2.piocher();//?a marche avec un get ?
+        case 3 : plateau.getIdCarteGrille(niveau, indice)= p3.piocher();
     }
 }
 
@@ -72,3 +64,4 @@ void Controleur::retirer_Jetons(Couleur c){
 void Controleur::rendre_Jetons(Couleur c){
     pj[c]++;
 }
+

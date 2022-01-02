@@ -69,7 +69,7 @@ void Joueur::acheter_carte(Carte* carte) {
 
 
 //Donne un noble au joueur
-void Joueur::recupérer_noble(Noble* n) {
+void Joueur::recuperer_noble(Noble* n) {
     int i = 0;
     while(noble[i] != nullptr) {
         i++;

@@ -13,8 +13,11 @@ Plateau::Plateau(){
     }
 }
 
-void modifCarteGrille(int niveau, int emplacement, Carte* c){
-    Carte* grille = getGrille();
+void Plateau::modifCarteGrille(int niveau, int emplacement, Carte* c){
     grille[niveau][emplacement] = c;
+}
+
+void Plateau::modifierNoble(int indice, Noble* n){
+    noble[indice] = n;
 }
 

@@ -25,7 +25,7 @@ public:
     void ajouter_carte_reserve(Carte* carte);
     void retirer_carte_reserve(Carte* carte);
     void acheter_carte(Carte* carte);
-    void recupérer_noble(Noble* noble);
+    void recuperer_noble(Noble* noble);
 
 private:
     friend class Partie;

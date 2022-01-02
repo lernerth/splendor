@@ -6,17 +6,24 @@
 #include "Plateau.h"
 #include "Carte.h"
 #include "Noble.h"
+#include "pioche_noble.h"
+#include "Pioche_carte.h"
 
  class Controleur{
 	public:
         //constructeur-destructeur
-        Controleur();
-        //~Controleur() { delete pn; } //Pourquoi delete que la pioche noble ??
+        Controleur() {
+            pioches = nullptr;
+            plateau = nullptr;
+            noble = nullptr;
+
+        };
+        ~Controleur(); //Pourquoi delete que la pioche noble ??
 
         //getters
-        const Plateau& getPlateau() const { return plateau; }
-        const Pioche_carte& getPioche(int niveau) const;
-        const Noble* getNobles(int i) const {return pn[i];}
+        //Plateau& getPlateau()  { return plateau; }
+        Carte** getPioche(int niveau) ;
+        //Noble* getNobles(int i) {return pn[i];}
 
         //Singleton
         Controleur(const Controleur& c) = delete;
@@ -31,12 +38,10 @@
 
 	private:
         friend class Partie;
-        Pioche_carte& p1;
-        Pioche_carte& p2;
-        Pioche_carte& p3;
+        Pioche_carte *pioches;
         QMap<Couleur, int> pj;
-        Plateau& plateau;
-        const Noble* pn[10];
+        Plateau *plateau;
+        Pioche_Noble *noble;
 	};
 
 #endif

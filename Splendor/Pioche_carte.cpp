@@ -10,10 +10,10 @@ Pioche_carte::Pioche_carte() {
     nb_carteslvl1 = 40;
     nb_carteslvl2 = 30;
     nb_carteslvl3 = 20;
-    toutes = new const Carte*[nb_cartes];
-    lvl1 = new const Carte*[nb_carteslvl1];
-    lvl2 = new const Carte*[nb_carteslvl2];
-    lvl3 = new const Carte*[nb_carteslvl3];
+    toutes = new Carte*[nb_cartes];
+    lvl1 = new Carte*[nb_carteslvl1];
+    lvl2 = new Carte*[nb_carteslvl2];
+    lvl3 = new Carte*[nb_carteslvl3];
 
 
     //ouverture et lecture du fichier .json
@@ -45,7 +45,7 @@ Pioche_carte::Pioche_carte() {
     };
 
 
-    const Carte** tableaux_niveaux[3] = {lvl1, lvl2, lvl3};
+    Carte** tableaux_niveaux[3] = {lvl1, lvl2, lvl3};
 
     for (int i=1; i <= 3; i++){
         QJsonValue json_niveau = json_niveaux[QString::fromStdString(std::to_string(i))];
@@ -75,7 +75,7 @@ Pioche_carte::Pioche_carte() {
     // on concatène les tableaux nivx pour obtenir le tableau toutes
     for (size_t i=0; i < 3; i++){
         size_t j=0;
-        const Carte* p;
+        Carte* p;
         while((p=tableaux_niveaux[i][j])){
             toutes[j] = p;
             j++;
@@ -102,9 +102,9 @@ size_t Pioche_carte::getNbCartes(int niveau) {
     }
 }
 
-const Carte& Pioche_carte::piocher(int niveau) {
+Carte* Pioche_carte::piocher(int niveau) {
     size_t x;
-    const Carte* c = nullptr;
+    Carte* c = nullptr;
     switch (niveau) {
         case 1:
             if (this->nb_carteslvl1 == 0) throw Exception("Pioche vide");
@@ -131,7 +131,7 @@ const Carte& Pioche_carte::piocher(int niveau) {
             throw Exception("La pioche n'existe pas");
             break;
     }
-    return *c;
+    return c;
     }
 
 

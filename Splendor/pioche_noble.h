@@ -5,14 +5,16 @@
 
 class Pioche_Noble{
 public:
-    int getNbNobles() const {return 10;}
-    const Noble** getTous() const {return tous;}
-    const Noble& getNoble(size_t i) const {if (i >= 11) throw Exception("Out of range"); return *tous[i];}
+    int getNbNobles() {return nbNoble;}
+    Noble** getTous() {return tous;}
+    Noble& getNoble(size_t i) {if (i >= 11) throw Exception("Out of range"); return *tous[i];}
+    Noble* piocherNoble();
 private:
     Pioche_Noble();
-    Pioche_Noble(const Pioche_Noble& j) = delete;
-    Pioche_Noble& operator=(const Pioche_Noble& j) = delete;
-    const Noble** tous;
+    Pioche_Noble(Pioche_Noble& j) = delete;
+    Pioche_Noble& operator=(Pioche_Noble& j) = delete;
+    Noble** tous;
+    int nbNoble;
 
 };
 

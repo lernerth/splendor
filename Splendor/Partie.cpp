@@ -15,6 +15,7 @@ Partie::Partie(size_t n, QString j[3]){
             Joueur& joueur_actuel = getJoueur(i);
             Controleur* controleur = getControleur();
             int choix = 0;
+            Carte *c;
             //Que voulez-vous faire ?
             switch(choix){
                 case '1' :
@@ -24,11 +25,11 @@ Partie::Partie(size_t n, QString j[3]){
                     PiocherJetons(c1, c2, c3, joueur_actuel, controleur);
 
                 case '2' :
-                    Carte* c; //cliquer sur une carte;
+                    //cliquer sur une carte;
                     AcheterCarte(c, joueur_actuel, controleur);
 
                 case '3' :
-                    Carte* c; //cliquer sur une carte;
+                    //cliquer sur une carte;
                     ReserverCarte(c, joueur_actuel, controleur);
 
                 if(joueur_actuel.getPrestige()>=15){

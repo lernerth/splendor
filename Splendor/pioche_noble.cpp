@@ -5,7 +5,8 @@
 #include <QJsonDocument>
 
 Pioche_Noble::Pioche_Noble(){
-    tous = new const Noble*[10];
+    nbNoble = 10;
+    tous = new Noble*[nbNoble];
 
     //ouverture et lecture du fichier .json
     QFile file_obj("../ressources/nobles.json");
@@ -42,3 +43,13 @@ Pioche_Noble::Pioche_Noble(){
     }
 
 }
+
+Noble* Pioche_Noble::piocherNoble() {
+    size_t x;
+    Noble* c = nullptr;
+    x = rand() % nbNoble;
+    c = this->tous[x];
+    for (int i = x + 1; i < nbNoble; i++) this->tous[i - 1] = this->tous[i];
+    nbNoble--;
+    return c;
+    }

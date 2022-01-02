@@ -23,7 +23,7 @@ private:
     int nbPoints_Prestige;
     QMap<Couleur,int> nbCartesNecessaires;
     QImage image;
-    Noble(int id, int i, QMap<Couleur,int> nbcn, QImage image) : nbPoints_Prestige(i), nbCartesNecessaires(nbcn), image(image){}
+    Noble(int i, QMap<Couleur,int> nbcn, QImage image) : nbPoints_Prestige(i), nbCartesNecessaires(nbcn), image(image){}
 
 
 };
