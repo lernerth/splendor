@@ -27,6 +27,7 @@ public:
     Carte& AcheterCarte(Carte* carte, Joueur& joueur, Controleur* controleur);
     Carte& ReserverCarte(Carte* carte, Joueur& joueur, Controleur* controleur);
     void FinDePartie();
+    void VisiteNoble(Joueur *joueur);
 
 private:
     friend class Controleur;

@@ -8,7 +8,6 @@ Partie::Partie(size_t n, QString j[3]){
     }
 
     int fin = 0;
-    int tour = 0;
 
     while(fin != 1){
         for(size_t i = 0; i < n; i++){
@@ -31,10 +30,13 @@ Partie::Partie(size_t n, QString j[3]){
                 case '3' :
                     //cliquer sur une carte;
                     ReserverCarte(c, joueur_actuel, controleur);
+                default:
+                    throw  Exception("Faire une action");
 
-                if(joueur_actuel.getPrestige()>=15){
-                    fin = 1;
-                }
+
+            if(joueur_actuel.getPrestige()>=15){
+                fin = 1;
+            }
 
             }
         }
@@ -92,6 +94,7 @@ void Partie::PiocherJetons(Couleur c1, Couleur c2, Couleur c3, Joueur& joueur, C
 
 Carte& Partie::AcheterCarte(Carte* carte, Joueur& joueur, Controleur* controleur){
     int manquant = 0;
+    int test = 0;
     if(carte->getPrix(Couleur::blanc) - joueur.getBonus(Couleur::blanc) > joueur.getJetons(Couleur::blanc)){
         manquant =  manquant + carte->getPrix(Couleur::blanc) - joueur.getBonus(Couleur::blanc) - joueur.getJetons(Couleur::blanc);
     }
@@ -117,20 +120,76 @@ Carte& Partie::AcheterCarte(Carte* carte, Joueur& joueur, Controleur* controleur
         for(int i = 0 ; i<3 ; i++){
             if(joueur.cartes_reservees[i] == carte){
                 joueur.retirer_carte_reserve(carte);
+                test = 1;
             }
         }
-        controleur->retirer_carte(carte);
-        joueur.acheter_carte(carte);
+        if (test == 0){
+            controleur->remplacer_carte(niveau, indice);
+            joueur.acheter_carte(carte);
+
+        }
+        for (int j = 0; j<(carte->getPrix(Couleur::blanc) - joueur.getBonus(Couleur::blanc)); j++){
+            joueur.retirer_jeton(Couleur::blanc);
+            controleur->rendre_Jetons(Couleur::blanc);
+        }
+        for (int j = 0; j<(carte->getPrix(Couleur::bleu) - joueur.getBonus(Couleur::bleu)); j++){
+            joueur.retirer_jeton(Couleur::bleu);
+            controleur->rendre_Jetons(Couleur::bleu);
+        }
+        for (int j = 0; j<(carte->getPrix(Couleur::noir) - joueur.getBonus(Couleur::noir)); j++){
+            joueur.retirer_jeton(Couleur::noir);
+            controleur->rendre_Jetons(Couleur::noir);
+        }
+        for (int j = 0; j<(carte->getPrix(Couleur::rouge) - joueur.getBonus(Couleur::rouge)); j++){
+            joueur.retirer_jeton(Couleur::rouge);
+            controleur->rendre_Jetons(Couleur::rouge);
+        }
+        for (int j = 0; j<(carte->getPrix(Couleur::vert) - joueur.getBonus(Couleur::vert)); j++){
+            joueur.retirer_jeton(Couleur::vert);
+            controleur->rendre_Jetons(Couleur::vert);
+        }
     }
 
     else if(manquant > 0 && manquant <= joueur.getJetons(Couleur::jaune)){
         for(int i = 0 ; i<3 ; i++){
             if(joueur.cartes_reservees[i] == carte){
                 joueur.retirer_carte_reserve(carte);
+                test = 1;
             }
         }
-        controleur->retirer_carte(carte);
-        joueur.acheter_carte(carte);
+        if (test == 0){
+            controleur->remplacer_carte(niveau, indice);
+            joueur.acheter_carte(carte);
+        }
+        for (int j = 0; j<(carte->getPrix(Couleur::blanc) - joueur.getBonus(Couleur::blanc)); j++){
+            joueur.retirer_jeton(Couleur::blanc);
+            controleur->rendre_Jetons(Couleur::blanc);
+            if (joueur.getJetons(Couleur::blanc)<0) joueur.jetons[Couleur::blanc]=0;
+        }
+        for (int j = 0; j<(carte->getPrix(Couleur::bleu) - joueur.getBonus(Couleur::bleu)); j++){
+            joueur.retirer_jeton(Couleur::bleu);
+            controleur->rendre_Jetons(Couleur::bleu);
+            if (joueur.getJetons(Couleur::bleu)<0) joueur.jetons[Couleur::bleu]=0;
+        }
+        for (int j = 0; j<(carte->getPrix(Couleur::noir) - joueur.getBonus(Couleur::noir)); j++){
+            joueur.retirer_jeton(Couleur::noir);
+            controleur->rendre_Jetons(Couleur::noir);
+            if (joueur.getJetons(Couleur::noir)<0) joueur.jetons[Couleur::noir]=0;
+        }
+        for (int j = 0; j<(carte->getPrix(Couleur::rouge) - joueur.getBonus(Couleur::rouge)); j++){
+            joueur.retirer_jeton(Couleur::rouge);
+            controleur->rendre_Jetons(Couleur::rouge);
+            if (joueur.getJetons(Couleur::rouge)<0) joueur.jetons[Couleur::rouge]=0;
+        }
+        for (int j = 0; j<(carte->getPrix(Couleur::vert) - joueur.getBonus(Couleur::vert)); j++){
+            joueur.retirer_jeton(Couleur::vert);
+            controleur->rendre_Jetons(Couleur::vert);
+            if (joueur.getJetons(Couleur::vert)<0) joueur.jetons[Couleur::vert]=0;
+        }
+        for (int j = 0; j<manquant; j++){
+            joueur.retirer_jeton(Couleur::jaune);
+            controleur->rendre_Jetons(Couleur::jaune);
+        }
     }
 
     else{
@@ -140,8 +199,21 @@ Carte& Partie::AcheterCarte(Carte* carte, Joueur& joueur, Controleur* controleur
 }
 
 
-Carte& ReserverCarte(Carte* carte, Joueur& joueur, Controleur* controleur){
+Carte& Partie::ReserverCarte(Carte* carte, Joueur& joueur, Controleur* controleur){
      joueur.ajouter_carte_reserve(carte);//ajoute la carte dans la main du joueur, vérifie déjà s'il y en a 3 ou pas
-     controleur->retirer_carte(carte);//enlève la carte ET la remplace
+     controleur->remplacer_carte(niveau, indice);//enlève la carte ET la remplace
      return *carte;
+}
+
+void Partie::VisiteNoble(Joueur *joueur){
+    Noble* actuel;
+    int i = 0;
+    int test = 0;
+    while (i < cont->noble->getNbNobles() && test == 0){
+        actuel = cont->noble->getNoble(i);
+        if (actuel->getPrix(Couleur::blanc)<= joueur->getBonus(Couleur::blanc) && actuel->getPrix(Couleur::bleu)<= joueur->getBonus(Couleur::bleu) && actuel->getPrix(Couleur::noir)<= joueur->getBonus(Couleur::noir) && actuel->getPrix(Couleur::rouge)<= joueur->getBonus(Couleur::rouge) && actuel->getPrix(Couleur::vert)<= joueur->getBonus(Couleur::vert)){
+            cont->retirer_Noble(i);
+            joueur->recuperer_noble(actuel);
+        }
+    }
 }

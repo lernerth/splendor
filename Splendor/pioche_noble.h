@@ -7,7 +7,7 @@ class Pioche_Noble{
 public:
     int getNbNobles() {return nbNoble;}
     Noble** getTous() {return tous;}
-    Noble& getNoble(size_t i) {if (i >= 11) throw Exception("Out of range"); return *tous[i];}
+    Noble* getNoble(int i) {if (i >= 11) throw Exception("Out of range"); return tous[i];}
     Noble* piocherNoble();
 private:
     Pioche_Noble();
