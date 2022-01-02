@@ -1,5 +1,15 @@
 #include "joueur.h"
 
+
+Joueur::Joueur(int i, QString n){
+    this->prestige = 0;
+    this->id = i;
+    this->nom = n;
+    this->cartes_reservees = nullptr;
+    this->cartes_achetees = nullptr;
+    this->noble = nullptr;
+}
+
 int Joueur::getJetons(Couleur c) {
     int nbJ = jetons[c];
     return nbJ;

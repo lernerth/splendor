@@ -29,7 +29,7 @@ public:
 
 private:
     friend class Partie;
-    const QString nom;
+    QString nom;
     int id;
     Carte** cartes_reservees = nullptr;
     Carte** cartes_achetees = nullptr;
@@ -37,7 +37,7 @@ private:
     QMap<Couleur, int> jetons;
     int prestige;
     QMap<Couleur, int> bonus;
-    Joueur(int i, QString n) : id(i), nom(n), prestige(0){}
+    Joueur(int i, QString n);
 };
 
 #endif // JOUEUR_H_INCLUDED
