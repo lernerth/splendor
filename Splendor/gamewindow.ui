@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1260</width>
+    <width>1460</width>
     <height>800</height>
    </rect>
   </property>
@@ -459,7 +459,7 @@
    <widget class="Line" name="line">
     <property name="geometry">
      <rect>
-      <x>840</x>
+      <x>1040</x>
       <y>-20</y>
       <width>20</width>
       <height>811</height>
@@ -472,7 +472,7 @@
    <widget class="Line" name="line_2">
     <property name="geometry">
      <rect>
-      <x>850</x>
+      <x>1050</x>
       <y>180</y>
       <width>451</width>
       <height>16</height>
@@ -485,7 +485,7 @@
    <widget class="Line" name="line_3">
     <property name="geometry">
      <rect>
-      <x>850</x>
+      <x>1050</x>
       <y>380</y>
       <width>461</width>
       <height>16</height>
@@ -498,7 +498,7 @@
    <widget class="Line" name="line_4">
     <property name="geometry">
      <rect>
-      <x>850</x>
+      <x>1050</x>
       <y>570</y>
       <width>471</width>
       <height>16</height>
@@ -511,7 +511,7 @@
    <widget class="QLabel" name="NomJoueur1">
     <property name="geometry">
      <rect>
-      <x>950</x>
+      <x>1150</x>
       <y>10</y>
       <width>211</width>
       <height>20</height>
@@ -527,7 +527,7 @@
    <widget class="QLabel" name="NomJoueur2">
     <property name="geometry">
      <rect>
-      <x>950</x>
+      <x>1150</x>
       <y>200</y>
       <width>211</width>
       <height>20</height>
@@ -543,7 +543,7 @@
    <widget class="QLabel" name="NomJoueur3">
     <property name="geometry">
      <rect>
-      <x>950</x>
+      <x>1150</x>
       <y>400</y>
       <width>211</width>
       <height>20</height>
@@ -559,7 +559,7 @@
    <widget class="QLabel" name="NomJoueur4">
     <property name="geometry">
      <rect>
-      <x>950</x>
+      <x>1150</x>
       <y>590</y>
       <width>211</width>
       <height>20</height>
@@ -567,174 +567,6 @@
     </property>
     <property name="text">
      <string>NomJoueur4</string>
-    </property>
-    <property name="alignment">
-     <set>Qt::AlignCenter</set>
-    </property>
-   </widget>
-   <widget class="QLabel" name="JetonBlancPlateau">
-    <property name="geometry">
-     <rect>
-      <x>30</x>
-      <y>20</y>
-      <width>81</width>
-      <height>81</height>
-     </rect>
-    </property>
-    <property name="sizePolicy">
-     <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-      <horstretch>0</horstretch>
-      <verstretch>0</verstretch>
-     </sizepolicy>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-    <property name="pixmap">
-     <pixmap>ressources/jetons/blanc.png</pixmap>
-    </property>
-    <property name="scaledContents">
-     <bool>true</bool>
-    </property>
-    <property name="alignment">
-     <set>Qt::AlignCenter</set>
-    </property>
-   </widget>
-   <widget class="QLabel" name="JetonNoirPlateau">
-    <property name="geometry">
-     <rect>
-      <x>130</x>
-      <y>20</y>
-      <width>81</width>
-      <height>81</height>
-     </rect>
-    </property>
-    <property name="sizePolicy">
-     <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-      <horstretch>0</horstretch>
-      <verstretch>0</verstretch>
-     </sizepolicy>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-    <property name="pixmap">
-     <pixmap>ressources/jetons/noir.png</pixmap>
-    </property>
-    <property name="scaledContents">
-     <bool>true</bool>
-    </property>
-    <property name="alignment">
-     <set>Qt::AlignCenter</set>
-    </property>
-   </widget>
-   <widget class="QLabel" name="JetonBleuPlateau">
-    <property name="geometry">
-     <rect>
-      <x>330</x>
-      <y>20</y>
-      <width>81</width>
-      <height>81</height>
-     </rect>
-    </property>
-    <property name="sizePolicy">
-     <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-      <horstretch>0</horstretch>
-      <verstretch>0</verstretch>
-     </sizepolicy>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-    <property name="pixmap">
-     <pixmap>ressources/jetons/rouge.png</pixmap>
-    </property>
-    <property name="scaledContents">
-     <bool>true</bool>
-    </property>
-    <property name="alignment">
-     <set>Qt::AlignCenter</set>
-    </property>
-   </widget>
-   <widget class="QLabel" name="JetonRougePlateau">
-    <property name="geometry">
-     <rect>
-      <x>230</x>
-      <y>20</y>
-      <width>81</width>
-      <height>81</height>
-     </rect>
-    </property>
-    <property name="sizePolicy">
-     <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-      <horstretch>0</horstretch>
-      <verstretch>0</verstretch>
-     </sizepolicy>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-    <property name="pixmap">
-     <pixmap>ressources/jetons/bleu.png</pixmap>
-    </property>
-    <property name="scaledContents">
-     <bool>true</bool>
-    </property>
-    <property name="alignment">
-     <set>Qt::AlignCenter</set>
-    </property>
-   </widget>
-   <widget class="QLabel" name="JetonVertPlateau">
-    <property name="geometry">
-     <rect>
-      <x>430</x>
-      <y>20</y>
-      <width>81</width>
-      <height>81</height>
-     </rect>
-    </property>
-    <property name="sizePolicy">
-     <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-      <horstretch>0</horstretch>
-      <verstretch>0</verstretch>
-     </sizepolicy>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-    <property name="pixmap">
-     <pixmap>ressources/jetons/vert.png</pixmap>
-    </property>
-    <property name="scaledContents">
-     <bool>true</bool>
-    </property>
-    <property name="alignment">
-     <set>Qt::AlignCenter</set>
-    </property>
-   </widget>
-   <widget class="QLabel" name="JetonJaunePlateau">
-    <property name="geometry">
-     <rect>
-      <x>530</x>
-      <y>20</y>
-      <width>81</width>
-      <height>81</height>
-     </rect>
-    </property>
-    <property name="sizePolicy">
-     <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-      <horstretch>0</horstretch>
-      <verstretch>0</verstretch>
-     </sizepolicy>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-    <property name="pixmap">
-     <pixmap>ressources/jetons/or.png</pixmap>
-    </property>
-    <property name="scaledContents">
-     <bool>true</bool>
     </property>
     <property name="alignment">
      <set>Qt::AlignCenter</set>
@@ -860,7 +692,7 @@
    <widget class="QLCDNumber" name="jetonsBlancJ1">
     <property name="geometry">
      <rect>
-      <x>870</x>
+      <x>1070</x>
       <y>50</y>
       <width>41</width>
       <height>41</height>
@@ -876,7 +708,7 @@
    <widget class="QLCDNumber" name="jetonsNoirJ1">
     <property name="geometry">
      <rect>
-      <x>1010</x>
+      <x>1210</x>
       <y>50</y>
       <width>41</width>
       <height>41</height>
@@ -892,7 +724,7 @@
    <widget class="QLCDNumber" name="jetonsBleuJ1">
     <property name="geometry">
      <rect>
-      <x>1150</x>
+      <x>1350</x>
       <y>50</y>
       <width>41</width>
       <height>41</height>
@@ -908,7 +740,7 @@
    <widget class="QLCDNumber" name="jetonsRougeJ1">
     <property name="geometry">
      <rect>
-      <x>870</x>
+      <x>1070</x>
       <y>100</y>
       <width>41</width>
       <height>41</height>
@@ -924,7 +756,7 @@
    <widget class="QLCDNumber" name="jetonsVertJ1">
     <property name="geometry">
      <rect>
-      <x>1010</x>
+      <x>1210</x>
       <y>100</y>
       <width>41</width>
       <height>41</height>
@@ -940,7 +772,7 @@
    <widget class="QLCDNumber" name="jetonsOrJ1">
     <property name="geometry">
      <rect>
-      <x>1150</x>
+      <x>1350</x>
       <y>100</y>
       <width>41</width>
       <height>41</height>
@@ -956,7 +788,7 @@
    <widget class="QLCDNumber" name="jetonsNoirJ2">
     <property name="geometry">
      <rect>
-      <x>1010</x>
+      <x>1210</x>
       <y>240</y>
       <width>41</width>
       <height>41</height>
@@ -972,7 +804,7 @@
    <widget class="QLCDNumber" name="jetonsBlancJ2">
     <property name="geometry">
      <rect>
-      <x>870</x>
+      <x>1070</x>
       <y>240</y>
       <width>41</width>
       <height>41</height>
@@ -988,7 +820,7 @@
    <widget class="QLCDNumber" name="jetonsOrJ2">
     <property name="geometry">
      <rect>
-      <x>1150</x>
+      <x>1350</x>
       <y>290</y>
       <width>41</width>
       <height>41</height>
@@ -1004,7 +836,7 @@
    <widget class="QLCDNumber" name="jetonsBleuJ2">
     <property name="geometry">
      <rect>
-      <x>1150</x>
+      <x>1350</x>
       <y>240</y>
       <width>41</width>
       <height>41</height>
@@ -1020,7 +852,7 @@
    <widget class="QLCDNumber" name="jetonsRougeJ2">
     <property name="geometry">
      <rect>
-      <x>870</x>
+      <x>1070</x>
       <y>290</y>
       <width>41</width>
       <height>41</height>
@@ -1036,7 +868,7 @@
    <widget class="QLCDNumber" name="jetonsVertJ2">
     <property name="geometry">
      <rect>
-      <x>1010</x>
+      <x>1210</x>
       <y>290</y>
       <width>41</width>
       <height>41</height>
@@ -1054,7 +886,7 @@
      <rect>
       <x>180</x>
       <y>190</y>
-      <width>391</width>
+      <width>568</width>
       <height>531</height>
      </rect>
     </property>
@@ -1063,106 +895,48 @@
       <enum>QLayout::SetDefaultConstraint</enum>
      </property>
      <item row="0" column="2">
-      <widget class="QLabel" name="Carte12">
+      <widget class="QPushButton" name="carte21">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="cursor">
+        <cursorShape>OpenHandCursor</cursorShape>
+       </property>
        <property name="text">
         <string/>
        </property>
-       <property name="pixmap">
-        <pixmap>ressources/deck/3.png</pixmap>
+       <property name="icon">
+        <iconset>
+         <normaloff>ressources/deck/3.png</normaloff>ressources/deck/3.png</iconset>
        </property>
-       <property name="scaledContents">
-        <bool>true</bool>
-       </property>
-      </widget>
-     </item>
-     <item row="0" column="4">
-      <widget class="QLabel" name="Carte13">
-       <property name="text">
-        <string/>
-       </property>
-       <property name="pixmap">
-        <pixmap>ressources/deck/3.png</pixmap>
-       </property>
-       <property name="scaledContents">
-        <bool>true</bool>
-       </property>
-      </widget>
-     </item>
-     <item row="2" column="4">
-      <widget class="QLabel" name="Carte23">
-       <property name="text">
-        <string/>
-       </property>
-       <property name="pixmap">
-        <pixmap>ressources/deck/2.png</pixmap>
-       </property>
-       <property name="scaledContents">
-        <bool>true</bool>
-       </property>
-      </widget>
-     </item>
-     <item row="4" column="2">
-      <widget class="QLabel" name="Carte32">
-       <property name="text">
-        <string/>
-       </property>
-       <property name="pixmap">
-        <pixmap>ressources/deck/1.png</pixmap>
-       </property>
-       <property name="scaledContents">
-        <bool>true</bool>
-       </property>
-      </widget>
-     </item>
-     <item row="4" column="4">
-      <widget class="QLabel" name="Carte33">
-       <property name="text">
-        <string/>
-       </property>
-       <property name="pixmap">
-        <pixmap>ressources/deck/1.png</pixmap>
-       </property>
-       <property name="scaledContents">
-        <bool>true</bool>
-       </property>
-      </widget>
-     </item>
-     <item row="4" column="0">
-      <widget class="QLabel" name="Carte31">
-       <property name="text">
-        <string/>
-       </property>
-       <property name="pixmap">
-        <pixmap>ressources/deck/1.png</pixmap>
-       </property>
-       <property name="scaledContents">
-        <bool>true</bool>
-       </property>
-      </widget>
-     </item>
-     <item row="2" column="2">
-      <widget class="QLabel" name="Carte22">
-       <property name="text">
-        <string/>
-       </property>
-       <property name="pixmap">
-        <pixmap>ressources/deck/2.png</pixmap>
-       </property>
-       <property name="scaledContents">
-        <bool>true</bool>
+       <property name="iconSize">
+        <size>
+         <width>122</width>
+         <height>169</height>
+        </size>
        </property>
       </widget>
      </item>
      <item row="2" column="0">
-      <widget class="QLabel" name="Carte21">
+      <widget class="QPushButton" name="carte10">
+       <property name="cursor">
+        <cursorShape>OpenHandCursor</cursorShape>
+       </property>
        <property name="text">
         <string/>
        </property>
-       <property name="pixmap">
-        <pixmap>ressources/deck/2.png</pixmap>
+       <property name="icon">
+        <iconset>
+         <normaloff>ressources/deck/2.png</normaloff>ressources/deck/2.png</iconset>
        </property>
-       <property name="scaledContents">
-        <bool>true</bool>
+       <property name="iconSize">
+        <size>
+         <width>122</width>
+         <height>169</height>
+        </size>
        </property>
       </widget>
      </item>
@@ -1179,10 +953,73 @@
        </property>
       </spacer>
      </item>
+     <item row="2" column="4">
+      <widget class="QPushButton" name="carte12">
+       <property name="cursor">
+        <cursorShape>OpenHandCursor</cursorShape>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="icon">
+        <iconset>
+         <normaloff>ressources/deck/2.png</normaloff>ressources/deck/2.png</iconset>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>122</width>
+         <height>169</height>
+        </size>
+       </property>
+      </widget>
+     </item>
+     <item row="4" column="2">
+      <widget class="QPushButton" name="carte01">
+       <property name="cursor">
+        <cursorShape>OpenHandCursor</cursorShape>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="icon">
+        <iconset>
+         <normaloff>ressources/deck/1.png</normaloff>ressources/deck/1.png</iconset>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>122</width>
+         <height>169</height>
+        </size>
+       </property>
+      </widget>
+     </item>
+     <item row="4" column="0">
+      <widget class="QPushButton" name="carte00">
+       <property name="cursor">
+        <cursorShape>OpenHandCursor</cursorShape>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="icon">
+        <iconset>
+         <normaloff>ressources/deck/1.png</normaloff>ressources/deck/1.png</iconset>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>122</width>
+         <height>169</height>
+        </size>
+       </property>
+      </widget>
+     </item>
      <item row="1" column="0">
       <spacer name="verticalSpacer">
        <property name="orientation">
         <enum>Qt::Vertical</enum>
+       </property>
+       <property name="sizeType">
+        <enum>QSizePolicy::Expanding</enum>
        </property>
        <property name="sizeHint" stdset="0">
         <size>
@@ -1192,16 +1029,69 @@
        </property>
       </spacer>
      </item>
-     <item row="0" column="0">
-      <widget class="QLabel" name="Carte11">
+     <item row="2" column="2">
+      <widget class="QPushButton" name="carte11">
+       <property name="cursor">
+        <cursorShape>OpenHandCursor</cursorShape>
+       </property>
        <property name="text">
         <string/>
        </property>
-       <property name="pixmap">
-        <pixmap>ressources/deck/3.png</pixmap>
+       <property name="icon">
+        <iconset>
+         <normaloff>ressources/deck/2.png</normaloff>ressources/deck/2.png</iconset>
        </property>
-       <property name="scaledContents">
-        <bool>true</bool>
+       <property name="iconSize">
+        <size>
+         <width>122</width>
+         <height>169</height>
+        </size>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="0">
+      <widget class="QPushButton" name="carte20">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="cursor">
+        <cursorShape>OpenHandCursor</cursorShape>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="icon">
+        <iconset>
+         <normaloff>ressources/deck/3.png</normaloff>ressources/deck/3.png</iconset>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>122</width>
+         <height>169</height>
+        </size>
+       </property>
+      </widget>
+     </item>
+     <item row="4" column="4">
+      <widget class="QPushButton" name="carte02">
+       <property name="cursor">
+        <cursorShape>OpenHandCursor</cursorShape>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="icon">
+        <iconset>
+         <normaloff>ressources/deck/1.png</normaloff>ressources/deck/1.png</iconset>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>122</width>
+         <height>169</height>
+        </size>
        </property>
       </widget>
      </item>
@@ -1223,6 +1113,9 @@
        <property name="orientation">
         <enum>Qt::Vertical</enum>
        </property>
+       <property name="sizeType">
+        <enum>QSizePolicy::Expanding</enum>
+       </property>
        <property name="sizeHint" stdset="0">
         <size>
          <width>20</width>
@@ -1231,12 +1124,104 @@
        </property>
       </spacer>
      </item>
+     <item row="0" column="4">
+      <widget class="QPushButton" name="carte22">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="cursor">
+        <cursorShape>OpenHandCursor</cursorShape>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="icon">
+        <iconset>
+         <normaloff>ressources/deck/3.png</normaloff>ressources/deck/3.png</iconset>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>122</width>
+         <height>169</height>
+        </size>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="5">
+      <widget class="QPushButton" name="carte23">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="cursor">
+        <cursorShape>OpenHandCursor</cursorShape>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="icon">
+        <iconset>
+         <normaloff>ressources/deck/3.png</normaloff>ressources/deck/3.png</iconset>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>122</width>
+         <height>169</height>
+        </size>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="5">
+      <widget class="QPushButton" name="carte13">
+       <property name="cursor">
+        <cursorShape>OpenHandCursor</cursorShape>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="icon">
+        <iconset>
+         <normaloff>ressources/deck/2.png</normaloff>ressources/deck/2.png</iconset>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>122</width>
+         <height>169</height>
+        </size>
+       </property>
+      </widget>
+     </item>
+     <item row="4" column="5">
+      <widget class="QPushButton" name="carte03">
+       <property name="cursor">
+        <cursorShape>OpenHandCursor</cursorShape>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="icon">
+        <iconset>
+         <normaloff>ressources/deck/1.png</normaloff>ressources/deck/1.png</iconset>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>122</width>
+         <height>169</height>
+        </size>
+       </property>
+      </widget>
+     </item>
     </layout>
    </widget>
    <widget class="QLCDNumber" name="jetonsNoirJ3">
     <property name="geometry">
      <rect>
-      <x>1010</x>
+      <x>1210</x>
       <y>440</y>
       <width>41</width>
       <height>41</height>
@@ -1252,7 +1237,7 @@
    <widget class="QLCDNumber" name="jetonsRougeJ3">
     <property name="geometry">
      <rect>
-      <x>870</x>
+      <x>1070</x>
       <y>490</y>
       <width>41</width>
       <height>41</height>
@@ -1268,7 +1253,7 @@
    <widget class="QLCDNumber" name="jetonsBlancJ3">
     <property name="geometry">
      <rect>
-      <x>870</x>
+      <x>1070</x>
       <y>440</y>
       <width>41</width>
       <height>41</height>
@@ -1284,7 +1269,7 @@
    <widget class="QLCDNumber" name="jetonsOrJ3">
     <property name="geometry">
      <rect>
-      <x>1150</x>
+      <x>1350</x>
       <y>490</y>
       <width>41</width>
       <height>41</height>
@@ -1300,7 +1285,7 @@
    <widget class="QLCDNumber" name="jetonsVertJ3">
     <property name="geometry">
      <rect>
-      <x>1010</x>
+      <x>1210</x>
       <y>490</y>
       <width>41</width>
       <height>41</height>
@@ -1316,7 +1301,7 @@
    <widget class="QLCDNumber" name="jetonsBleuJ3">
     <property name="geometry">
      <rect>
-      <x>1150</x>
+      <x>1350</x>
       <y>440</y>
       <width>41</width>
       <height>41</height>
@@ -1332,7 +1317,7 @@
    <widget class="QLCDNumber" name="jetonsRougeJ4">
     <property name="geometry">
      <rect>
-      <x>870</x>
+      <x>1070</x>
       <y>680</y>
       <width>41</width>
       <height>41</height>
@@ -1348,7 +1333,7 @@
    <widget class="QLCDNumber" name="jetonsVertJ4">
     <property name="geometry">
      <rect>
-      <x>1010</x>
+      <x>1210</x>
       <y>680</y>
       <width>41</width>
       <height>41</height>
@@ -1364,7 +1349,7 @@
    <widget class="QLCDNumber" name="jetonsBleuJ4">
     <property name="geometry">
      <rect>
-      <x>1150</x>
+      <x>1350</x>
       <y>630</y>
       <width>41</width>
       <height>41</height>
@@ -1380,7 +1365,7 @@
    <widget class="QLCDNumber" name="jetonsNoirJ4">
     <property name="geometry">
      <rect>
-      <x>1010</x>
+      <x>1210</x>
       <y>630</y>
       <width>41</width>
       <height>41</height>
@@ -1396,7 +1381,7 @@
    <widget class="QLCDNumber" name="jetonsBlancJ4">
     <property name="geometry">
      <rect>
-      <x>870</x>
+      <x>1070</x>
       <y>630</y>
       <width>41</width>
       <height>41</height>
@@ -1412,7 +1397,7 @@
    <widget class="QLCDNumber" name="jetonsOrJ4">
     <property name="geometry">
      <rect>
-      <x>1150</x>
+      <x>1350</x>
       <y>680</y>
       <width>41</width>
       <height>41</height>
@@ -1428,7 +1413,7 @@
    <widget class="QLabel" name="Blanc1">
     <property name="geometry">
      <rect>
-      <x>920</x>
+      <x>1120</x>
       <y>50</y>
       <width>41</width>
       <height>41</height>
@@ -1456,7 +1441,7 @@
    <widget class="QLabel" name="Noir1">
     <property name="geometry">
      <rect>
-      <x>1060</x>
+      <x>1260</x>
       <y>50</y>
       <width>41</width>
       <height>41</height>
@@ -1484,7 +1469,7 @@
    <widget class="QLabel" name="Bleu1">
     <property name="geometry">
      <rect>
-      <x>1200</x>
+      <x>1400</x>
       <y>50</y>
       <width>41</width>
       <height>41</height>
@@ -1512,7 +1497,7 @@
    <widget class="QLabel" name="Rouge1">
     <property name="geometry">
      <rect>
-      <x>920</x>
+      <x>1120</x>
       <y>100</y>
       <width>41</width>
       <height>41</height>
@@ -1540,7 +1525,7 @@
    <widget class="QLabel" name="Vert1">
     <property name="geometry">
      <rect>
-      <x>1060</x>
+      <x>1260</x>
       <y>100</y>
       <width>41</width>
       <height>41</height>
@@ -1568,7 +1553,7 @@
    <widget class="QLabel" name="Or1">
     <property name="geometry">
      <rect>
-      <x>1200</x>
+      <x>1400</x>
       <y>100</y>
       <width>41</width>
       <height>41</height>
@@ -1596,7 +1581,7 @@
    <widget class="QLabel" name="Blanc2">
     <property name="geometry">
      <rect>
-      <x>920</x>
+      <x>1120</x>
       <y>240</y>
       <width>41</width>
       <height>41</height>
@@ -1624,7 +1609,7 @@
    <widget class="QLabel" name="Rouge2">
     <property name="geometry">
      <rect>
-      <x>920</x>
+      <x>1120</x>
       <y>290</y>
       <width>41</width>
       <height>41</height>
@@ -1652,7 +1637,7 @@
    <widget class="QLabel" name="Blanc3">
     <property name="geometry">
      <rect>
-      <x>920</x>
+      <x>1120</x>
       <y>440</y>
       <width>41</width>
       <height>41</height>
@@ -1680,7 +1665,7 @@
    <widget class="QLabel" name="Rouge3">
     <property name="geometry">
      <rect>
-      <x>920</x>
+      <x>1120</x>
       <y>490</y>
       <width>41</width>
       <height>41</height>
@@ -1708,7 +1693,7 @@
    <widget class="QLabel" name="Rouge4">
     <property name="geometry">
      <rect>
-      <x>920</x>
+      <x>1120</x>
       <y>680</y>
       <width>41</width>
       <height>41</height>
@@ -1736,7 +1721,7 @@
    <widget class="QLabel" name="Blanc4">
     <property name="geometry">
      <rect>
-      <x>920</x>
+      <x>1120</x>
       <y>630</y>
       <width>41</width>
       <height>41</height>
@@ -1764,7 +1749,7 @@
    <widget class="QLabel" name="Noir2">
     <property name="geometry">
      <rect>
-      <x>1060</x>
+      <x>1260</x>
       <y>240</y>
       <width>41</width>
       <height>41</height>
@@ -1792,7 +1777,7 @@
    <widget class="QLabel" name="Vert2">
     <property name="geometry">
      <rect>
-      <x>1060</x>
+      <x>1260</x>
       <y>290</y>
       <width>41</width>
       <height>41</height>
@@ -1820,7 +1805,7 @@
    <widget class="QLabel" name="Noir3">
     <property name="geometry">
      <rect>
-      <x>1060</x>
+      <x>1260</x>
       <y>440</y>
       <width>41</width>
       <height>41</height>
@@ -1848,7 +1833,7 @@
    <widget class="QLabel" name="Vert3">
     <property name="geometry">
      <rect>
-      <x>1060</x>
+      <x>1260</x>
       <y>490</y>
       <width>41</width>
       <height>41</height>
@@ -1876,7 +1861,7 @@
    <widget class="QLabel" name="Noir4">
     <property name="geometry">
      <rect>
-      <x>1060</x>
+      <x>1260</x>
       <y>630</y>
       <width>41</width>
       <height>41</height>
@@ -1904,7 +1889,7 @@
    <widget class="QLabel" name="Vert4">
     <property name="geometry">
      <rect>
-      <x>1060</x>
+      <x>1260</x>
       <y>680</y>
       <width>41</width>
       <height>41</height>
@@ -1932,7 +1917,7 @@
    <widget class="QLabel" name="Bleu2">
     <property name="geometry">
      <rect>
-      <x>1200</x>
+      <x>1400</x>
       <y>240</y>
       <width>41</width>
       <height>41</height>
@@ -1960,7 +1945,7 @@
    <widget class="QLabel" name="Or2">
     <property name="geometry">
      <rect>
-      <x>1200</x>
+      <x>1400</x>
       <y>290</y>
       <width>41</width>
       <height>41</height>
@@ -1988,7 +1973,7 @@
    <widget class="QLabel" name="Bleu3">
     <property name="geometry">
      <rect>
-      <x>1200</x>
+      <x>1400</x>
       <y>440</y>
       <width>41</width>
       <height>41</height>
@@ -2016,7 +2001,7 @@
    <widget class="QLabel" name="Or3">
     <property name="geometry">
      <rect>
-      <x>1200</x>
+      <x>1400</x>
       <y>490</y>
       <width>41</width>
       <height>41</height>
@@ -2044,7 +2029,7 @@
    <widget class="QLabel" name="Bleu4">
     <property name="geometry">
      <rect>
-      <x>1200</x>
+      <x>1400</x>
       <y>630</y>
       <width>41</width>
       <height>41</height>
@@ -2072,7 +2057,7 @@
    <widget class="QLabel" name="Or4">
     <property name="geometry">
      <rect>
-      <x>1200</x>
+      <x>1400</x>
       <y>680</y>
       <width>41</width>
       <height>41</height>
@@ -2100,7 +2085,7 @@
    <widget class="QLabel" name="label">
     <property name="geometry">
      <rect>
-      <x>660</x>
+      <x>860</x>
       <y>230</y>
       <width>111</width>
       <height>16</height>
@@ -2113,7 +2098,7 @@
    <widget class="QRadioButton" name="acheter">
     <property name="geometry">
      <rect>
-      <x>640</x>
+      <x>840</x>
       <y>260</y>
       <width>161</width>
       <height>22</height>
@@ -2126,7 +2111,7 @@
    <widget class="QRadioButton" name="reserver">
     <property name="geometry">
      <rect>
-      <x>640</x>
+      <x>840</x>
       <y>290</y>
       <width>161</width>
       <height>22</height>
@@ -2139,7 +2124,7 @@
    <widget class="QRadioButton" name="prendreJetons">
     <property name="geometry">
      <rect>
-      <x>640</x>
+      <x>840</x>
       <y>320</y>
       <width>161</width>
       <height>22</height>
@@ -2152,20 +2137,26 @@
    <widget class="QPushButton" name="finDeTour">
     <property name="geometry">
      <rect>
-      <x>650</x>
-      <y>370</y>
-      <width>131</width>
-      <height>24</height>
+      <x>850</x>
+      <y>360</y>
+      <width>121</width>
+      <height>31</height>
      </rect>
     </property>
     <property name="text">
-     <string>Fin de tour </string>
+     <string>Fin du tour </string>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>121</width>
+      <height>121</height>
+     </size>
     </property>
    </widget>
    <widget class="Line" name="line_5">
     <property name="geometry">
      <rect>
-      <x>608</x>
+      <x>808</x>
       <y>400</y>
       <width>211</width>
       <height>20</height>
@@ -2178,7 +2169,7 @@
    <widget class="Line" name="line_6">
     <property name="geometry">
      <rect>
-      <x>608</x>
+      <x>808</x>
       <y>210</y>
       <width>211</width>
       <height>20</height>
@@ -2191,7 +2182,7 @@
    <widget class="Line" name="line_7">
     <property name="geometry">
      <rect>
-      <x>600</x>
+      <x>800</x>
       <y>220</y>
       <width>16</width>
       <height>191</height>
@@ -2204,7 +2195,7 @@
    <widget class="Line" name="line_8">
     <property name="geometry">
      <rect>
-      <x>810</x>
+      <x>1010</x>
       <y>220</y>
       <width>16</width>
       <height>192</height>
@@ -2217,8 +2208,8 @@
    <widget class="Line" name="line_9">
     <property name="geometry">
      <rect>
-      <x>642</x>
-      <y>20</y>
+      <x>820</x>
+      <y>40</y>
       <width>16</width>
       <height>71</height>
      </rect>
@@ -2230,8 +2221,8 @@
    <widget class="Line" name="line_10">
     <property name="geometry">
      <rect>
-      <x>802</x>
-      <y>20</y>
+      <x>982</x>
+      <y>40</y>
       <width>16</width>
       <height>71</height>
      </rect>
@@ -2243,8 +2234,8 @@
    <widget class="Line" name="line_11">
     <property name="geometry">
      <rect>
-      <x>650</x>
-      <y>80</y>
+      <x>830</x>
+      <y>100</y>
       <width>161</width>
       <height>20</height>
      </rect>
@@ -2256,8 +2247,8 @@
    <widget class="Line" name="line_12">
     <property name="geometry">
      <rect>
-      <x>650</x>
-      <y>10</y>
+      <x>830</x>
+      <y>30</y>
       <width>161</width>
       <height>20</height>
      </rect>
@@ -2269,8 +2260,8 @@
    <widget class="QLabel" name="label_2">
     <property name="geometry">
      <rect>
-      <x>660</x>
-      <y>30</y>
+      <x>840</x>
+      <y>50</y>
       <width>101</width>
       <height>16</height>
      </rect>
@@ -2282,8 +2273,8 @@
    <widget class="QLabel" name="label_3">
     <property name="geometry">
      <rect>
-      <x>680</x>
-      <y>60</y>
+      <x>860</x>
+      <y>80</y>
       <width>111</width>
       <height>16</height>
      </rect>
@@ -2297,7 +2288,7 @@
      <rect>
       <x>60</x>
       <y>730</y>
-      <width>531</width>
+      <width>701</width>
       <height>20</height>
      </rect>
     </property>
@@ -2313,7 +2304,7 @@
      <rect>
       <x>60</x>
       <y>160</y>
-      <width>531</width>
+      <width>701</width>
       <height>20</height>
      </rect>
     </property>
@@ -2343,7 +2334,7 @@
    <widget class="Line" name="cadreCartes">
     <property name="geometry">
      <rect>
-      <x>580</x>
+      <x>750</x>
       <y>170</y>
       <width>20</width>
       <height>571</height>
@@ -2356,23 +2347,174 @@
      <enum>Qt::Vertical</enum>
     </property>
    </widget>
+   <widget class="QPushButton" name="JetonBlancPlateau">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>20</y>
+      <width>80</width>
+      <height>81</height>
+     </rect>
+    </property>
+    <property name="cursor">
+     <cursorShape>OpenHandCursor</cursorShape>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="icon">
+     <iconset>
+      <normaloff>ressources/jetons/blanc.png</normaloff>ressources/jetons/blanc.png</iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>80</width>
+      <height>81</height>
+     </size>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="JetonNoirPlateau">
+    <property name="geometry">
+     <rect>
+      <x>130</x>
+      <y>20</y>
+      <width>80</width>
+      <height>81</height>
+     </rect>
+    </property>
+    <property name="cursor">
+     <cursorShape>OpenHandCursor</cursorShape>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="icon">
+     <iconset>
+      <normaloff>ressources/jetons/noir.png</normaloff>ressources/jetons/noir.png</iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>80</width>
+      <height>81</height>
+     </size>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="JetonBleuPlateau">
+    <property name="geometry">
+     <rect>
+      <x>230</x>
+      <y>20</y>
+      <width>80</width>
+      <height>81</height>
+     </rect>
+    </property>
+    <property name="cursor">
+     <cursorShape>OpenHandCursor</cursorShape>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="icon">
+     <iconset>
+      <normaloff>ressources/jetons/bleu.png</normaloff>ressources/jetons/bleu.png</iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>80</width>
+      <height>81</height>
+     </size>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="JetonRougePlateau">
+    <property name="geometry">
+     <rect>
+      <x>330</x>
+      <y>20</y>
+      <width>80</width>
+      <height>81</height>
+     </rect>
+    </property>
+    <property name="cursor">
+     <cursorShape>OpenHandCursor</cursorShape>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="icon">
+     <iconset>
+      <normaloff>ressources/jetons/rouge.png</normaloff>ressources/jetons/rouge.png</iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>80</width>
+      <height>81</height>
+     </size>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="JetonVertPlateau">
+    <property name="geometry">
+     <rect>
+      <x>430</x>
+      <y>20</y>
+      <width>80</width>
+      <height>81</height>
+     </rect>
+    </property>
+    <property name="cursor">
+     <cursorShape>OpenHandCursor</cursorShape>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="icon">
+     <iconset>
+      <normaloff>ressources/jetons/vert.png</normaloff>ressources/jetons/vert.png</iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>80</width>
+      <height>81</height>
+     </size>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="JetonOrPlateau">
+    <property name="geometry">
+     <rect>
+      <x>530</x>
+      <y>20</y>
+      <width>80</width>
+      <height>81</height>
+     </rect>
+    </property>
+    <property name="cursor">
+     <cursorShape>OpenHandCursor</cursorShape>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="icon">
+     <iconset>
+      <normaloff>ressources/jetons/or.png</normaloff>ressources/jetons/or.png</iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>80</width>
+      <height>81</height>
+     </size>
+    </property>
+   </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>1260</width>
+     <width>1460</width>
      <height>21</height>
     </rect>
    </property>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
-  <action name="actionAllez_a_d_gage">
-   <property name="text">
-    <string>Allez,  ça dégage</string>
-   </property>
-  </action>
  </widget>
  <resources/>
  <connections/>
