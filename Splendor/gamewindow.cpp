@@ -21,6 +21,7 @@ GameWindow_t::GameWindow_t(Partie* p) :
     AffichernbJetons();
     AfficherNobles();
     AfficherJoueur();
+    ui->prendreJetons->setChecked(true);
 
     //Affichage à l'initialisation de la fenêtre
     ui->cadreCartes->setVisible(false);
@@ -77,7 +78,13 @@ void GameWindow_t::highlight(){
         ui->carte21->setEnabled(true);
         ui->carte22->setEnabled(true);
         ui->carte23->setEnabled(true);
-        //Bloquer
+        //Bloquer les jetons
+        ui->JetonBlancPlateau->setEnabled(false);
+        ui->JetonNoirPlateau->setEnabled(false);
+        ui->JetonBleuPlateau->setEnabled(false);
+        ui->JetonRougePlateau->setEnabled(false);
+        ui->JetonVertPlateau->setEnabled(false);
+        ui->JetonOrPlateau->setEnabled(false);
     }
     else if (ui->reserver->isChecked()==true){
         ui->cadreCartes->setVisible(true);
@@ -97,13 +104,20 @@ void GameWindow_t::highlight(){
         ui->carte21->setEnabled(true);
         ui->carte22->setEnabled(true);
         ui->carte23->setEnabled(true);
+        //Bloquer les jetons
+        ui->JetonBlancPlateau->setEnabled(false);
+        ui->JetonNoirPlateau->setEnabled(false);
+        ui->JetonBleuPlateau->setEnabled(false);
+        ui->JetonRougePlateau->setEnabled(false);
+        ui->JetonVertPlateau->setEnabled(false);
+        ui->JetonOrPlateau->setEnabled(false);
     }
     else if (ui->prendreJetons->isChecked()==true){
         ui->cadreCartes->setVisible(false);
         ui->cadreCartes2->setVisible(false);
         ui->cadreCartes3->setVisible(false);
         ui->cadreCartes4->setVisible(false);
-        //Débloquer le clic sur les cartes
+        //Bloquer le clic sur les cartes
         ui->carte00->setEnabled(false);
         ui->carte01->setEnabled(false);
         ui->carte02->setEnabled(false);
@@ -116,6 +130,13 @@ void GameWindow_t::highlight(){
         ui->carte21->setEnabled(false);
         ui->carte22->setEnabled(false);
         ui->carte23->setEnabled(false);
+        //Débloquer les jetons
+        ui->JetonBlancPlateau->setEnabled(true);
+        ui->JetonNoirPlateau->setEnabled(true);
+        ui->JetonBleuPlateau->setEnabled(true);
+        ui->JetonRougePlateau->setEnabled(true);
+        ui->JetonVertPlateau->setEnabled(true);
+        ui->JetonOrPlateau->setEnabled(true);
     }
 }
 
@@ -203,31 +224,53 @@ void GameWindow_t::afficherCartes(){
     ui->carte20->setIcon(QIcon(Partie::getInstance()->getControleur()->getPlateau()->getCarteGrille(2,0)->getImage()));
     ui->carte20->setIconSize(QSize(122, 169));
     BoutonCarte[ui->carte20]=Partie::getInstance()->getControleur()->getPlateau()->getCarteGrille(2,0);
-    TableauBouton[8]=ui->carte20;
+    //TableauBouton[8]=ui->carte20;
+
     ui->carte21->setIcon(QIcon(Partie::getInstance()->getControleur()->getPlateau()->getCarteGrille(2,1)->getImage()));
     ui->carte21->setIconSize(QSize(122, 169));
+    BoutonCarte[ui->carte21]=Partie::getInstance()->getControleur()->getPlateau()->getCarteGrille(2,1);
+
     ui->carte22->setIcon(QIcon(Partie::getInstance()->getControleur()->getPlateau()->getCarteGrille(2,2)->getImage()));
     ui->carte22->setIconSize(QSize(122, 169));
+    BoutonCarte[ui->carte22]=Partie::getInstance()->getControleur()->getPlateau()->getCarteGrille(2,2);
+
     ui->carte23->setIcon(QIcon(Partie::getInstance()->getControleur()->getPlateau()->getCarteGrille(2,3)->getImage()));
     ui->carte23->setIconSize(QSize(122, 169));
+    BoutonCarte[ui->carte23]=Partie::getInstance()->getControleur()->getPlateau()->getCarteGrille(2,3);
+
     //Niveau 2
     ui->carte10->setIcon(QIcon(Partie::getInstance()->getControleur()->getPlateau()->getCarteGrille(1,0)->getImage()));
     ui->carte10->setIconSize(QSize(122, 169));
+    BoutonCarte[ui->carte10]=Partie::getInstance()->getControleur()->getPlateau()->getCarteGrille(1,0);
+
     ui->carte11->setIcon(QIcon(Partie::getInstance()->getControleur()->getPlateau()->getCarteGrille(1,1)->getImage()));
     ui->carte11->setIconSize(QSize(122, 169));
+    BoutonCarte[ui->carte11]=Partie::getInstance()->getControleur()->getPlateau()->getCarteGrille(1,1);
+
     ui->carte12->setIcon(QIcon(Partie::getInstance()->getControleur()->getPlateau()->getCarteGrille(1,2)->getImage()));
     ui->carte12->setIconSize(QSize(122, 169));
+    BoutonCarte[ui->carte12]=Partie::getInstance()->getControleur()->getPlateau()->getCarteGrille(1,2);
+
     ui->carte13->setIcon(QIcon(Partie::getInstance()->getControleur()->getPlateau()->getCarteGrille(1,3)->getImage()));
     ui->carte13->setIconSize(QSize(122, 169));
+    BoutonCarte[ui->carte13]=Partie::getInstance()->getControleur()->getPlateau()->getCarteGrille(1,3);
+
     //Niveau 1
     ui->carte00->setIcon(QIcon(Partie::getInstance()->getControleur()->getPlateau()->getCarteGrille(0,0)->getImage()));
     ui->carte00->setIconSize(QSize(122, 169));
+    BoutonCarte[ui->carte00]=Partie::getInstance()->getControleur()->getPlateau()->getCarteGrille(0,0);
+
     ui->carte01->setIcon(QIcon(Partie::getInstance()->getControleur()->getPlateau()->getCarteGrille(0,1)->getImage()));
     ui->carte01->setIconSize(QSize(122, 169));
+    BoutonCarte[ui->carte01]=Partie::getInstance()->getControleur()->getPlateau()->getCarteGrille(0,1);
+
     ui->carte02->setIcon(QIcon(Partie::getInstance()->getControleur()->getPlateau()->getCarteGrille(0,2)->getImage()));
     ui->carte02->setIconSize(QSize(122, 169));
+    BoutonCarte[ui->carte02]=Partie::getInstance()->getControleur()->getPlateau()->getCarteGrille(0,2);
+
     ui->carte03->setIcon(QIcon(Partie::getInstance()->getControleur()->getPlateau()->getCarteGrille(0,3)->getImage()));
     ui->carte03->setIconSize(QSize(122, 169));
+    BoutonCarte[ui->carte03]=Partie::getInstance()->getControleur()->getPlateau()->getCarteGrille(0,3);
 }
 
 //Afficher les images des jetons
@@ -304,7 +347,10 @@ void GameWindow_t::AfficherJoueur(){
     ui->Joueuractuel->setText(Partie::getInstance()->getJoueur(1)->getNom());
 }
 
-/*void GameWindow_t::FindeTour(){
+void GameWindow_t::FindeTour(){
+    Carte* c;
+    int actuel = 0;
+    Joueur * joueur_actuel = Partie::getInstance()->getJoueur(actuel);
     switch(choix){
         case '1' :
             Couleur c1; //cliquer sur un jeton
@@ -320,7 +366,8 @@ void GameWindow_t::AfficherJoueur(){
             //cliquer sur une carte;
             Partie::getInstance()->ReserverCarte(c, *joueur_actuel, Partie::getInstance()->getControleur());
         default:
-            tourfini = 0;
+            //Message d'Erreur
+            qDebug()<<"erreur";
     }
 }
-*/
+

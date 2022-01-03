@@ -143,6 +143,14 @@ public:
     QLabel *Noble2;
     QLabel *Noble5;
     QLabel *Noble3;
+    QLabel *label_3;
+    QLCDNumber *PrestigeJoueur1;
+    QLCDNumber *PrestigeJoueur2;
+    QLabel *label_4;
+    QLCDNumber *PrestigeJoueur3;
+    QLabel *label_5;
+    QLCDNumber *PrestigeJoueur4;
+    QLabel *label_6;
     QMenuBar *menubar;
     QStatusBar *statusbar;
 
@@ -150,7 +158,7 @@ public:
     {
         if (GameWindow->objectName().isEmpty())
             GameWindow->setObjectName(QString::fromUtf8("GameWindow"));
-        GameWindow->resize(1460, 800);
+        GameWindow->resize(1460, 810);
         QPalette palette;
         QBrush brush(QColor(0, 0, 0, 255));
         brush.setStyle(Qt::SolidPattern);
@@ -908,10 +916,34 @@ public:
         Noble3->setGeometry(QRect(790, 610, 111, 111));
         Noble3->setFrameShape(QFrame::NoFrame);
         Noble3->setScaledContents(true);
+        label_3 = new QLabel(centralwidget);
+        label_3->setObjectName(QString::fromUtf8("label_3"));
+        label_3->setGeometry(QRect(1160, 160, 71, 16));
+        PrestigeJoueur1 = new QLCDNumber(centralwidget);
+        PrestigeJoueur1->setObjectName(QString::fromUtf8("PrestigeJoueur1"));
+        PrestigeJoueur1->setGeometry(QRect(1230, 150, 64, 31));
+        PrestigeJoueur2 = new QLCDNumber(centralwidget);
+        PrestigeJoueur2->setObjectName(QString::fromUtf8("PrestigeJoueur2"));
+        PrestigeJoueur2->setGeometry(QRect(1230, 350, 64, 31));
+        label_4 = new QLabel(centralwidget);
+        label_4->setObjectName(QString::fromUtf8("label_4"));
+        label_4->setGeometry(QRect(1160, 360, 71, 16));
+        PrestigeJoueur3 = new QLCDNumber(centralwidget);
+        PrestigeJoueur3->setObjectName(QString::fromUtf8("PrestigeJoueur3"));
+        PrestigeJoueur3->setGeometry(QRect(1230, 540, 64, 31));
+        label_5 = new QLabel(centralwidget);
+        label_5->setObjectName(QString::fromUtf8("label_5"));
+        label_5->setGeometry(QRect(1160, 550, 71, 16));
+        PrestigeJoueur4 = new QLCDNumber(centralwidget);
+        PrestigeJoueur4->setObjectName(QString::fromUtf8("PrestigeJoueur4"));
+        PrestigeJoueur4->setGeometry(QRect(1230, 730, 64, 31));
+        label_6 = new QLabel(centralwidget);
+        label_6->setObjectName(QString::fromUtf8("label_6"));
+        label_6->setGeometry(QRect(1160, 740, 71, 16));
         GameWindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(GameWindow);
         menubar->setObjectName(QString::fromUtf8("menubar"));
-        menubar->setGeometry(QRect(0, 0, 1460, 20));
+        menubar->setGeometry(QRect(0, 0, 1460, 21));
         GameWindow->setMenuBar(menubar);
         statusbar = new QStatusBar(GameWindow);
         statusbar->setObjectName(QString::fromUtf8("statusbar"));
@@ -986,6 +1018,10 @@ public:
         Noble2->setText(QString());
         Noble5->setText(QString());
         Noble3->setText(QString());
+        label_3->setText(QCoreApplication::translate("GameWindow", "Prestige : ", nullptr));
+        label_4->setText(QCoreApplication::translate("GameWindow", "Prestige : ", nullptr));
+        label_5->setText(QCoreApplication::translate("GameWindow", "Prestige : ", nullptr));
+        label_6->setText(QCoreApplication::translate("GameWindow", "Prestige : ", nullptr));
     } // retranslateUi
 
 };
