@@ -18,6 +18,7 @@ GameWindow_t::GameWindow_t(Partie* p) :
     this->setFixedSize(1460,800);
     //Affichage des jetons du plateau
     afficherJetons();
+    AffichernbJetons();
 
     //Affichage à l'initialisation de la fenêtre
     ui->cadreCartes->setVisible(false);
@@ -187,31 +188,31 @@ void GameWindow_t::setNbJoueurs(size_t nb){
 //Afficher les images des cartes
 void GameWindow_t::afficherCartes(){
     //Niveau 3
-    ui->carte20->setIcon(QIcon("ressources/deck/3.png"));
+    ui->carte20->setIcon(QIcon(Partie::getInstance()->getControleur()->getPlateau()->getCarteGrille(2,0)->getImage()));
     ui->carte20->setIconSize(QSize(122, 169));
-    ui->carte21->setIcon(QIcon("ressources/deck/3.png"));
+    ui->carte21->setIcon(QIcon(Partie::getInstance()->getControleur()->getPlateau()->getCarteGrille(2,1)->getImage()));
     ui->carte21->setIconSize(QSize(122, 169));
-    ui->carte22->setIcon(QIcon("ressources/deck/3.png"));
+    ui->carte22->setIcon(QIcon(Partie::getInstance()->getControleur()->getPlateau()->getCarteGrille(2,2)->getImage()));
     ui->carte22->setIconSize(QSize(122, 169));
-    ui->carte23->setIcon(QIcon("ressources/deck/3.png"));
+    ui->carte23->setIcon(QIcon(Partie::getInstance()->getControleur()->getPlateau()->getCarteGrille(2,3)->getImage()));
     ui->carte23->setIconSize(QSize(122, 169));
     //Niveau 2
-    ui->carte10->setIcon(QIcon("ressources/deck/2.png"));
+    ui->carte10->setIcon(QIcon(Partie::getInstance()->getControleur()->getPlateau()->getCarteGrille(1,0)->getImage()));
     ui->carte10->setIconSize(QSize(122, 169));
-    ui->carte11->setIcon(QIcon("ressources/deck/2.png"));
+    ui->carte11->setIcon(QIcon(Partie::getInstance()->getControleur()->getPlateau()->getCarteGrille(1,1)->getImage()));
     ui->carte11->setIconSize(QSize(122, 169));
-    ui->carte12->setIcon(QIcon("ressources/deck/2.png"));
+    ui->carte12->setIcon(QIcon(Partie::getInstance()->getControleur()->getPlateau()->getCarteGrille(1,2)->getImage()));
     ui->carte12->setIconSize(QSize(122, 169));
-    ui->carte13->setIcon(QIcon("ressources/deck/2.png"));
+    ui->carte13->setIcon(QIcon(Partie::getInstance()->getControleur()->getPlateau()->getCarteGrille(1,3)->getImage()));
     ui->carte13->setIconSize(QSize(122, 169));
     //Niveau 1
-    ui->carte00->setIcon(QIcon("ressources/deck/1.png"));
+    ui->carte00->setIcon(QIcon(Partie::getInstance()->getControleur()->getPlateau()->getCarteGrille(0,0)->getImage()));
     ui->carte00->setIconSize(QSize(122, 169));
-    ui->carte01->setIcon(QIcon("ressources/deck/1.png"));
+    ui->carte01->setIcon(QIcon(Partie::getInstance()->getControleur()->getPlateau()->getCarteGrille(0,1)->getImage()));
     ui->carte01->setIconSize(QSize(122, 169));
-    ui->carte02->setIcon(QIcon("ressources/deck/1.png"));
+    ui->carte02->setIcon(QIcon(Partie::getInstance()->getControleur()->getPlateau()->getCarteGrille(0,2)->getImage()));
     ui->carte02->setIconSize(QSize(122, 169));
-    ui->carte03->setIcon(QIcon("ressources/deck/1.png"));
+    ui->carte03->setIcon(QIcon(Partie::getInstance()->getControleur()->getPlateau()->getCarteGrille(0,3)->getImage()));
     ui->carte03->setIconSize(QSize(122, 169));
 }
 
@@ -267,5 +268,14 @@ void GameWindow_t::afficherImages(){
     ui->Vert4->setPixmap(QPixmap("ressources/jetons/vert.png"));
     ui->Or4->setPixmap(QPixmap("ressources/jetons/or.png"));
 }
+
+void GameWindow_t::AffichernbJetons(){
+    ui->NbJetonsBlanc->display(Partie::getInstance()->getControleur()->getCouleur(Couleur::blanc));
+    ui->NbJetonsBleu->display(Partie::getInstance()->getControleur()->getCouleur(Couleur::bleu));
+    ui->NbJetonsRouge->display(Partie::getInstance()->getControleur()->getCouleur(Couleur::rouge));
+    ui->NbJetonsNoir->display(Partie::getInstance()->getControleur()->getCouleur(Couleur::noir));
+    ui->NbJetonsVert->display(Partie::getInstance()->getControleur()->getCouleur(Couleur::vert));
+    ui->NbJetonsOr->display(Partie::getInstance()->getControleur()->getCouleur(Couleur::jaune));
+};
 
 

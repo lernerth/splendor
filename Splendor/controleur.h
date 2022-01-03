@@ -23,6 +23,8 @@
 
         //getters
         Carte** getPioche(int niveau) ;
+        int getCouleur(Couleur c) {return pj[c];};
+        Plateau* getPlateau() {return plateau;};
 
         //Singleton
         Controleur(const Controleur& c) = delete;

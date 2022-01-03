@@ -58,7 +58,7 @@ Pioche_carte::Pioche_carte() {
                 {Couleur::bleu, carte["demande"]["bleu"].toInt()},
                 {Couleur::blanc, carte["demande"]["blanc"].toInt()},
             };
-            QPixmap sprite("ressources/ready/cartes/"+QString::fromStdString(std::to_string(i))+"/"+QString::fromStdString(std::to_string(j))+".png");
+            QString sprite = "ressources/ready/cartes/"+QString::fromStdString(std::to_string(i))+"/"+QString::fromStdString(std::to_string(j))+".png";
 
             // on crée une carte et on ajoute son adresse au tableau nivx correspondant
             tableaux_niveaux[i-1][j] = new Carte(

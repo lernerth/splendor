@@ -28,6 +28,7 @@ public:
     void setNom3(QString nom3);
     void setNom4(QString nom4);
     void setNbJoueurs(size_t nb);
+    void AffichernbJetons();
     static int choix;
 
 private:

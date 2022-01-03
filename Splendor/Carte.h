@@ -19,6 +19,7 @@ public:
     Couleur getRemise();
     int getPrix(Couleur c);
     int getIdCarte();
+    QString getImage(){return image;};
 
 private:
     friend class Pioche_carte;
@@ -27,8 +28,8 @@ private:
     int prestige; 
     Couleur remise; //Bonus color
     QMap<Couleur, int> prix;
-    QPixmap image;
-    Carte(int id, int n, int p, Couleur r, QMap<Couleur, int> pr, QPixmap i) : id_Carte(id), niveau(n), prestige(p), remise(r), prix(pr), image(i) {};
+    QString image;
+    Carte(int id, int n, int p, Couleur r, QMap<Couleur, int> pr, QString i) : id_Carte(id), niveau(n), prestige(p), remise(r), prix(pr), image(i) {};
 };
 
 #endif // CARTE_H
