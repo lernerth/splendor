@@ -4,6 +4,12 @@
 #include <QMainWindow>
 #include "global.h"
 #include "Partie.h"
+#include "ui_gamewindow.h"
+#include "mainwindow.h"
+#include <QString>
+#include <string>
+
+class Partie;
 
 namespace Ui {
 class GameWindow;
@@ -34,13 +40,16 @@ private:
     Partie* partie;
     int nb;
 
+
 private slots :
     void afficherJetons();
-    void afficherJetonsJoueurs();
     void highlight();
+    void afficherCartes();
+    void afficherImages();
 
 //public slots:
 
 };
 
 #endif // GAMEWINDOW_H
+

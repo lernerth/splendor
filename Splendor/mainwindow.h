@@ -4,7 +4,9 @@
 #include <QMainWindow>
 #include <QWindow>
 #include <QTextEdit>
-
+#include "ui_mainwindow.h"
+#include <string>
+#include <QString>
 #include "Partie.h"
 
 

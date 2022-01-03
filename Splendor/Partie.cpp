@@ -7,7 +7,7 @@ Partie::Partie(size_t n, QString j[4]){
     for (size_t i=0; i<n; i++){
         ListeJoueur[i] = new Joueur(i+1, j[i]);
     }
-
+    /*
     int fin = 0;
     int tourfini = 0;
 
@@ -22,7 +22,7 @@ Partie::Partie(size_t n, QString j[4]){
             controleur = getControleur();
             while(fin == 0){
 
-                choix = GameWindow::choix;
+                choix = GameWindow_t::choix;
                 switch(choix){
                     case '1' :
                         Couleur c1; //cliquer sur un jeton
@@ -48,7 +48,7 @@ Partie::Partie(size_t n, QString j[4]){
                 fin = 1;
             }
         }
-    }
+    }*/
 
     void FinDePartie();
 };
@@ -132,7 +132,7 @@ Carte& Partie::AcheterCarte(Carte* carte, Joueur& joueur, Controleur* controleur
             }
         }
         if (test == 0){
-            controleur->remplacer_carte(niveau, indice);
+            controleur->remplacer_carte(0, 0); //Remplacer 0, 0 par niveau indice envoyer par interface
             joueur.acheter_carte(carte);
 
         }
@@ -166,7 +166,7 @@ Carte& Partie::AcheterCarte(Carte* carte, Joueur& joueur, Controleur* controleur
             }
         }
         if (test == 0){
-            controleur->remplacer_carte(niveau, indice);
+            controleur->remplacer_carte(0, 0);
             joueur.acheter_carte(carte);
         }
         for (int j = 0; j<(carte->getPrix(Couleur::blanc) - joueur.getBonus(Couleur::blanc)); j++){
@@ -209,7 +209,7 @@ Carte& Partie::AcheterCarte(Carte* carte, Joueur& joueur, Controleur* controleur
 
 Carte& Partie::ReserverCarte(Carte* carte, Joueur& joueur, Controleur* controleur){
      joueur.ajouter_carte_reserve(carte);//ajoute la carte dans la main du joueur, vérifie déjà s'il y en a 3 ou pas
-     controleur->remplacer_carte(niveau, indice);//enlève la carte ET la remplace
+     controleur->remplacer_carte(0, 0);//enlève la carte ET la remplace
      return *carte;
 }
 

@@ -24,10 +24,10 @@ private:
     friend class Pioche_carte;
     int id_Carte;
     int niveau;
-    int prestige;
-    QPixmap image;
+    int prestige; 
     Couleur remise; //Bonus color
     QMap<Couleur, int> prix;
+    QPixmap image;
     Carte(int id, int n, int p, Couleur r, QMap<Couleur, int> pr, QPixmap i) : id_Carte(id), niveau(n), prestige(p), remise(r), prix(pr), image(i) {};
 };
 

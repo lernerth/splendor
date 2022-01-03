@@ -19,7 +19,6 @@ SOURCES += \
     gamewindow.cpp \
     joueur.cpp \
     main.cpp \
-    mainwindow.cpp \
     pioche_noble.cpp
 
 HEADERS += \

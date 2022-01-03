@@ -3,10 +3,10 @@
 #include "gamewindow.h"
 #include <QString>
 #include <string>
-
-MainWindow::MainWindow(QWidget *parent)
-    : QMainWindow(parent)
-    , ui(new Ui::MainWindow)
+/*
+MainWindow::MainWindow(QWidget *parent):
+      QMainWindow(parent),
+      ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
 
@@ -204,7 +204,7 @@ size_t MainWindow::getNbJoueurs() const {
     size_t nbJoueurs = ui->nbJoueurs->value();
     return nbJoueurs;
 }
-
+*/
 
 
 

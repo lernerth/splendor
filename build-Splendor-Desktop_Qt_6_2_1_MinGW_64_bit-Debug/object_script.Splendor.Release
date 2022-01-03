@@ -1,0 +1,13 @@
+release/Carte.o
+release/Noble.o
+release/Partie.o
+release/Pioche_carte.o
+release/Plateau.o
+release/controleur.o
+release/debug.o
+release/gamewindow.o
+release/joueur.o
+release/main.o
+release/pioche_noble.o
+release/moc_gamewindow.o
+release/moc_mainwindow.o

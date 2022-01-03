@@ -1,0 +1,13 @@
+debug/Carte.o
+debug/Noble.o
+debug/Partie.o
+debug/Pioche_carte.o
+debug/Plateau.o
+debug/controleur.o
+debug/debug.o
+debug/gamewindow.o
+debug/joueur.o
+debug/main.o
+debug/pioche_noble.o
+debug/moc_gamewindow.o
+debug/moc_mainwindow.o
