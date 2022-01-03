@@ -161,33 +161,31 @@ void MainWindow::checkName(){
 void MainWindow::fermer()
 {
    MainWindow::close();
+   QString joueur[4];
 
    if (ui->nbJoueurs->value()==2){
-       QString joueur[ui->nbJoueurs->value()];
        joueur[0] = ui->nomJoueur1->text();
        joueur[1] = ui->nomJoueur2->text();
-       Partie(ui->nbJoueurs->value(), joueur);
+       joueur[2] = "";
+       joueur[3] = "";
 
    }
    if (ui->nbJoueurs->value()==3){
-       QString joueur[ui->nbJoueurs->value()];
        joueur[0] = ui->nomJoueur1->text();
        joueur[1] = ui->nomJoueur2->text();
        joueur[2] = ui->nomJoueur3->text();
-       Partie(ui->nbJoueurs->value(), joueur);
+       joueur[3] = "";
 
    }
    if (ui->nbJoueurs->value()==3){
-       QString joueur[ui->nbJoueurs->value()];
        joueur[0] = ui->nomJoueur1->text();
        joueur[1] = ui->nomJoueur2->text();
        joueur[2] = ui->nomJoueur3->text();
        joueur[3] = ui->nomJoueur4->text();
-       Partie(ui->nbJoueurs->value(), joueur);
-
    }
+   Partie* p = new Partie(ui->nbJoueurs->value(), joueur);
 
-   GameWindow* GameWindow = new class GameWindow(nullptr);
+   GameWindow_t* GameWindow = new GameWindow_t(p);
    GameWindow->setNom1(ui->nomJoueur1->text());
    GameWindow->setNom2(ui->nomJoueur2->text());
    GameWindow->setNom3(ui->nomJoueur3->text());

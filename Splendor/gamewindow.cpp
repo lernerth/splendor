@@ -4,9 +4,10 @@
 #include <string>
 #include <QString>
 
-GameWindow::GameWindow(QWidget *parent) :
-    QMainWindow(parent),
-    ui(new Ui::GameWindow)
+GameWindow_t::GameWindow_t(Partie* p) :
+    //QMainWindow(parent),
+    ui(new Ui::GameWindow),
+    partie(p)
 {
     ui->setupUi(this);
     this->setFixedSize(1260,800);
@@ -28,12 +29,12 @@ GameWindow::GameWindow(QWidget *parent) :
     connect(ui->acheter, SIGNAL(pressed()), this, SLOT(numChoix()));
 }
 
-GameWindow::~GameWindow()
+GameWindow_t::~GameWindow_t()
 {
     delete ui;
 }
 
-void GameWindow::afficherJetons(){
+void GameWindow_t::afficherJetons(){
     ui->JetonBlancPlateau->setPixmap(QPixmap(":/ressources/jetons/blanc.png"));
     ui->JetonNoirPlateau->setPixmap(QPixmap(":/ressources/jetons/noir.png"));
     ui->JetonBleuPlateau->setPixmap(QPixmap(":/ressources/jetons/bleu.png"));
@@ -42,11 +43,11 @@ void GameWindow::afficherJetons(){
     ui->JetonJaunePlateau->setPixmap(QPixmap(":/ressources/jetons/or.png"));
 }
 
-void GameWindow::afficherJetonsJoueurs(){
+void GameWindow_t::afficherJetonsJoueurs(){
 
 }
 
-void GameWindow::highlight(){
+void GameWindow_t::highlight(){
     if (ui->acheter->isChecked()==true){
         ui->cadreCartes->setVisible(true);
         ui->cadreCartes2->setVisible(true);
@@ -67,23 +68,23 @@ void GameWindow::highlight(){
     }
 }
 
-void GameWindow::setNom1(QString nom1){
+void GameWindow_t::setNom1(QString nom1){
     ui->NomJoueur1->setText(nom1);
 }
 
-void GameWindow::setNom2(QString nom1){
+void GameWindow_t::setNom2(QString nom1){
     ui->NomJoueur2->setText(nom1);
 }
 
-void GameWindow::setNom3(QString nom1){
+void GameWindow_t::setNom3(QString nom1){
     ui->NomJoueur3->setText(nom1);
 }
 
-void GameWindow::setNom4(QString nom1){
+void GameWindow_t::setNom4(QString nom1){
     ui->NomJoueur4->setText(nom1);
 }
 
-void GameWindow::setNbJoueurs(size_t nb){
+void GameWindow_t::setNbJoueurs(size_t nb){
     if (nb < 3){
         //Noms
         ui->NomJoueur3->setVisible(false);
@@ -135,7 +136,7 @@ void GameWindow::setNbJoueurs(size_t nb){
     }
 }
 
-int GameWindow::numChoix(){
+int GameWindow_t::numChoix(){
     if (ui->prendreJetons->isChecked() == true) this->choix = 1;
     else if (ui->acheter->isChecked() == true) this->choix = 2;
     else if(ui->reserver->isChecked() == true) this->choix = 3;

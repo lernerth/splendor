@@ -3,19 +3,20 @@
 
 #include <QMainWindow>
 #include "global.h"
+#include "Partie.h"
 
 namespace Ui {
 class GameWindow;
 }
 
-class GameWindow : public QMainWindow
+class GameWindow_t : public QMainWindow
 {
     Q_OBJECT
 
 public:
-    explicit GameWindow();
-    explicit GameWindow(QWidget *parent = nullptr);
-    ~GameWindow();
+    //GameWindow_t();
+    GameWindow_t(Partie* p);
+    ~GameWindow_t();
     void setNom1(QString nom1);
     void setNom2(QString nom2);
     void setNom3(QString nom3);
@@ -30,6 +31,7 @@ private:
     QString nom2;
     QString nom3;
     QString nom4;
+    Partie* partie;
     int nb;
 
 private slots :
@@ -37,7 +39,7 @@ private slots :
     void afficherJetonsJoueurs();
     void highlight();
 
-public slots:
+//public slots:
 
 };
 

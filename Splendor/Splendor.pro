@@ -15,6 +15,7 @@ SOURCES += \
     Pioche_carte.cpp \
     Plateau.cpp \
     controleur.cpp \
+    debug.cpp \
     gamewindow.cpp \
     joueur.cpp \
     main.cpp \
