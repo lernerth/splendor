@@ -52,7 +52,7 @@ private slots :
     void highlight();
     void afficherCartes();
     void afficherImages();
-    void FindeTour();
+    //void FindeTour();
     void print(){qDebug()<<choix;};
 
 public slots:

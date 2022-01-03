@@ -167,6 +167,11 @@ void GameWindow_t::setNbJoueurs(size_t nb){
         ui->Rouge4->setVisible(false);
         ui->Vert4->setVisible(false);
         ui->Or4->setVisible(false);
+        //Prestige
+        ui->PrestigeJoueur3->setVisible(false);
+        ui->PrestigeJoueur4->setVisible(false);
+        ui->label_5->setVisible(false);
+        ui->label_6->setVisible(false);
     }
     if (nb < 4){
         //Nombre de jetons
@@ -184,6 +189,8 @@ void GameWindow_t::setNbJoueurs(size_t nb){
         ui->Rouge4->setVisible(false);
         ui->Vert4->setVisible(false);
         ui->Or4->setVisible(false);
+        ui->PrestigeJoueur4->setVisible(false);
+        ui->label_6->setVisible(false);
     }
 }
 
@@ -297,7 +304,7 @@ void GameWindow_t::AfficherJoueur(){
     ui->Joueuractuel->setText(Partie::getInstance()->getJoueur(1)->getNom());
 }
 
-void GameWindow_t::FindeTour(){
+/*void GameWindow_t::FindeTour(){
     switch(choix){
         case '1' :
             Couleur c1; //cliquer sur un jeton
@@ -316,4 +323,4 @@ void GameWindow_t::FindeTour(){
             tourfini = 0;
     }
 }
-
+*/

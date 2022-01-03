@@ -202,7 +202,7 @@ void Partie::setChoix(int c){
     this->choice = c;
 }
 
-void Partie::Tour(Partie* p){
+/*void Partie::Tour(Partie* p){
     int fin = 0;
     int tourfini = 0;
 
@@ -249,3 +249,4 @@ void Partie::Tour(Partie* p){
     FinDePartie();
 }
 
+*/

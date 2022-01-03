@@ -26,7 +26,7 @@ public:
     void PiocherJetons(Couleur c1, Couleur c2, Couleur c3, Joueur& joueur, Controleur* controleur);
     Carte& AcheterCarte(Carte* carte, Joueur& joueur, Controleur* controleur);
     Carte& ReserverCarte(Carte* carte, Joueur& joueur, Controleur* controleur);
-    void FinDePartie();
+    //void FinDePartie();
     void VisiteNoble(Joueur *joueur);
     void setChoix(int choice);
     void Tour(Partie* p);;
