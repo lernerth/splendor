@@ -55,7 +55,6 @@ private slots :
     void afficherCartes();
     void afficherImages();
     void FindeTour();
-    void print(){qDebug()<<choix;};
     void creerGroupeCartes(QButtonGroup* group);
     /*Couleur clicJetonBlanc();
     Couleur clicJetonNoir();

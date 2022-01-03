@@ -24,7 +24,7 @@ GameWindow_t::GameWindow_t(Partie* p) :
     afficherJetons();
     AffichernbJetons();
     AfficherNobles();
-    AfficherJoueur();
+    //AfficherJoueur();
     ui->prendreJetons->setChecked(true);
 
     //Affichage à l'initialisation de la fenêtre
@@ -365,11 +365,15 @@ void GameWindow_t::AfficherJoueur(){
 
 void GameWindow_t::FindeTour(){
     Carte* c;
-    int actuel = 0;
-    int test = 0;
+    int actuel = 1;
+    int testreserve = 0;
     QPushButton* carteSelectionnee;
     Joueur * joueur_actuel = Partie::getInstance()->getJoueur(actuel);
     Carte ** Reserve = Partie::getInstance()->getJoueur(actuel)->getCartesReservees();
+
+    //nom du joueur dont c'est le tour
+    ui->Joueuractuel->setText(Partie::getInstance()->getJoueur(actuel)->getNom());
+
     //cliquer sur un jeton
     Couleur c1 = Couleur::blanc; //1er jeton pioche
     Couleur c2 = Couleur::bleu;//2eme jeton pioche
@@ -390,13 +394,13 @@ void GameWindow_t::FindeTour(){
             //cliquer sur une carte
             for(int i = 0; i <3 ; ++i) {
                     if(Reserve[i] == nullptr){
-                        test = 1;
+                        testreserve = 1;
                     }
                     if(i==2){
                         std::cout <<"Impossible réserve déjà pleine";
                     }
             }
-            if (test == 1){
+            if (testreserve == 1){
                 carteSelectionnee = dynamic_cast<QPushButton*>(cartes->checkedButton());
                 c = BoutonCarte[carteSelectionnee];
                 Partie::getInstance()->ReserverCarte(c, *joueur_actuel, Partie::getInstance()->getControleur());
@@ -407,7 +411,13 @@ void GameWindow_t::FindeTour(){
             //Message d'Erreur
             qDebug()<<"erreur";
     }
+    if(actuel < Partie::getInstance()->getNbJoueurs()){
+        actuel++;
+    }
+    else { actuel = 1; }
+    qDebug()<<"joueur num"<<actuel;
 }
+
 
 
 void GameWindow_t::creerGroupeCartes(QButtonGroup* group){
