@@ -17,7 +17,7 @@ Pioche_carte::Pioche_carte() {
 
 
     //ouverture et lecture du fichier .json
-    QFile file_obj("../ressources/cartes.json");
+    QFile file_obj("ressources/cartes.json");
     if(!file_obj.open(QIODevice::ReadOnly)){
         throw Exception("Erreur d'ouverture du fichier");
         exit(1);
@@ -58,7 +58,7 @@ Pioche_carte::Pioche_carte() {
                 {Couleur::bleu, carte["demande"]["bleu"].toInt()},
                 {Couleur::blanc, carte["demande"]["blanc"].toInt()},
             };
-            QPixmap sprite("../ressources/ready/cartes/"+QString::fromStdString(std::to_string(i))+"/"+QString::fromStdString(std::to_string(j))+".png");
+            QPixmap sprite("ressources/ready/cartes/"+QString::fromStdString(std::to_string(i))+"/"+QString::fromStdString(std::to_string(j))+".png");
 
             // on crée une carte et on ajoute son adresse au tableau nivx correspondant
             tableaux_niveaux[i-1][j] = new Carte(
@@ -102,33 +102,34 @@ size_t Pioche_carte::getNbCartes(int niveau) {
     }
 }
 
-Carte* Pioche_carte::piocher(int niveau) {
+Carte* Pioche_carte::piocher(int niveau, Pioche_carte* p) {
     size_t x;
     Carte* c = nullptr;
+    qDebug()<<"pioche niveau"<<niveau;
     switch (niveau) {
         case 1:
-            if (this->nb_carteslvl1 == 0) throw Exception("Pioche vide");
-            x = rand() % nb_carteslvl1;
-            c = this->lvl1[x];
-            for (size_t i = x + 1; i < nb_carteslvl1; i++) this->lvl1[i - 1] = this->lvl1[i];
-            nb_carteslvl1--;
+            if (p->nb_carteslvl1 == 0) throw Exception("Pioche vide");
+            x = rand() % p->nb_carteslvl1;
+            c = p->lvl1[x];
+            for (size_t i = x + 1; i < p->nb_carteslvl1; i++) p->lvl1[i - 1] = p->lvl1[i];
+            p->nb_carteslvl1--;
             break;
         case 2:
-            if (this->nb_carteslvl2 == 0) throw Exception("Pioche vide");
-            x = rand() % nb_carteslvl2;
-            c = this->lvl2[x];
-            for (size_t i = x + 1; i < nb_carteslvl2; i++) this->lvl2[i - 1] = this->lvl2[i];
-            nb_carteslvl2--;
+            if (p->nb_carteslvl2 == 0) throw Exception("Pioche vide");
+            x = rand() % p->nb_carteslvl2;
+            c = p->lvl2[x];
+            for (size_t i = x + 1; i < p->nb_carteslvl2; i++) p->lvl2[i - 1] = p->lvl2[i];
+            p->nb_carteslvl2--;
             break;
         case 3:
-            if (this->nb_carteslvl3 == 0) throw Exception("Pioche vide");
-            x = rand() % nb_carteslvl3;
-            c = this->lvl3[x];
-            for (size_t i = x + 1; i < nb_carteslvl3; i++) this->lvl3[i - 1] = this->lvl3[i];
-            nb_carteslvl3--;
+            if (p->nb_carteslvl3 == 0) throw Exception("Pioche vide");
+            x = rand() % p->nb_carteslvl3;
+            c = p->lvl3[x];
+            for (size_t i = x + 1; i < p->nb_carteslvl3; i++) p->lvl3[i - 1] = p->lvl3[i];
+            p->nb_carteslvl3--;
             break;
         default:
-            throw Exception("La pioche n'existe pas");
+            throw Exception("La pioche Carte n'existe pas");
             break;
     }
     return c;

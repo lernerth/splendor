@@ -20,7 +20,6 @@ using namespace std;
 
 class Partie {
 public:
-    Partie(size_t n, QString j[3]);
     size_t getNbJoueurs() {return Nbjoueur;};
     Joueur* getJoueur(size_t numJ);
     Controleur* getControleur() {return cont;}
@@ -30,13 +29,26 @@ public:
     void FinDePartie();
     void VisiteNoble(Joueur *joueur);
     void setChoix(int choice);
-    void Tour(Partie* p);
+    void Tour(Partie* p);;
+    void AfficherCarte(int i, int j, Partie* p);
+    void SetPartie(size_t n, QString j[4], Partie* p);
+    static Partie* getInstance() {
+        if (h.Instance == nullptr) {
+            h.Instance = new Partie;
+        } return h.Instance;};
 
 private:
+    struct handler{
+        Partie* Instance;
+        handler(): Instance(nullptr){}
+        ~handler(){delete Instance;}
+    };
+    static handler h;
     friend class Controleur;
+    Partie();
     Controleur* cont;
     size_t Nbjoueur;
-    Joueur* ListeJoueur[3];
+    Joueur* ListeJoueur[4];
     int choice;
 
 };

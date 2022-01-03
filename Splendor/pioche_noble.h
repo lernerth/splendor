@@ -9,8 +9,9 @@ public:
     int getNbNobles() {return nbNoble;}
     Noble** getTous() {return tous;}
     Noble* getNoble(int i) {if (i >= 11) throw Exception("Out of range"); return tous[i];}
-    Noble* piocherNoble();
+    Noble* piocherNoble(Pioche_Noble* n);
 private:
+    friend class Controleur;
     Pioche_Noble(Pioche_Noble& j) = delete;
     Pioche_Noble& operator=(Pioche_Noble& j) = delete;
     Noble** tous;

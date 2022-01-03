@@ -1,19 +1,5 @@
 #include "gamewindow.h"
 
-
-
-
-/*void test(){
-    QString j[4];
-    j[0] = "t";
-    j[1] = "p";
-    j[2] = "";
-    j[3] = "";
-    Partie* p = new Partie(2, j);
-    GameWindow_t* g= new GameWindow_t(p);
-}*/
-
-
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 #include "gamewindow.h"
@@ -199,7 +185,8 @@ void MainWindow::fermer()
        joueur[2] = ui->nomJoueur3->text();
        joueur[3] = ui->nomJoueur4->text();
    }
-   Partie* p = new Partie(ui->nbJoueurs->value(), joueur);
+   Partie* p = Partie::getInstance();
+   p->SetPartie(ui->nbJoueurs->value(), joueur, p);
 
    GameWindow_t* GameWindow = new GameWindow_t(p);
    GameWindow->setNom1(ui->nomJoueur1->text());

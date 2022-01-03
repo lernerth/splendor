@@ -9,6 +9,7 @@
 #include "pioche_noble.h"
 #include "Pioche_carte.h"
 
+
  class Controleur{
 	public:
         //constructeur-destructeur
@@ -29,7 +30,7 @@
 
         //Methodes
         void initialiser_Plateau(size_t nb_joueurs, Controleur* contr);//initialiser la grille et la rangée
-        void remplacer_carte(int niveau, int indice);     //remplacer une carte développement du tableau
+        void remplacer_carte(int niveau, int indice, Controleur* contr);     //remplacer une carte développement du tableau
         void retirer_Noble(int indice);     //retirer une carte noble
         void retirer_Jetons(Couleur c);         //retirer des jetons de la pioche centrale
         void rendre_Jetons(Couleur c);          //rendre des jetons à la pioche centrale

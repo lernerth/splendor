@@ -1,14 +1,24 @@
 #include "Partie.h"
 
+Partie::handler Partie::h;
 
-Partie::Partie(size_t n, QString j[4]){
+Partie::Partie(){
+    cont = nullptr;
+    Nbjoueur =0;
     choice = 0;
-    Nbjoueur = n;
-    for (size_t i=0; i<n; i++){
-        ListeJoueur[i] = new Joueur(i+1, j[i]);
+    for (int i = 0; i<4; i++){
+        ListeJoueur[i] = nullptr;
     }
-    cont = new Controleur();
-    cont->initialiser_Plateau(n, cont);
+};
+
+void Partie::SetPartie(size_t n, QString j[4], Partie* p){
+    p->choice = 0;
+    p->Nbjoueur = n;
+    for (size_t i=0; i<n; i++){
+        p->ListeJoueur[i] = new Joueur(i+1, j[i]);
+    }
+    p->cont = new Controleur();
+    p->cont->initialiser_Plateau(n, cont);
 };
 
 Joueur* Partie::getJoueur(size_t numJ) {
@@ -90,7 +100,7 @@ Carte& Partie::AcheterCarte(Carte* carte, Joueur& joueur, Controleur* controleur
             }
         }
         if (test == 0){
-            controleur->remplacer_carte(0, 0); //Remplacer 0, 0 par niveau indice envoyer par interface
+            controleur->remplacer_carte(0, 0, controleur); //Remplacer 0, 0 par niveau indice envoyer par interface
             joueur.acheter_carte(carte);
 
         }
@@ -124,7 +134,7 @@ Carte& Partie::AcheterCarte(Carte* carte, Joueur& joueur, Controleur* controleur
             }
         }
         if (test == 0){
-            controleur->remplacer_carte(0, 0);
+            controleur->remplacer_carte(0, 0, controleur);
             joueur.acheter_carte(carte);
         }
         for (int j = 0; j<(carte->getPrix(Couleur::blanc) - joueur.getBonus(Couleur::blanc)); j++){
@@ -167,7 +177,7 @@ Carte& Partie::AcheterCarte(Carte* carte, Joueur& joueur, Controleur* controleur
 
 Carte& Partie::ReserverCarte(Carte* carte, Joueur& joueur, Controleur* controleur){
      joueur.ajouter_carte_reserve(carte);//ajoute la carte dans la main du joueur, vérifie déjà s'il y en a 3 ou pas
-     controleur->remplacer_carte(0, 0);//enlève la carte ET la remplace
+     controleur->remplacer_carte(0, 0, controleur);//enlève la carte ET la remplace
      return *carte;
 }
 
@@ -234,3 +244,8 @@ void Partie::Tour(Partie* p){
 
     void FinDePartie();
 }
+
+/*void Partie::AfficherCarte(int i, int j, Partie* p){
+    QString carte;
+    carte = "carte"+QString::toStdString(std::to_string(i))+QString::toStdString(std::to_string(j))
+}*/

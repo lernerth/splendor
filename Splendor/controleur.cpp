@@ -23,19 +23,18 @@ void Controleur::initialiser_Plateau(size_t nb_joueurs, Controleur* contr){
     //Carte à acheter
     for (int j = 0; j < 4; j++){
         for(int i = 1; i < 4; i++){
-            contr->plateau->modifCarteGrille(i, j, pioches->piocher(i+1));
+            contr->plateau->modifCarteGrille(i, j, pioches->piocher(i, contr->pioches));
         }
     }
     //Cartes nobles
     for(size_t i = 0; i < nb_joueurs+1 ; i++){
-        contr->plateau->modifierNoble(i, noble->piocherNoble());
+        contr->plateau->modifierNoble(i, noble->piocherNoble(contr->noble));
     }
 }
 
 //remplacer une carte
-void Controleur::remplacer_carte (int niveau, int indice){
-    Plateau p = *plateau;
-    p.modifCarteGrille(niveau-1, indice, pioches->piocher(niveau));
+void Controleur::remplacer_carte (int niveau, int indice, Controleur* contr){
+    contr->plateau->modifCarteGrille(niveau-1, indice, pioches->piocher(niveau, contr->pioches));
 }
 
 //retirer une carte noble

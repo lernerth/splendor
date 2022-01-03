@@ -9,7 +9,7 @@ Pioche_Noble::Pioche_Noble(){
     tous = new Noble*[nbNoble];
 
     //ouverture et lecture du fichier .json
-    QFile file_obj("../ressources/nobles.json");
+    QFile file_obj("ressources/nobles.json");
     if(!file_obj.open(QIODevice::ReadOnly)){
         throw Exception("Erreur d'ouverture du fichier");
         exit(1);
@@ -32,7 +32,7 @@ Pioche_Noble::Pioche_Noble(){
             {Couleur::bleu, noble["demande"]["bleu"].toInt()},
             {Couleur::blanc, noble["demande"]["blanc"].toInt()},
         };
-        QImage sprite("../ressources/ready/cartes/"+QString::fromStdString(std::to_string(j))+".png");
+        QImage sprite("ressources/ready/cartes/"+QString::fromStdString(std::to_string(j))+".png");
 
         // on crée une carte et on ajoute son adresse au tableau nivx correspondant
         tous[j] = new Noble(
@@ -44,12 +44,12 @@ Pioche_Noble::Pioche_Noble(){
 
 }
 
-Noble* Pioche_Noble::piocherNoble() {
+Noble* Pioche_Noble::piocherNoble(Pioche_Noble* n) {
     size_t x;
     Noble* c = nullptr;
-    x = rand() % nbNoble;
-    c = this->tous[x];
-    for (int i = x + 1; i < nbNoble; i++) this->tous[i - 1] = this->tous[i];
-    nbNoble--;
+    x = rand() % n->nbNoble;
+    c = n->tous[x];
+    for (int i = x + 1; i < n->nbNoble; i++) n->tous[i - 1] = n->tous[i];
+    n->nbNoble--;
     return c;
     }

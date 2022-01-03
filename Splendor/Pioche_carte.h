@@ -10,7 +10,7 @@
 class Pioche_carte {
 public:
     size_t getNbCartes(int niveau);
-    Carte* piocher(int niveau);
+    Carte* piocher(int niveau, Pioche_carte* p);
     Carte** getToutes() { return toutes; };
     Carte** getLvl1() { return lvl1; };
     Carte** getLvl2() { return lvl2; };
