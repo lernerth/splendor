@@ -17,6 +17,22 @@ GameWindow_t::GameWindow_t(Partie* p) :
     ui->cadreCartes2->setVisible(false);
     ui->cadreCartes3->setVisible(false);
     ui->cadreCartes4->setVisible(false);
+    //Débloquer le clic sur les cartes
+    ui->carte00->setEnabled(false);
+    ui->carte01->setEnabled(false);
+    ui->carte02->setEnabled(false);
+    ui->carte03->setEnabled(false);
+    ui->carte10->setEnabled(false);
+    ui->carte11->setEnabled(false);
+    ui->carte12->setEnabled(false);
+    ui->carte13->setEnabled(false);
+    ui->carte20->setEnabled(false);
+    ui->carte21->setEnabled(false);
+    ui->carte22->setEnabled(false);
+    ui->carte23->setEnabled(false);
+
+    afficherCartes();
+    afficherImages();
 
     //Affichage du cadre de focus lors de l'achat ou la reservation de cartes
     connect(ui->acheter, SIGNAL(pressed()), this, SLOT(highlight()));
