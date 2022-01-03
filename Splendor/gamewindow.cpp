@@ -57,12 +57,17 @@ GameWindow_t::GameWindow_t(Partie* p) :
     connect(ui->reserver, SIGNAL(clicked()), this, SLOT(numChoix()));
     connect(ui->acheter, SIGNAL(clicked()), this, SLOT(numChoix()));
 
+    /*
     //Signal quand on clique sur un jeton pour l'achat
     connect(ui->JetonBlancPlateau, SIGNAL(clicked()), this, SLOT(clicJetonBlanc()));
     connect(ui->JetonNoirPlateau, SIGNAL(clicked()), this, SLOT(clicJetonNoir()));
     connect(ui->JetonBleuPlateau, SIGNAL(clicked()), this, SLOT(clicJetonBleu()));
     connect(ui->JetonRougePlateau, SIGNAL(clicked()), this, SLOT(clicJetonRouge()));
     connect(ui->JetonVertPlateau, SIGNAL(clicked()), this, SLOT(clicJetonVert()));
+    */
+
+    //Signal sur bouton fin de tour
+    connect(ui->finDeTour, SIGNAL(clicked()), this, SLOT(FindeTour()));
 }
 
 GameWindow_t::~GameWindow_t()
@@ -365,9 +370,12 @@ void GameWindow_t::FindeTour(){
     QPushButton* carteSelectionnee;
     Joueur * joueur_actuel = Partie::getInstance()->getJoueur(actuel);
     Carte ** Reserve = Partie::getInstance()->getJoueur(actuel)->getCartesReservees();
-    Couleur c1 = priseJeton(); //cliquer sur un jeton
-    Couleur c2 = priseJeton(); //cliquer sur un jeton
-    Couleur c3 = priseJeton(); //cliquer sur un jeton
+    //cliquer sur un jeton
+    Couleur c1 = Couleur::blanc; //1er jeton pioche
+    Couleur c2 = Couleur::bleu;//2eme jeton pioche
+    Couleur c3 = Couleur::vert;//3eme jeton pioche
+    //A lier au clic sur un jeton
+
     switch(choix){
         case '1' :
             Partie::getInstance()->PiocherJetons(c1, c2, c3, *joueur_actuel, Partie::getInstance()->getControleur());
@@ -418,6 +426,7 @@ void GameWindow_t::creerGroupeCartes(QButtonGroup* group){
     group->setExclusive(true);
 }
 
+/*
 Couleur GameWindow_t::clicJetonBlanc(){
     return Couleur::blanc;
 }
@@ -445,3 +454,4 @@ Couleur GameWindow_t::priseJeton(){
     connect(ui->JetonRougePlateau, SIGNAL(clicked()), this, SLOT(clicJetonRouge()));
     connect(ui->JetonVertPlateau, SIGNAL(clicked()), this, SLOT(clicJetonVert()));
 }
+*/

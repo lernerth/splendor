@@ -57,12 +57,12 @@ private slots :
     void FindeTour();
     void print(){qDebug()<<choix;};
     void creerGroupeCartes(QButtonGroup* group);
-    Couleur clicJetonBlanc();
+    /*Couleur clicJetonBlanc();
     Couleur clicJetonNoir();
     Couleur clicJetonBleu();
     Couleur clicJetonRouge();
     Couleur clicJetonVert();
-    Couleur priseJeton();
+    Couleur priseJeton();*/
 
 public slots:
     void numChoix();
