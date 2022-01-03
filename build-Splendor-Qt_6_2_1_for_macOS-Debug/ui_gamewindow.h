@@ -385,6 +385,7 @@ public:
         icon.addFile(QString::fromUtf8("ressources/deck/3.png"), QSize(), QIcon::Normal, QIcon::Off);
         carte21->setIcon(icon);
         carte21->setIconSize(QSize(122, 169));
+        carte21->setCheckable(true);
 
         cartesPlateau->addWidget(carte21, 0, 2, 1, 1);
 
@@ -395,6 +396,7 @@ public:
         icon1.addFile(QString::fromUtf8("ressources/deck/2.png"), QSize(), QIcon::Normal, QIcon::Off);
         carte10->setIcon(icon1);
         carte10->setIconSize(QSize(122, 169));
+        carte10->setCheckable(true);
 
         cartesPlateau->addWidget(carte10, 2, 0, 1, 1);
 
@@ -407,6 +409,7 @@ public:
         carte12->setCursor(QCursor(Qt::OpenHandCursor));
         carte12->setIcon(icon1);
         carte12->setIconSize(QSize(122, 169));
+        carte12->setCheckable(true);
 
         cartesPlateau->addWidget(carte12, 2, 4, 1, 1);
 
@@ -417,6 +420,7 @@ public:
         icon2.addFile(QString::fromUtf8("ressources/deck/1.png"), QSize(), QIcon::Normal, QIcon::Off);
         carte01->setIcon(icon2);
         carte01->setIconSize(QSize(122, 169));
+        carte01->setCheckable(true);
 
         cartesPlateau->addWidget(carte01, 4, 2, 1, 1);
 
@@ -425,6 +429,7 @@ public:
         carte00->setCursor(QCursor(Qt::OpenHandCursor));
         carte00->setIcon(icon2);
         carte00->setIconSize(QSize(122, 169));
+        carte00->setCheckable(true);
 
         cartesPlateau->addWidget(carte00, 4, 0, 1, 1);
 
@@ -437,6 +442,7 @@ public:
         carte11->setCursor(QCursor(Qt::OpenHandCursor));
         carte11->setIcon(icon1);
         carte11->setIconSize(QSize(122, 169));
+        carte11->setCheckable(true);
 
         cartesPlateau->addWidget(carte11, 2, 2, 1, 1);
 
@@ -447,6 +453,7 @@ public:
         carte20->setCursor(QCursor(Qt::OpenHandCursor));
         carte20->setIcon(icon);
         carte20->setIconSize(QSize(122, 169));
+        carte20->setCheckable(true);
 
         cartesPlateau->addWidget(carte20, 0, 0, 1, 1);
 
@@ -455,6 +462,7 @@ public:
         carte02->setCursor(QCursor(Qt::OpenHandCursor));
         carte02->setIcon(icon2);
         carte02->setIconSize(QSize(122, 169));
+        carte02->setCheckable(true);
 
         cartesPlateau->addWidget(carte02, 4, 4, 1, 1);
 
@@ -473,6 +481,7 @@ public:
         carte22->setCursor(QCursor(Qt::OpenHandCursor));
         carte22->setIcon(icon);
         carte22->setIconSize(QSize(122, 169));
+        carte22->setCheckable(true);
 
         cartesPlateau->addWidget(carte22, 0, 4, 1, 1);
 
@@ -483,6 +492,7 @@ public:
         carte23->setCursor(QCursor(Qt::OpenHandCursor));
         carte23->setIcon(icon);
         carte23->setIconSize(QSize(122, 169));
+        carte23->setCheckable(true);
 
         cartesPlateau->addWidget(carte23, 0, 5, 1, 1);
 
@@ -491,6 +501,7 @@ public:
         carte13->setCursor(QCursor(Qt::OpenHandCursor));
         carte13->setIcon(icon1);
         carte13->setIconSize(QSize(122, 169));
+        carte13->setCheckable(true);
 
         cartesPlateau->addWidget(carte13, 2, 5, 1, 1);
 
@@ -499,6 +510,7 @@ public:
         carte03->setCursor(QCursor(Qt::OpenHandCursor));
         carte03->setIcon(icon2);
         carte03->setIconSize(QSize(122, 169));
+        carte03->setCheckable(true);
 
         cartesPlateau->addWidget(carte03, 4, 5, 1, 1);
 

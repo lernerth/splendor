@@ -15,7 +15,11 @@ GameWindow_t::GameWindow_t(Partie* p) :
     partie(p)
 {
     ui->setupUi(this);
+    QButtonGroup* cartes = new QButtonGroup(this);
     this->setFixedSize(1460,800);
+    //Gestion des cartes
+    creerGroupeCartes(cartes);
+
     //Affichage des jetons du plateau
     afficherJetons();
     AffichernbJetons();
@@ -52,6 +56,13 @@ GameWindow_t::GameWindow_t(Partie* p) :
     connect(ui->prendreJetons, SIGNAL(clicked()), this, SLOT(numChoix()));
     connect(ui->reserver, SIGNAL(clicked()), this, SLOT(numChoix()));
     connect(ui->acheter, SIGNAL(clicked()), this, SLOT(numChoix()));
+
+    //Signal quand on clique sur un jeton pour l'achat
+    connect(ui->JetonBlancPlateau, SIGNAL(clicked()), this, SLOT(clicJetonBlanc()));
+    connect(ui->JetonNoirPlateau, SIGNAL(clicked()), this, SLOT(clicJetonNoir()));
+    connect(ui->JetonBleuPlateau, SIGNAL(clicked()), this, SLOT(clicJetonBleu()));
+    connect(ui->JetonRougePlateau, SIGNAL(clicked()), this, SLOT(clicJetonRouge()));
+    connect(ui->JetonVertPlateau, SIGNAL(clicked()), this, SLOT(clicJetonVert()));
 }
 
 GameWindow_t::~GameWindow_t()
@@ -350,24 +361,87 @@ void GameWindow_t::AfficherJoueur(){
 void GameWindow_t::FindeTour(){
     Carte* c;
     int actuel = 0;
+    int test = 0;
+    QPushButton* carteSelectionnee;
     Joueur * joueur_actuel = Partie::getInstance()->getJoueur(actuel);
+    Carte ** Reserve = Partie::getInstance()->getJoueur(actuel)->getCartesReservees();
+    Couleur c1 = priseJeton(); //cliquer sur un jeton
+    Couleur c2 = priseJeton(); //cliquer sur un jeton
+    Couleur c3 = priseJeton(); //cliquer sur un jeton
     switch(choix){
         case '1' :
-            Couleur c1; //cliquer sur un jeton
-            Couleur c2; //cliquer sur un jeton
-            Couleur c3; //cliquer sur un jeton
             Partie::getInstance()->PiocherJetons(c1, c2, c3, *joueur_actuel, Partie::getInstance()->getControleur());
 
         case '2' :
             //cliquer sur une carte;
+            carteSelectionnee = dynamic_cast<QPushButton*>(cartes->checkedButton());
+            c = BoutonCarte[carteSelectionnee];
             Partie::getInstance()->AcheterCarte(c, *joueur_actuel, Partie::getInstance()->getControleur());
 
         case '3' :
-            //cliquer sur une carte;
-            Partie::getInstance()->ReserverCarte(c, *joueur_actuel, Partie::getInstance()->getControleur());
+            //cliquer sur une carte
+            for(int i = 0; i <3 ; ++i) {
+                    if(Reserve[i] == nullptr){
+                        test = 1;
+                    }
+                    if(i==2){
+                        std::cout <<"Impossible réserve déjà pleine";
+                    }
+            }
+            if (test == 1){
+                carteSelectionnee = dynamic_cast<QPushButton*>(cartes->checkedButton());
+                c = BoutonCarte[carteSelectionnee];
+                Partie::getInstance()->ReserverCarte(c, *joueur_actuel, Partie::getInstance()->getControleur());
+            }
+            else std::cout <<"Impossible réserve déjà pleine";
+
         default:
             //Message d'Erreur
             qDebug()<<"erreur";
     }
 }
 
+
+void GameWindow_t::creerGroupeCartes(QButtonGroup* group){
+    group->addButton(ui->carte00);
+    group->addButton(ui->carte01);
+    group->addButton(ui->carte02);
+    group->addButton(ui->carte03);
+    group->addButton(ui->carte10);
+    group->addButton(ui->carte11);
+    group->addButton(ui->carte12);
+    group->addButton(ui->carte13);
+    group->addButton(ui->carte20);
+    group->addButton(ui->carte21);
+    group->addButton(ui->carte22);
+    group->addButton(ui->carte23);
+    group->setExclusive(true);
+}
+
+Couleur GameWindow_t::clicJetonBlanc(){
+    return Couleur::blanc;
+}
+
+Couleur GameWindow_t::clicJetonNoir(){
+    return Couleur::noir;
+}
+
+Couleur GameWindow_t::clicJetonBleu(){
+    return Couleur::bleu;
+}
+
+Couleur GameWindow_t::clicJetonRouge(){
+    return Couleur::rouge;
+}
+
+Couleur GameWindow_t::clicJetonVert(){
+    return Couleur::vert;
+}
+
+Couleur GameWindow_t::priseJeton(){
+    connect(ui->JetonBlancPlateau, SIGNAL(clicked()), this, SLOT(clicJetonBlanc()));
+    connect(ui->JetonNoirPlateau, SIGNAL(clicked()), this, SLOT(clicJetonNoir()));
+    connect(ui->JetonBleuPlateau, SIGNAL(clicked()), this, SLOT(clicJetonBleu()));
+    connect(ui->JetonRougePlateau, SIGNAL(clicked()), this, SLOT(clicJetonRouge()));
+    connect(ui->JetonVertPlateau, SIGNAL(clicked()), this, SLOT(clicJetonVert()));
+}

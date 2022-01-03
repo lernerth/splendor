@@ -918,6 +918,9 @@
          <height>169</height>
         </size>
        </property>
+       <property name="checkable">
+        <bool>true</bool>
+       </property>
       </widget>
      </item>
      <item row="2" column="0">
@@ -937,6 +940,9 @@
          <width>122</width>
          <height>169</height>
         </size>
+       </property>
+       <property name="checkable">
+        <bool>true</bool>
        </property>
       </widget>
      </item>
@@ -971,6 +977,9 @@
          <height>169</height>
         </size>
        </property>
+       <property name="checkable">
+        <bool>true</bool>
+       </property>
       </widget>
      </item>
      <item row="4" column="2">
@@ -991,6 +1000,9 @@
          <height>169</height>
         </size>
        </property>
+       <property name="checkable">
+        <bool>true</bool>
+       </property>
       </widget>
      </item>
      <item row="4" column="0">
@@ -1010,6 +1022,9 @@
          <width>122</width>
          <height>169</height>
         </size>
+       </property>
+       <property name="checkable">
+        <bool>true</bool>
        </property>
       </widget>
      </item>
@@ -1047,6 +1062,9 @@
          <height>169</height>
         </size>
        </property>
+       <property name="checkable">
+        <bool>true</bool>
+       </property>
       </widget>
      </item>
      <item row="0" column="0">
@@ -1073,6 +1091,9 @@
          <height>169</height>
         </size>
        </property>
+       <property name="checkable">
+        <bool>true</bool>
+       </property>
       </widget>
      </item>
      <item row="4" column="4">
@@ -1092,6 +1113,9 @@
          <width>122</width>
          <height>169</height>
         </size>
+       </property>
+       <property name="checkable">
+        <bool>true</bool>
        </property>
       </widget>
      </item>
@@ -1148,6 +1172,9 @@
          <height>169</height>
         </size>
        </property>
+       <property name="checkable">
+        <bool>true</bool>
+       </property>
       </widget>
      </item>
      <item row="0" column="5">
@@ -1174,6 +1201,9 @@
          <height>169</height>
         </size>
        </property>
+       <property name="checkable">
+        <bool>true</bool>
+       </property>
       </widget>
      </item>
      <item row="2" column="5">
@@ -1194,6 +1224,9 @@
          <height>169</height>
         </size>
        </property>
+       <property name="checkable">
+        <bool>true</bool>
+       </property>
       </widget>
      </item>
      <item row="4" column="5">
@@ -1213,6 +1246,9 @@
          <width>122</width>
          <height>169</height>
         </size>
+       </property>
+       <property name="checkable">
+        <bool>true</bool>
        </property>
       </widget>
      </item>

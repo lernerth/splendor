@@ -8,6 +8,7 @@
 #include "mainwindow.h"
 #include <QString>
 #include <QSignalMapper>
+#include <QButtonGroup>
 #include <string>
 
 class Partie;
@@ -45,6 +46,7 @@ private:
     QPushButton* TableauBouton[12];
     int nb;
     QSignalMapper* mapper;
+    QButtonGroup* cartes;
 
 
 private slots :
@@ -54,6 +56,13 @@ private slots :
     void afficherImages();
     void FindeTour();
     void print(){qDebug()<<choix;};
+    void creerGroupeCartes(QButtonGroup* group);
+    Couleur clicJetonBlanc();
+    Couleur clicJetonNoir();
+    Couleur clicJetonBleu();
+    Couleur clicJetonRouge();
+    Couleur clicJetonVert();
+    Couleur priseJeton();
 
 public slots:
     void numChoix();
