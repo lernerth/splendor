@@ -8,7 +8,7 @@ public:
     Pioche_Noble();
     int getNbNobles() {return nbNoble;}
     Noble** getTous() {return tous;}
-    Noble* getNoble(int i) {if (i >= 11) throw Exception("Out of range"); return tous[i];}
+    Noble* getNoble(int i) {return tous[i];}
     Noble* piocherNoble(Pioche_Noble* n);
 private:
     friend class Controleur;

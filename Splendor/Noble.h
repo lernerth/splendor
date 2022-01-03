@@ -14,7 +14,7 @@ public:
     int getId() const{return id; }
     int getPrestige() const { return nbPoints_Prestige; }
     int getPrix(Couleur c) const { return prixNoble[c]; }
-    QImage getImage() const { return image; }
+    QString getImage() const { return image; }
 
 
 private:
@@ -22,8 +22,8 @@ private:
     int id;
     int nbPoints_Prestige;
     QMap<Couleur,int> prixNoble;
-    QImage image;
-    Noble(int i, QMap<Couleur,int> nbcn, QImage image) : nbPoints_Prestige(i), prixNoble(nbcn), image(image){}
+    QString image;
+    Noble(int i, QMap<Couleur,int> nbcn, QString image) : nbPoints_Prestige(i), prixNoble(nbcn), image(image){}
 
 
 };

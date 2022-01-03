@@ -32,7 +32,7 @@ Pioche_Noble::Pioche_Noble(){
             {Couleur::bleu, noble["demande"]["bleu"].toInt()},
             {Couleur::blanc, noble["demande"]["blanc"].toInt()},
         };
-        QImage sprite("ressources/ready/cartes/"+QString::fromStdString(std::to_string(j))+".png");
+        QString sprite = "ressources/ready/nobles/"+QString::fromStdString(std::to_string(j))+".png";
 
         // on crée une carte et on ajoute son adresse au tableau nivx correspondant
         tous[j] = new Noble(

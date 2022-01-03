@@ -19,6 +19,8 @@ GameWindow_t::GameWindow_t(Partie* p) :
     //Affichage des jetons du plateau
     afficherJetons();
     AffichernbJetons();
+    AfficherNobles();
+    AfficherJoueur();
 
     //Affichage à l'initialisation de la fenêtre
     ui->cadreCartes->setVisible(false);
@@ -187,9 +189,14 @@ void GameWindow_t::setNbJoueurs(size_t nb){
 
 //Afficher les images des cartes
 void GameWindow_t::afficherCartes(){
+    //mapper = new QSignalMapper;
+
+
     //Niveau 3
     ui->carte20->setIcon(QIcon(Partie::getInstance()->getControleur()->getPlateau()->getCarteGrille(2,0)->getImage()));
     ui->carte20->setIconSize(QSize(122, 169));
+    BoutonCarte[ui->carte20]=Partie::getInstance()->getControleur()->getPlateau()->getCarteGrille(2,0);
+    TableauBouton[8]=ui->carte20;
     ui->carte21->setIcon(QIcon(Partie::getInstance()->getControleur()->getPlateau()->getCarteGrille(2,1)->getImage()));
     ui->carte21->setIconSize(QSize(122, 169));
     ui->carte22->setIcon(QIcon(Partie::getInstance()->getControleur()->getPlateau()->getCarteGrille(2,2)->getImage()));
@@ -278,4 +285,35 @@ void GameWindow_t::AffichernbJetons(){
     ui->NbJetonsOr->display(Partie::getInstance()->getControleur()->getCouleur(Couleur::jaune));
 };
 
+void GameWindow_t::AfficherNobles(){
+    ui->Noble1->setPixmap(QPixmap(Partie::getInstance()->getControleur()->getPlateau()->getNoble(0)->getImage()));
+    ui->Noble2->setPixmap(QPixmap(Partie::getInstance()->getControleur()->getPlateau()->getNoble(1)->getImage()));
+    ui->Noble3->setPixmap(QPixmap(Partie::getInstance()->getControleur()->getPlateau()->getNoble(2)->getImage()));
+    if (Partie::getInstance()->getNbJoueurs()== 3 || Partie::getInstance()->getNbJoueurs() ==4) { ui->Noble4->setPixmap(QPixmap(Partie::getInstance()->getControleur()->getPlateau()->getNoble(3)->getImage()));}
+    if (Partie::getInstance()->getNbJoueurs() ==4) { ui->Noble5->setPixmap(QPixmap(Partie::getInstance()->getControleur()->getPlateau()->getNoble(4)->getImage()));}
+}
+
+void GameWindow_t::AfficherJoueur(){
+    ui->Joueuractuel->setText(Partie::getInstance()->getJoueur(1)->getNom());
+}
+
+void GameWindow_t::FindeTour(){
+    switch(choix){
+        case '1' :
+            Couleur c1; //cliquer sur un jeton
+            Couleur c2; //cliquer sur un jeton
+            Couleur c3; //cliquer sur un jeton
+            Partie::getInstance()->PiocherJetons(c1, c2, c3, *joueur_actuel, Partie::getInstance()->getControleur());
+
+        case '2' :
+            //cliquer sur une carte;
+            Partie::getInstance()->AcheterCarte(c, *joueur_actuel, Partie::getInstance()->getControleur());
+
+        case '3' :
+            //cliquer sur une carte;
+            Partie::getInstance()->ReserverCarte(c, *joueur_actuel, Partie::getInstance()->getControleur());
+        default:
+            tourfini = 0;
+    }
+}
 

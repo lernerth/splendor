@@ -24,7 +24,7 @@ void Partie::SetPartie(size_t n, QString j[4], Partie* p){
 Joueur* Partie::getJoueur(size_t numJ) {
     Joueur* j = nullptr;
     if(numJ>Nbjoueur) throw Exception("Ce joueur n'existe pas");
-    j = this->ListeJoueur[numJ];
+    j = this->ListeJoueur[numJ-1];
     return j;
 };
 
@@ -178,6 +178,10 @@ Carte& Partie::AcheterCarte(Carte* carte, Joueur& joueur, Controleur* controleur
 Carte& Partie::ReserverCarte(Carte* carte, Joueur& joueur, Controleur* controleur){
      joueur.ajouter_carte_reserve(carte);//ajoute la carte dans la main du joueur, vérifie déjà s'il y en a 3 ou pas
      controleur->remplacer_carte(0, 0, controleur);//enlève la carte ET la remplace
+     if (controleur->getCouleur(Couleur::jaune)>0){
+             joueur.ajouter_jeton(Couleur::jaune);
+             controleur->retirer_Jetons(Couleur::jaune);
+     }
      return *carte;
 }
 
@@ -242,10 +246,6 @@ void Partie::Tour(Partie* p){
         }
     }
 
-    void FinDePartie();
+    FinDePartie();
 }
 
-/*void Partie::AfficherCarte(int i, int j, Partie* p){
-    QString carte;
-    carte = "carte"+QString::toStdString(std::to_string(i))+QString::toStdString(std::to_string(j))
-}*/

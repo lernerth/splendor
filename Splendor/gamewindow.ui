@@ -887,7 +887,7 @@
       <x>180</x>
       <y>190</y>
       <width>568</width>
-      <height>531</height>
+      <height>551</height>
      </rect>
     </property>
     <layout class="QGridLayout" name="cartesPlateau">
@@ -2270,7 +2270,7 @@
      <string>Au tour de :</string>
     </property>
    </widget>
-   <widget class="QLabel" name="label_3">
+   <widget class="QLabel" name="Joueuractuel">
     <property name="geometry">
      <rect>
       <x>860</x>
@@ -2518,6 +2518,9 @@
     <property name="text">
      <string/>
     </property>
+    <property name="scaledContents">
+     <bool>true</bool>
+    </property>
    </widget>
    <widget class="QLabel" name="Noble4">
     <property name="geometry">
@@ -2534,8 +2537,11 @@
     <property name="text">
      <string/>
     </property>
+    <property name="scaledContents">
+     <bool>true</bool>
+    </property>
    </widget>
-   <widget class="QLabel" name="Noble">
+   <widget class="QLabel" name="Noble2">
     <property name="geometry">
      <rect>
       <x>790</x>
@@ -2549,6 +2555,9 @@
     </property>
     <property name="text">
      <string/>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
     </property>
    </widget>
    <widget class="QLabel" name="Noble5">
@@ -2566,6 +2575,9 @@
     <property name="text">
      <string/>
     </property>
+    <property name="scaledContents">
+     <bool>true</bool>
+    </property>
    </widget>
    <widget class="QLabel" name="Noble3">
     <property name="geometry">
@@ -2582,6 +2594,9 @@
     <property name="text">
      <string/>
     </property>
+    <property name="scaledContents">
+     <bool>true</bool>
+    </property>
    </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
@@ -2590,7 +2605,7 @@
      <x>0</x>
      <y>0</y>
      <width>1460</width>
-     <height>21</height>
+     <height>20</height>
     </rect>
    </property>
   </widget>

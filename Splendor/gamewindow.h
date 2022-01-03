@@ -7,6 +7,7 @@
 #include "ui_gamewindow.h"
 #include "mainwindow.h"
 #include <QString>
+#include <QSignalMapper>
 #include <string>
 
 class Partie;
@@ -29,6 +30,8 @@ public:
     void setNom4(QString nom4);
     void setNbJoueurs(size_t nb);
     void AffichernbJetons();
+    void AfficherNobles();
+    void AfficherJoueur();
     static int choix;
 
 private:
@@ -38,7 +41,10 @@ private:
     QString nom3;
     QString nom4;
     Partie* partie;
+    QMap<QPushButton*, Carte*> BoutonCarte;
+    QPushButton* TableauBouton[12];
     int nb;
+    QSignalMapper* mapper;
 
 
 private slots :
@@ -46,6 +52,7 @@ private slots :
     void highlight();
     void afficherCartes();
     void afficherImages();
+    void FindeTour();
     void print(){qDebug()<<choix;};
 
 public slots:
