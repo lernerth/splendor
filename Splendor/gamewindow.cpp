@@ -18,7 +18,7 @@ GameWindow_t::GameWindow_t(Partie* p) :
     QButtonGroup* cartes = new QButtonGroup(this);
     this->setFixedSize(1460,800);
     //Gestion des cartes
-    creerGroupeCartes(cartes);
+    //creerGroupeCartes(cartes);
 
     //Affichage des jetons du plateau
     afficherJetons();
@@ -48,6 +48,7 @@ GameWindow_t::GameWindow_t(Partie* p) :
 
     afficherCartes();
     afficherImages();
+    afficherPrestige();
 
     //Affichage du cadre de focus lors de l'achat ou la reservation de cartes
     connect(ui->acheter, SIGNAL(clicked()), this, SLOT(highlight()));
@@ -418,9 +419,27 @@ void GameWindow_t::FindeTour(){
     qDebug()<<"joueur num"<<actuel;
 }
 
+void GameWindow_t::afficherPrestige(){
+    int nb = Partie::getInstance()->getNbJoueurs();
+    if (nb==2){
+        ui->PrestigeJoueur1->display(Partie::getInstance()->getJoueur(1)->getPrestige());
+        ui->PrestigeJoueur2->display(Partie::getInstance()->getJoueur(2)->getPrestige());
+    }
+    else if (nb==3){
+        ui->PrestigeJoueur1->display(Partie::getInstance()->getJoueur(1)->getPrestige());
+        ui->PrestigeJoueur2->display(Partie::getInstance()->getJoueur(2)->getPrestige());
+        ui->PrestigeJoueur3->display(Partie::getInstance()->getJoueur(3)->getPrestige());
+    }
+    else if (nb==4){
+        ui->PrestigeJoueur1->display(Partie::getInstance()->getJoueur(1)->getPrestige());
+        ui->PrestigeJoueur2->display(Partie::getInstance()->getJoueur(2)->getPrestige());
+        ui->PrestigeJoueur3->display(Partie::getInstance()->getJoueur(3)->getPrestige());
+        ui->PrestigeJoueur4->display(Partie::getInstance()->getJoueur(4)->getPrestige());
+    }
+}
 
 
-void GameWindow_t::creerGroupeCartes(QButtonGroup* group){
+/*void GameWindow_t::creerGroupeCartes(QButtonGroup* group){
     group->addButton(ui->carte00);
     group->addButton(ui->carte01);
     group->addButton(ui->carte02);
@@ -436,7 +455,7 @@ void GameWindow_t::creerGroupeCartes(QButtonGroup* group){
     group->setExclusive(true);
 }
 
-/*
+
 Couleur GameWindow_t::clicJetonBlanc(){
     return Couleur::blanc;
 }

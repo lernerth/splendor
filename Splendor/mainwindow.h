@@ -16,13 +16,31 @@ namespace Ui {
 }
 QT_END_NAMESPACE
 
+/*!
+ *  \class MainWindow
+   * \brief classe créant la fenêtre de paramétrage de la partie
+   */
 class MainWindow : public QMainWindow
 {
     Q_OBJECT
 
 public:
+    /*!
+        *\fn MainWindow(QWidget *parent = nullptr)
+        *\brief construit la fenêtre de paramétrage
+        *\param parent = nullptr : la fenêtre s'affiche dès l'ouverture, et n'a pas de parents
+        */
     MainWindow(QWidget *parent = nullptr);
+    /*!
+        *\fn ~MainWindow()
+        *\brief détruit la fenêtre de paramétrage
+        */
     ~MainWindow();
+    /*!
+        *\fn size_t getNbJoueurs()
+        *\brief récupère le nombre de joueurs de la partie
+        *\return le nombre de joueurs
+        */
     size_t getNbJoueurs() const ;
 
 private slots :
