@@ -2085,8 +2085,8 @@
    <widget class="QLabel" name="label">
     <property name="geometry">
      <rect>
-      <x>860</x>
-      <y>230</y>
+      <x>850</x>
+      <y>140</y>
       <width>111</width>
       <height>16</height>
      </rect>
@@ -2098,8 +2098,8 @@
    <widget class="QRadioButton" name="acheter">
     <property name="geometry">
      <rect>
-      <x>840</x>
-      <y>260</y>
+      <x>830</x>
+      <y>170</y>
       <width>161</width>
       <height>22</height>
      </rect>
@@ -2111,8 +2111,8 @@
    <widget class="QRadioButton" name="reserver">
     <property name="geometry">
      <rect>
-      <x>840</x>
-      <y>290</y>
+      <x>830</x>
+      <y>200</y>
       <width>161</width>
       <height>22</height>
      </rect>
@@ -2124,8 +2124,8 @@
    <widget class="QRadioButton" name="prendreJetons">
     <property name="geometry">
      <rect>
-      <x>840</x>
-      <y>320</y>
+      <x>830</x>
+      <y>230</y>
       <width>161</width>
       <height>22</height>
      </rect>
@@ -2137,8 +2137,8 @@
    <widget class="QPushButton" name="finDeTour">
     <property name="geometry">
      <rect>
-      <x>850</x>
-      <y>360</y>
+      <x>840</x>
+      <y>270</y>
       <width>121</width>
       <height>31</height>
      </rect>
@@ -2156,8 +2156,8 @@
    <widget class="Line" name="line_5">
     <property name="geometry">
      <rect>
-      <x>808</x>
-      <y>400</y>
+      <x>798</x>
+      <y>310</y>
       <width>211</width>
       <height>20</height>
      </rect>
@@ -2169,8 +2169,8 @@
    <widget class="Line" name="line_6">
     <property name="geometry">
      <rect>
-      <x>808</x>
-      <y>210</y>
+      <x>798</x>
+      <y>120</y>
       <width>211</width>
       <height>20</height>
      </rect>
@@ -2182,8 +2182,8 @@
    <widget class="Line" name="line_7">
     <property name="geometry">
      <rect>
-      <x>800</x>
-      <y>220</y>
+      <x>790</x>
+      <y>130</y>
       <width>16</width>
       <height>191</height>
      </rect>
@@ -2195,8 +2195,8 @@
    <widget class="Line" name="line_8">
     <property name="geometry">
      <rect>
-      <x>1010</x>
-      <y>220</y>
+      <x>1000</x>
+      <y>130</y>
       <width>16</width>
       <height>192</height>
      </rect>
@@ -2501,6 +2501,86 @@
       <width>80</width>
       <height>81</height>
      </size>
+    </property>
+   </widget>
+   <widget class="QLabel" name="Noble1">
+    <property name="geometry">
+     <rect>
+      <x>790</x>
+      <y>370</y>
+      <width>111</width>
+      <height>111</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::NoFrame</enum>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="Noble4">
+    <property name="geometry">
+     <rect>
+      <x>920</x>
+      <y>370</y>
+      <width>111</width>
+      <height>111</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::NoFrame</enum>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="Noble">
+    <property name="geometry">
+     <rect>
+      <x>790</x>
+      <y>490</y>
+      <width>111</width>
+      <height>111</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::NoFrame</enum>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="Noble5">
+    <property name="geometry">
+     <rect>
+      <x>920</x>
+      <y>490</y>
+      <width>111</width>
+      <height>111</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::NoFrame</enum>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="Noble3">
+    <property name="geometry">
+     <rect>
+      <x>790</x>
+      <y>610</y>
+      <width>111</width>
+      <height>111</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::NoFrame</enum>
+    </property>
+    <property name="text">
+     <string/>
     </property>
    </widget>
   </widget>
