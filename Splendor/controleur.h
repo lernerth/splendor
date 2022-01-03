@@ -13,9 +13,9 @@
 	public:
         //constructeur-destructeur
         Controleur() {
-            pioches = nullptr;
-            plateau = nullptr;
-            noble = nullptr;
+            pioches = new Pioche_carte();
+            plateau = new Plateau();
+            noble = new Pioche_Noble();
 
         };
         ~Controleur(); //Pourquoi delete que la pioche noble ??
@@ -28,7 +28,7 @@
         Controleur& operator=(const Controleur& c) = delete;
 
         //Methodes
-        void initialiser_Plateau(int nb_joueurs);//initialiser la grille et la rangée
+        void initialiser_Plateau(size_t nb_joueurs, Controleur* contr);//initialiser la grille et la rangée
         void remplacer_carte(int niveau, int indice);     //remplacer une carte développement du tableau
         void retirer_Noble(int indice);     //retirer une carte noble
         void retirer_Jetons(Couleur c);         //retirer des jetons de la pioche centrale

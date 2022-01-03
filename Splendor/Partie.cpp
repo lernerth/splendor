@@ -7,50 +7,8 @@ Partie::Partie(size_t n, QString j[4]){
     for (size_t i=0; i<n; i++){
         ListeJoueur[i] = new Joueur(i+1, j[i]);
     }
-    /*
-    int fin = 0;
-    int tourfini = 0;
-
-    Joueur* joueur_actuel;
-    Controleur* controleur;
-    int choix = 0;
-    Carte *c;
-
-    while(fin != 1){
-        for(size_t i = 0; i < n; i++){
-            joueur_actuel = getJoueur(i);
-            controleur = getControleur();
-            while(fin == 0){
-
-                choix = GameWindow_t::choix;
-                switch(choix){
-                    case '1' :
-                        Couleur c1; //cliquer sur un jeton
-                        Couleur c2; //cliquer sur un jeton
-                        Couleur c3; //cliquer sur un jeton
-                        PiocherJetons(c1, c2, c3, *joueur_actuel, controleur);
-
-                    case '2' :
-                        //cliquer sur une carte;
-                        AcheterCarte(c, *joueur_actuel, controleur);
-
-                    case '3' :
-                        //cliquer sur une carte;
-                        ReserverCarte(c, *joueur_actuel, controleur);
-                    default:
-                        throw  Exception("Faire une action");
-                }
-            }
-            choix = 0;
-            tourfini = 0;
-
-            if(joueur_actuel->getPrestige()>=15){
-                fin = 1;
-            }
-        }
-    }*/
-
-    void FinDePartie();
+    cont = new Controleur();
+    cont->initialiser_Plateau(n, cont);
 };
 
 Joueur* Partie::getJoueur(size_t numJ) {
@@ -228,4 +186,51 @@ void Partie::VisiteNoble(Joueur *joueur){
 
 void Partie::setChoix(int c){
     this->choice = c;
+}
+
+void Partie::Tour(Partie* p){
+    int fin = 0;
+    int tourfini = 0;
+
+    Joueur* joueur_actuel;
+    Controleur* controleur;
+    int choix = 0;
+    Carte *c;
+    size_t n = p->Nbjoueur;
+
+    while(fin != 1){
+        for(size_t i = 0; i < n; i++){
+            joueur_actuel = getJoueur(i);
+            controleur = getControleur();
+            while(tourfini == 0){
+
+                qDebug()<<"choix"<<choix;
+                switch(choix){
+                    case '1' :
+                        Couleur c1; //cliquer sur un jeton
+                        Couleur c2; //cliquer sur un jeton
+                        Couleur c3; //cliquer sur un jeton
+                        PiocherJetons(c1, c2, c3, *joueur_actuel, controleur);
+
+                    case '2' :
+                        //cliquer sur une carte;
+                        AcheterCarte(c, *joueur_actuel, controleur);
+
+                    case '3' :
+                        //cliquer sur une carte;
+                        ReserverCarte(c, *joueur_actuel, controleur);
+                    default:
+                        tourfini = 0;
+                }
+            }
+            choix = 0;
+            tourfini = 0;
+
+            if(joueur_actuel->getPrestige()>=15){
+                fin = 1;
+            }
+        }
+    }
+
+    void FinDePartie();
 }

@@ -2,6 +2,13 @@
 
 int GameWindow_t::choix = 0;
 
+
+void GameWindow_t::numChoix(){
+    if (ui->prendreJetons->isChecked() == true) partie->setChoix(1);
+    else if (ui->acheter->isChecked() == true) partie->setChoix(2);
+    else if(ui->reserver->isChecked() == true) partie->setChoix(3);
+}
+
 GameWindow_t::GameWindow_t(Partie* p) :
     //QMainWindow(parent),
     ui(new Ui::GameWindow),
@@ -35,12 +42,12 @@ GameWindow_t::GameWindow_t(Partie* p) :
     afficherImages();
 
     //Affichage du cadre de focus lors de l'achat ou la reservation de cartes
-    connect(ui->acheter, SIGNAL(pressed()), this, SLOT(highlight()));
-    connect(ui->reserver, SIGNAL(pressed()), this, SLOT(highlight()));
-    connect(ui->prendreJetons, SIGNAL(pressed()), this, SLOT(highlight()));
-    connect(ui->prendreJetons, SIGNAL(pressed()), this, SLOT(numChoix()));
-    connect(ui->reserver, SIGNAL(pressed()), this, SLOT(numChoix()));
-    connect(ui->acheter, SIGNAL(pressed()), this, SLOT(numChoix()));
+    connect(ui->acheter, SIGNAL(clicked()), this, SLOT(highlight()));
+    connect(ui->reserver, SIGNAL(clicked()), this, SLOT(highlight()));
+    connect(ui->prendreJetons, SIGNAL(clicked()), this, SLOT(highlight()));
+    connect(ui->prendreJetons, SIGNAL(clicked()), this, SLOT(numChoix()));
+    connect(ui->reserver, SIGNAL(clicked()), this, SLOT(numChoix()));
+    connect(ui->acheter, SIGNAL(clicked()), this, SLOT(numChoix()));
 }
 
 GameWindow_t::~GameWindow_t()
@@ -262,10 +269,3 @@ void GameWindow_t::afficherImages(){
 }
 
 
-int GameWindow_t::numChoix(){
-    if (ui->prendreJetons->isChecked() == true) this->choix = 1;
-    else if (ui->acheter->isChecked() == true) this->choix = 2;
-    else if(ui->reserver->isChecked() == true) this->choix = 3;
-    //Partie::setChoix(choix);
-    return this->choix;
-}

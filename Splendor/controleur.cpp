@@ -19,17 +19,16 @@ Carte** Controleur::getPioche(int niveau) {
 }
 
 //Methodes
-void Controleur::initialiser_Plateau(int nb_joueurs){
-    Plateau p = *plateau;
+void Controleur::initialiser_Plateau(size_t nb_joueurs, Controleur* contr){
     //Carte à acheter
     for (int j = 0; j < 4; j++){
         for(int i = 1; i < 4; i++){
-            p.modifCarteGrille(i, j, pioches->piocher(i+1));
+            contr->plateau->modifCarteGrille(i, j, pioches->piocher(i+1));
         }
     }
     //Cartes nobles
-    for(int i = 0; i < nb_joueurs+1 ; i++){
-        p.modifierNoble(i, noble->piocherNoble());
+    for(size_t i = 0; i < nb_joueurs+1 ; i++){
+        contr->plateau->modifierNoble(i, noble->piocherNoble());
     }
 }
 

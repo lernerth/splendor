@@ -30,6 +30,7 @@ public:
     void FinDePartie();
     void VisiteNoble(Joueur *joueur);
     void setChoix(int choice);
+    void Tour(Partie* p);
 
 private:
     friend class Controleur;

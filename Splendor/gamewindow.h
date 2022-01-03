@@ -28,7 +28,6 @@ public:
     void setNom3(QString nom3);
     void setNom4(QString nom4);
     void setNbJoueurs(size_t nb);
-    int numChoix();
     static int choix;
 
 private:
@@ -46,8 +45,10 @@ private slots :
     void highlight();
     void afficherCartes();
     void afficherImages();
+    void print(){qDebug()<<choix;};
 
-//public slots:
+public slots:
+    void numChoix();
 
 };
 
